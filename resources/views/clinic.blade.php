@@ -1273,314 +1273,94 @@
       display: inline;
     }
 
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 1024px) {
-      nav {
-        padding: 16px 30px;
-      }
+    /* ===== RESPONSIVE OVERHAUL (MOBILE & TABLET) ===== */
+    @media (max-width: 900px) {
+      nav { padding: 16px 24px; height: 64px; }
+      .nav-links, .nav-cta { display: none; }
+      
+      section, 
+      .what-lhr, .why-choose, .how-it-works, .machines, .skin-types, 
+      .faq, .adv-treatments { padding: 50px 0; }
 
-      .what-lhr,
-      .why-choose {
-        grid-template-columns: 1fr;
-        padding: 80px 30px;
-      }
+      .cnt, .hero-content, .intro-strip, .what-lhr, 
+      .how-it-works, .machines, .skin-types, .why-choose, .faq, .cta-section { padding: 0 20px; }
 
-      .steps-grid {
-        grid-template-columns: 1fr 1fr;
-      }
+      .hero { height: auto; min-height: 100vh; padding: 100px 0 60px; flex-direction: column; text-align: center; justify-content: flex-start; }
+      .hero-content { padding: 20px; max-width: 100%; order: 1; }
+      .hero h1 { font-size: 42px; line-height: 1.1; margin-bottom: 20px; }
+      .hero p { margin: 0 auto 30px; font-size: 14px; }
+      .hero-btns { justify-content: center; flex-direction: column; gap: 12px; }
+      .btn-primary, .btn-outline { width: 100%; text-align: center; }
+      
+      .hero-stats { position: relative; inset: auto; margin-top: 40px; display: grid !important; grid-template-columns: 1fr 1fr; gap: 20px; width: 100%; padding: 0 20px; order: 2; }
+      .stat-item { padding: 15px; background: rgba(255,255,255,0.03); border: 1px solid rgba(201,138,160,0.1); }
+      .stat-item:last-child { grid-column: span 2; }
 
-      .machines-scroll {
-        grid-template-columns: 1fr 1fr;
-      }
+      .intro-strip { flex-direction: column; gap: 15px; padding: 30px 20px; text-align: center; }
+      
+      .section-header { margin-bottom: 40px; }
+      .section-header h2 { font-size: 32px; }
+      
+      .treatments-grid { grid-template-columns: 1fr; }
+      .treatment-box { padding: 30px 20px; }
+      
+      .what-lhr { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+      .lhr-benefits { grid-template-columns: 1fr; text-align: left; }
+      .lhr-img-main { height: 350px; }
+      
+      .steps-grid { grid-template-columns: 1fr; gap: 20px; }
+      .step-card { padding: 40px 24px; }
+      
+      .machines-intro { flex-direction: column; text-align: center; align-items: center; gap: 15px; }
+      .machines-intro p { text-align: center; }
+      .machines-scroll { grid-template-columns: 1fr; gap: 20px; }
+      .machine-img { height: 300px; }
+      
+      .skin-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      
+      .why-choose { grid-template-columns: 1fr; gap: 40px; }
+      .why-img-main { height: 350px; }
+      .why-content { text-align: center; }
+      .reason-item { text-align: left; }
+      
+      .faq-list { margin-top: 30px; }
+      .faq-q { font-size: 18px; padding: 20px 0; }
+      
+      /* Footer Enhancements */
+      .foot-grid { grid-template-columns: 1fr; gap: 48px; text-align: center; }
+      .foot-logo { font-size: 28px; justify-content: center; }
+      .foot-p { margin: 0 auto 24px; max-width: 100% !important; }
+      .fsoc { justify-content: center; display: flex; }
+      .fc h4 { font-size: 11px; margin-bottom: 20px; color: var(--rose); }
+      .fc ul { gap: 10px; }
+      .fc ul a { font-size: 14px; }
+      .foot-bot { flex-direction: column; gap: 20px; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.05); }
+      .foot-bot span { font-size: 11px; }
 
-      .skin-grid {
-        grid-template-columns: repeat(3, 1fr);
+      /* Mobile Toggle & Menu */
+      .mobile-toggle { display: block; font-size: 24px; color: var(--white); cursor: pointer; border: none; background: none; }
+      .mobile-menu { 
+        position: fixed; top: 0; right: -100%; width: 85%; height: 100%; 
+        background: var(--dark); z-index: 3000; padding: 100px 40px; 
+        transition: right 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+        box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+        display: flex; flex-direction: column; gap: 30px;
       }
-
-      .ba-grid {
-        grid-template-columns: 1fr 1fr;
+      .mobile-menu.active { right: 0; }
+      .mobile-menu a { 
+        font-size: 20px; text-transform: uppercase; letter-spacing: 4px; 
+        color: var(--white); text-decoration: none; font-family: 'Cormorant Garamond', serif;
       }
-
-      footer {
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-        padding: 40px 30px;
+      .mobile-menu a.active { color: var(--rose); }
+      .mobile-menu-close { position: absolute; top: 24px; right: 24px; font-size: 30px; color: var(--rose); cursor: pointer; }
+      .mobile-overlay { 
+        position: fixed; inset: 0; background: rgba(0,0,0,0.8); z-index: 2500; 
+        opacity: 0; pointer-events: none; transition: opacity 0.4s; 
       }
-
-      .hero-content {
-        padding: 0 30px;
-      }
-
-      .hero-stats {
-        right: 30px;
-        bottom: 30px;
-      }
-
-      .cta-inner {
-        padding: 50px 40px;
-        grid-template-columns: 1fr;
-      }
-
-      .pricing,
-      .how-it-works,
-      .machines,
-      .skin-types,
-      .before-after,
-      .faq,
-      .cta-section {
-        padding: 80px 30px;
-      }
+      .mobile-overlay.active { opacity: 1; pointer-events: auto; }
     }
-
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        gap: 15px;
-        padding: 20px;
-      }
-
-      .nav-links {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      .nav-logo {
-        position: relative;
-        left: 0;
-        transform: none;
-        font-size: 20px;
-      }
-
-      .nav-cta {
-        display: none;
-      }
-
-      .hero {
-        height: auto;
-        min-height: 100vh;
-        padding: 140px 20px 80px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-
-      .hero h1 {
-        font-size: clamp(36px, 9vw, 48px);
-      }
-
-      .hero p {
-        font-size: 14px;
-        margin-bottom: 24px;
-        max-width: 100%;
-      }
-
-      .hero-content {
-        padding: 0;
-        text-align: center;
-        max-width: 100%;
-      }
-
-      .hero-tag {
-        margin: 0 auto 20px auto;
-        display: inline-block;
-      }
-
-      .hero-btns {
-        justify-content: center;
-        flex-direction: column;
-        gap: 12px;
-        width: 100%;
-        max-width: 300px;
-        margin: 0 auto;
-      }
-
-      .btn-primary,
-      .btn-outline {
-        width: 100%;
-        text-align: center;
-        padding: 12px 20px;
-      }
-
-      .hero-stats {
-        position: relative;
-        bottom: 0;
-        right: 0;
-        margin-top: 50px;
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-        opacity: 1;
-        width: 100%;
-      }
-
-      .intro-strip {
-        flex-direction: column;
-        gap: 15px;
-        padding: 30px 20px;
-      }
-
-      .adv-treatments {
-        padding: 60px 20px;
-      }
-
-      .treatments-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .treatment-box {
-        padding: 30px 20px;
-      }
-
-      .what-lhr,
-      .why-choose,
-      .how-it-works,
-      .machines,
-      .pricing,
-      .skin-types,
-      .before-after,
-      .faq {
-        padding: 60px 20px;
-      }
-
-      .what-lhr,
-      .why-choose {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-
-      .lhr-img-main {
-        height: 400px;
-      }
-
-      .lhr-img-overlay {
-        width: 120px;
-        height: 120px;
-        left: 0;
-        bottom: -20px;
-      }
-
-      .lhr-badge {
-        width: 100px;
-        padding: 16px;
-        right: 0;
-      }
-
-      .lhr-badge .badge-num {
-        font-size: 24px;
-      }
-
-      .lhr-benefits {
-        grid-template-columns: 1fr;
-      }
-
-      .section-header h2 {
-        font-size: 32px;
-      }
-
-      .steps-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .machines-intro {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-      }
-
-      .machines-intro p {
-        text-align: left;
-      }
-
-      .machines-scroll {
-        grid-template-columns: 1fr;
-      }
-
-      .price-table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-      }
-
-      .price-table th,
-      .price-table td {
-        padding: 12px 16px;
-        font-size: 13px;
-      }
-
-      .price-table td:first-child {
-        font-size: 15px;
-      }
-
-      .skin-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .ba-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .ba-imgs {
-        grid-template-columns: 1fr;
-      }
-
-      .ba-img {
-        height: 250px;
-      }
-
-      .why-img-main {
-        height: 400px;
-      }
-
-      .why-img-card {
-        width: 160px;
-        padding: 24px;
-        right: 0;
-        bottom: 0;
-      }
-
-      .faq-q {
-        font-size: 18px;
-        padding-right: 20px;
-      }
-
-      .cta-section {
-        padding: 0 20px 80px;
-      }
-
-      .cta-inner {
-        padding: 40px 24px;
-        text-align: center;
-      }
-
-      .cta-inner h2 {
-        font-size: 28px;
-      }
-
-      .cta-btn {
-        width: 100%;
-        display: block;
-        padding: 16px 0;
-      }
-
-      footer {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        padding: 60px 20px;
-        text-align: center;
-      }
-
-      .footer-brand p {
-        margin: 0 auto;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-        padding: 20px;
-      }
-    }
+    
+    .mobile-toggle { display: none; }
   </style>
 </head>
 
@@ -1596,8 +1376,22 @@
       <li><a href="/lhr">LHR</a></li>
       <li><a href="#booking">Book</a></li>
     </ul>
-    <a href="https://wa.me/919140971129?text=Hello%2C+I+want+to+book+an+appointment." target="_blank" class="nav-cta">Book Now</a>
+    <div class="nav-right">
+      <a href="https://wa.me/919140971129?text=Hello%2C+I+want+to+book+an+appointment." target="_blank" class="nav-cta">Book Now</a>
+      <button class="mobile-toggle" id="menuOpen" aria-label="Open Menu">☰</button>
+    </div>
   </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-overlay" id="menuOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-close" id="menuClose">✕</div>
+    <a href="/">Home</a>
+    <a href="/?page=salon">Salon</a>
+    <a href="/clinic" class="active">Clinic</a>
+    <a href="/lhr">LHR</a>
+    <a href="https://wa.me/919140971129" target="_blank">Book Now</a>
+  </div>
 
   <!-- HERO -->
   <section class="hero">
@@ -1632,7 +1426,7 @@
   <!-- ADVANCED AESTHETIC TREATMENTS -->
   <section class="adv-treatments">
     <div class="section-header reveal">
-      <span class="section-tag">Our Services</span>
+
       <h2>Advanced Aesthetic <em>Treatments</em></h2>
       <p>Our clinic provides clinically advanced aesthetic treatments performed with precision using medical-grade
         technologies. Each treatment is designed to target specific skin concerns while improving long-term skin health.
@@ -1689,12 +1483,9 @@
   <!-- WHAT IS LHR -->
   <section class="what-lhr">
     <div class="lhr-text reveal-left">
-      <span class="section-tag">What Is LHR?</span>
       <h2>The Science of <em>Permanent</em> Smoothness</h2>
-      <p>Laser Hair Reduction uses concentrated light energy absorbed by the melanin in hair follicles. The heat
-        generated disables the follicle's ability to regrow hair — permanently, over 6–8 sessions.</p>
-      <p>At Skinnovation, we use only FDA-approved devices calibrated specifically for Indian skin tones, ensuring
-        maximum safety and efficacy.</p>
+      <p>Our FDA-approved diode laser technology targets hair follicles with precision — delivering permanent hair reduction that is safe for all skin tones and all body areas.</p>
+      <p>At Skinnovation, we use only internationally certified laser platforms proven safe and effective for Indian skin tones (Fitzpatrick III–VI). Advanced cooling technology ensures each session is comfortable — even in sensitive areas.</p>
       <div class="lhr-benefits">
         <div class="benefit-chip">Painless Technology</div>
         <div class="benefit-chip">All Skin Tones</div>
@@ -1705,14 +1496,9 @@
       </div>
     </div>
     <div class="lhr-image-wrap reveal-right">
-      <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80"
-        alt="Laser Hair Reduction Treatment" class="lhr-img-main">
-      <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=400&q=80" alt="Skin Care"
-        class="lhr-img-overlay">
-      <div class="lhr-badge">
-        <span class="badge-num">95%</span>
-        <span class="badge-text">Reduction Rate</span>
-      </div>
+      <img src="https://images.pexels.com/photos/3997987/pexels-photo-3997987.jpeg?auto=compress&cs=tinysrgb&w=800&q=95"
+        alt="Laser Hair Reduction Technology" class="lhr-img-main">
+
     </div>
   </section>
 
@@ -1766,205 +1552,67 @@
         <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=700&q=80" alt="Primelase HR"
           class="machine-img">
         <div class="machine-overlay">
-          <div class="machine-tag">Diode Laser</div>
-          <div class="machine-name">Primelase HR</div>
-          <div class="machine-desc">High-power diode laser with triple wavelength. Ideal for all Indian skin types with
-            maximum speed.</div>
-          <a href="#" class="machine-link">Learn More</a>
         </div>
       </div>
       <div class="machine-card">
         <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=700&q=80" alt="Clarity II"
           class="machine-img">
         <div class="machine-overlay">
-          <div class="machine-tag">Nd:YAG + Alex</div>
-          <div class="machine-name">Clarity II</div>
-          <div class="machine-desc">Dual-wavelength platform offering the most precise control for darker skin tones
-            with IntelliTrak technology.</div>
-          <a href="#" class="machine-link">Learn More</a>
         </div>
       </div>
       <div class="machine-card">
         <img src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=700&q=80" alt="Elysion Pro"
           class="machine-img">
         <div class="machine-overlay">
-          <div class="machine-tag">Soprano Ice</div>
-          <div class="machine-name">Elysion Pro</div>
-          <div class="machine-desc">Pain-free SHR technology with continuous motion delivery. Perfect for sensitive skin
-            areas.</div>
-          <a href="#" class="machine-link">Learn More</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TREATMENT AREAS -->
-  <section class="pricing" id="pricing">
-    <div class="section-header reveal">
-      <span class="section-tag">Treatment Areas</span>
-      <h2>Investment in Your <em>Confidence</em></h2>
-    </div>
-    <table class="price-table reveal">
-      <thead>
-        <tr>
-          <th>Body Area</th>
-          <th>Sessions</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Full Body <span class="price-badge">Most Popular</span></td>
-          <td>6–8</td>
-          <td><a href="#booking" class="price-cta-btn">Book Now</a></td>
-        </tr>
-        <tr>
-          <td>Full Arms</td>
-          <td>6</td>
-          <td><a href="#booking" class="price-cta-btn">Book Now</a></td>
-        </tr>
-        <tr>
-          <td>Full Legs</td>
-          <td>6</td>
-          <td><a href="#booking" class="price-cta-btn">Book Now</a></td>
-        </tr>
-        <tr>
-          <td>Underarms</td>
-          <td>6</td>
-          <td><a href="#booking" class="price-cta-btn">Book Now</a></td>
-        </tr>
-        <tr>
-          <td>Upper Lip</td>
-          <td>6</td>
-          <td><a href="#booking" class="price-cta-btn">Book Now</a></td>
-        </tr>
-        <tr>
-          <td>Bikini Line</td>
-          <td>6</td>
-          <td><a href="#booking" class="price-cta-btn">Book Now</a></td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+
 
   <!-- SKIN TYPES -->
   <section class="skin-types">
     <div class="section-header reveal">
-      <span class="section-tag">Safe For All</span>
+
       <h2>Every Skin Tone, <em>Every Texture</em></h2>
     </div>
     <div class="skin-grid reveal">
       <div class="skin-card">
         <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=300&q=80" alt="Skin Type I">
-        <div class="skin-card-info">
-          <div class="skin-type-num">I</div>
-          <div class="skin-type-label">Very Fair</div>
-        </div>
+
       </div>
       <div class="skin-card">
         <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=300&q=80" alt="Skin Type II">
-        <div class="skin-card-info">
-          <div class="skin-type-num">II</div>
-          <div class="skin-type-label">Fair</div>
-        </div>
+
       </div>
       <div class="skin-card">
         <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=300&q=80" alt="Skin Type III">
-        <div class="skin-card-info">
-          <div class="skin-type-num">III</div>
-          <div class="skin-type-label">Medium</div>
-        </div>
+
       </div>
       <div class="skin-card">
         <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=300&q=80" alt="Skin Type IV">
-        <div class="skin-card-info">
-          <div class="skin-type-num">IV</div>
-          <div class="skin-type-label">Olive</div>
-        </div>
+
       </div>
       <div class="skin-card">
         <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=300&q=80" alt="Skin Type V">
-        <div class="skin-card-info">
-          <div class="skin-type-num">V</div>
-          <div class="skin-type-label">Brown</div>
-        </div>
+
       </div>
       <div class="skin-card">
         <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=300&q=80" alt="Skin Type VI">
-        <div class="skin-card-info">
-          <div class="skin-type-num">VI</div>
-          <div class="skin-type-label">Deep</div>
-        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- BEFORE AFTER -->
-  <section class="before-after">
-    <div class="section-header reveal">
-      <span class="section-tag">Real Results</span>
-      <h2>Transformations That <em>Speak</em></h2>
-    </div>
-    <div class="ba-grid reveal">
-      <div class="ba-card">
-        <div class="ba-imgs">
-          <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&q=80" alt="Before"
-            class="ba-img">
-          <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=400&q=80" alt="After" class="ba-img"
-            style="filter:brightness(1.05) saturate(1.1)">
-        </div>
-        <div class="ba-labels">
-          <div class="ba-label">Before</div>
-          <div class="ba-label after">After</div>
-        </div>
-        <div class="ba-body">
-          <div class="ba-area">Full Arms</div>
-          <div class="ba-sessions">8 Sessions · 90% Reduction</div>
-        </div>
-      </div>
-      <div class="ba-card">
-        <div class="ba-imgs">
-          <img src="https://images.unsplash.com/photo-1552693673-1bf958298935?w=400&q=80" alt="Before" class="ba-img">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="After" class="ba-img"
-            style="filter:brightness(1.05) saturate(1.1)">
-        </div>
-        <div class="ba-labels">
-          <div class="ba-label">Before</div>
-          <div class="ba-label after">After</div>
-        </div>
-        <div class="ba-body">
-          <div class="ba-area">Full Legs</div>
-          <div class="ba-sessions">6 Sessions · 95% Reduction</div>
-        </div>
-      </div>
-      <div class="ba-card">
-        <div class="ba-imgs">
-          <img src="https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?w=400&q=80" alt="Before"
-            class="ba-img">
-          <img src="https://images.unsplash.com/photo-1594938298603-c8148e4a5892?w=400&q=80" alt="After" class="ba-img"
-            style="filter:brightness(1.05) saturate(1.1)">
-        </div>
-        <div class="ba-labels">
-          <div class="ba-label">Before</div>
-          <div class="ba-label after">After</div>
-        </div>
-        <div class="ba-body">
-          <div class="ba-area">Face & Neck</div>
-          <div class="ba-sessions">7 Sessions · 92% Reduction</div>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <!-- WHY CHOOSE -->
   <section class="why-choose">
     <div class="why-image reveal-left">
       <img src="https://images.unsplash.com/photo-1614608682850-e0d6ed316d47?w=800&q=80" alt="Expert Dermatologist"
         class="why-img-main">
-      <div class="why-img-card">
-        <span class="card-num">14</span>
-        <span class="card-text">Expert Doctors</span>
-      </div>
+
     </div>
     <div class="why-content reveal-right">
       <span class="section-tag">Why Skinnovation</span>
@@ -2048,17 +1696,7 @@
     </div>
   </section>
 
-  <!-- BOOKING CTA -->
-  <section class="cta-section" id="booking">
-    <div class="cta-inner reveal">
-      <div>
-        <h2>Begin Your <em>Transformation</em> Today</h2>
-        <p>Book a free consultation with our dermatologist. Walk in, get analyzed, and receive your personalized LHR
-          plan.</p>
-      </div>
-      <a href="tel:02241531007" class="cta-btn">Book Free Consultation →</a>
-    </div>
-  </section>
+
 
   <!-- FOOTER -->
   <footer style="background: #0a0a0a; border-top: 1px solid rgba(212,181,160,0.1); padding: 100px 0 50px;">
@@ -2221,6 +1859,21 @@
         heroBg.style.transform = `scale(1) translateY(${scrolled * 0.3}px)`;
       }
     });
+    // ===== MOBILE MENU TOGGLE =====
+    const menuOpen = document.getElementById('menuOpen');
+    const menuClose = document.getElementById('menuClose');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuOverlay = document.getElementById('menuOverlay');
+
+    function toggleMenu(show) {
+      mobileMenu.classList.toggle('active', show);
+      menuOverlay.classList.toggle('active', show);
+      document.body.style.overflow = show ? 'hidden' : '';
+    }
+
+    menuOpen.addEventListener('click', () => toggleMenu(true));
+    menuClose.addEventListener('click', () => toggleMenu(false));
+    menuOverlay.addEventListener('click', () => toggleMenu(false));
   </script>
 </body>
 

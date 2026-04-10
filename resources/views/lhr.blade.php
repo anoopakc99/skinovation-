@@ -171,7 +171,7 @@
 
   /* ── WHY LHR ── */
   .why-section {
-    padding: 100px 0; background: var(--dark2);
+    padding: 0px 0; background: var(--dark2);
     border-top: 1px solid rgba(201,169,110,0.1);
     border-bottom: 1px solid rgba(201,169,110,0.1);
   }
@@ -213,7 +213,7 @@
   .why-point-desc { font-size: 13px; color: var(--text-muted); line-height: 1.8; font-weight: 300; }
 
   /* ── BODY PARTS ── */
-  .parts-section { padding: 100px 0; background: var(--black); }
+  .parts-section { padding:0px 0; background: var(--black); }
   .parts-inner { max-width: 1300px; margin: 0 auto; padding: 0 60px; }
   .parts-grid {
     display: grid;
@@ -513,23 +513,93 @@
 
 
 
+  /* ── CUSTOM SECTIONS (LHR) ── */
+  .path-section { background: var(--black); padding: 100px 0; border-bottom: 1px solid rgba(201,169,110,0.1); }
+  .path-inner { max-width: 1300px; margin: 0 auto; padding: 0 60px; }
+  .timeline-container { position: relative; padding-left: 40px; margin-top: 40px; }
+  .timeline-line { position: absolute; left: 16px; top: 0; bottom: 0; width: 1px; background: rgba(201,169,110,0.3); }
+  .timeline-step { position: relative; margin-bottom: 50px; }
+  .timeline-dot { position: absolute; left: -31px; top: 5px; width: 15px; height: 15px; background: var(--gold); border-radius: 50%; box-shadow: 0 0 15px rgba(201,169,110,0.4); }
+  .timeline-title { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 400; color: var(--gold); margin-bottom: 10px; }
+  .timeline-desc { font-size: 14px; color: var(--text-muted); line-height: 1.8; max-width: 700px; }
+
+  .ba-section-custom { padding: 100px 0; background: var(--black); text-align: center; }
+  .ba-inner-custom { max-width: 1300px; margin: 0 auto; padding: 0 60px; }
+  .ba-header-custom { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 400; color: var(--gold); margin-bottom: 12px; }
+  .ba-line-custom { width: 250px; height: 1px; border-bottom: 2px dotted #e83e8c; margin: 0 auto 50px; }
+  .ba-grid-custom { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 50px; }
+  .ba-card-custom { display: flex; height: 300px; border-radius: 10px; overflow: hidden; border: 1px solid rgba(201,169,110,0.2); position: relative; }
+  .ba-card-inner { flex: 1; position: relative; }
+  .ba-card-img { width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: transform 0.3s; }
+  .ba-card-divider { width: 2px; background: rgba(255,255,255,0.5); flex-shrink: 0; z-index: 1; }
+  .ba-card-label { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.8); color: #fff; padding: 3px 12px; border-radius: 20px; font-size: 11px; white-space: nowrap; font-family: sans-serif; }
+
   @media (max-width: 900px) {
     nav { padding: 16px 24px; }
     .nav-links, .nav-cta { display: none; }
-    section, .why-inner, .parts-inner, .process-inner, .ba-inner,
-    .skin-inner, .pricing-inner, .testimonials-inner, .faq-inner { padding: 60px 24px; }
-     .hero-content { padding: 100px 24px; }
-     .hero { margin-top: 60px; }
-    .hero-stats { left: 24px; right: 24px; bottom: 40px; flex-wrap: wrap; }
-    .hero h1 { font-size: 42px; }
-    .why-grid, .skin-grid, .faq-grid, .cta-inner { grid-template-columns: 1fr; }
-    .parts-grid { grid-template-columns: 1fr 1fr; }
-    .part-card.wide { grid-column: span 2; }
-    .process-steps { grid-template-columns: 1fr 1fr; }
-    .pricing-grid, .testimonials-grid { grid-template-columns: 1fr; }
-    .foot-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+    
+    section, 
+    .path-section, .why-section, .parts-section, .process-section, 
+    .ba-section-custom, .skin-section, .pricing-section, 
+    .testimonials-section, .faq-section, .cta-section { padding: 40px 0; }
+
+    .why-inner, .parts-inner, .process-inner, .ba-inner,
+    .skin-inner, .pricing-inner, .testimonials-inner, .faq-inner,
+    .path-inner, .ba-inner-custom { padding: 0 20px; }
+    
+    .hero { min-height: auto; padding-bottom: 60px; }
+    .hero-content { padding: 60px 20px 20px; text-align: center; }
+    .hero h1 { font-size: 38px; max-width: 100%; margin: 0 auto 20px; }
+    .hero-sub { margin: 0 auto 30px; font-size: 14px; }
+    .hero-btns { justify-content: center; }
+    .hero-img { position: relative; width: 100%; height: 350px; opacity: 1; margin-top: 20px; order: 2; }
+    .hero-img-overlay { display: none; }
+    .hero { flex-direction: column; }
+    
+    .hero-stats { position: static; max-width: 100%; margin-top: 30px; display: grid; grid-template-columns: 1fr 1fr; }
+    .hero-stat { padding: 15px; border-right: none; border-bottom: 1px solid rgba(201,169,110,0.1); }
+    .hero-stat:nth-child(odd) { border-right: 1px solid rgba(201,169,110,0.1); }
+    
+    .why-grid, .skin-grid, .faq-grid, .cta-inner { grid-template-columns: 1fr; gap: 30px; }
+    .why-inner { text-align: center; }
+    .section-title { font-size: 30px; }
+    .section-line { margin: 15px auto 25px; }
+    .section-desc { margin-left: auto; margin-right: auto; font-size: 14px; }
+    .why-image-wrap img { height: 300px; }
+    .why-point { text-align: left; gap: 15px; }
+    .why-points { gap: 20px; margin-top: 30px; }
+    
+    .parts-grid { grid-template-columns: 1fr; }
+    .part-card.wide { grid-column: span 1; min-height: 280px; }
+    .part-card { aspect-ratio: 4/5; }
+    
+    .process-steps { grid-template-columns: 1fr; margin-top: 40px; }
+    .process-step { border-right: none; border-bottom: 1px solid rgba(201,169,110,0.1); padding: 30px 20px; }
+    .process-step:last-child { border-bottom: none; }
+    
+    .timeline-container { padding-left: 20px; margin-top: 30px; }
+    .timeline-line { left: 6px; }
+    .timeline-dot { left: -21px; width: 10px; height: 10px; }
+    .timeline-title { font-size: 20px; }
+    .timeline-step { margin-bottom: 35px; }
+    
+    .ba-grid-custom { grid-template-columns: 1fr; gap: 20px; margin-top: 40px; }
+    .ba-card-custom { height: 260px; }
+    .ba-header-custom { font-size: 32px; }
+    .ba-line-custom { width: 120px; margin-bottom: 30px; }
+    
+    .pricing-grid, .testimonials-grid { grid-template-columns: 1fr; gap: 20px; margin-top: 40px; }
+    .pricing-card { padding: 35px 20px; }
+    
+    .rating-bar { flex-direction: column; padding: 30px 20px; text-align: center; margin-top: 40px; }
+    .google-badge { justify-content: center; }
+    
+    .cta-inner { text-align: center; padding: 60px 20px; gap: 40px; }
+    .cta-actions { width: 100%; }
+    
+    .foot-grid { grid-template-columns: 1fr; gap: 35px; }
     .foot-bot { flex-direction: column; gap: 15px; text-align: center; }
-    footer { padding: 60px 24px; }
+    footer { padding: 50px 20px; }
   }
 </style>
 </head>
@@ -571,10 +641,7 @@
     <div class="why-grid">
       <div class="why-image-wrap">
         <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80" alt="Laser Treatment">
-        <div class="why-image-badge">
-          <span class="why-image-badge-num">55%</span>
-          <span class="why-image-badge-text">Off Today</span>
-        </div>
+
       </div>
       <div>
 
@@ -617,42 +684,42 @@
 </div>
 
 <!-- Structured Path -->
-<div class="path-section" style="background: var(--black); padding: 100px 0; border-bottom: 1px solid rgba(201,169,110,0.1);">
-  <div class="path-inner" style="max-width: 1300px; margin: 0 auto; padding: 0 60px;">
+<div class="path-section">
+  <div class="path-inner">
     <h2 class="section-title">A Structured Path to<br><em>Visible Transformation</em></h2>
     <div class="section-line"></div>
-    <p class="section-desc" style="margin-bottom: 60px;">Your Laser Hair Reduction journey at Skinnovation is designed as a progressive, result-oriented experience.</p>
+    <p class="section-desc">Your Laser Hair Reduction journey at Skinnovation is designed as a progressive, result-oriented experience.</p>
     
-    <div class="timeline-container" style="position: relative; padding-left: 40px; margin-top: 40px;">
+    <div class="timeline-container">
       <!-- Vertical Line -->
-      <div class="timeline-line" style="position: absolute; left: 16px; top: 0; bottom: 0; width: 1px; background: rgba(201,169,110,0.3);"></div>
+      <div class="timeline-line"></div>
       
       <!-- Step 1 -->
-      <div class="timeline-step" style="position: relative; margin-bottom: 50px;">
-        <div class="timeline-dot" style="position: absolute; left: -31px; top: 5px; width: 15px; height: 15px; background: var(--gold); border-radius: 50%; box-shadow: 0 0 15px rgba(201,169,110,0.4);"></div>
-        <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 400; color: var(--gold); margin-bottom: 10px;">Consultation & Skin Analysis</h4>
-        <p style="font-size: 14px; color: var(--text-muted); line-height: 1.8; max-width: 700px;">A detailed assessment is conducted to understand your skin type, hair growth pattern, and treatment suitability.</p>
+      <div class="timeline-step">
+        <div class="timeline-dot"></div>
+        <h4 class="timeline-title">Consultation & Skin Analysis</h4>
+        <p class="timeline-desc">A detailed assessment is conducted to understand your skin type, hair growth pattern, and treatment suitability.</p>
       </div>
       
       <!-- Step 2 -->
-      <div class="timeline-step" style="position: relative; margin-bottom: 50px;">
-        <div class="timeline-dot" style="position: absolute; left: -31px; top: 5px; width: 15px; height: 15px; background: var(--gold); border-radius: 50%; box-shadow: 0 0 15px rgba(201,169,110,0.4);"></div>
-        <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 400; color: var(--gold); margin-bottom: 10px;">Patch Test & Calibration</h4>
-        <p style="font-size: 14px; color: var(--text-muted); line-height: 1.8; max-width: 700px;">A patch test ensures optimal laser settings are selected for your skin, prioritizing both safety and effectiveness.</p>
+      <div class="timeline-step">
+        <div class="timeline-dot"></div>
+        <h4 class="timeline-title">Patch Test & Calibration</h4>
+        <p class="timeline-desc">A patch test ensures optimal laser settings are selected for your skin, prioritizing both safety and effectiveness.</p>
       </div>
       
       <!-- Step 3 -->
-      <div class="timeline-step" style="position: relative; margin-bottom: 50px;">
-        <div class="timeline-dot" style="position: absolute; left: -31px; top: 5px; width: 15px; height: 15px; background: var(--gold); border-radius: 50%; box-shadow: 0 0 15px rgba(201,169,110,0.4);"></div>
-        <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 400; color: var(--gold); margin-bottom: 10px;">Progressive Reduction Phase</h4>
-        <p style="font-size: 14px; color: var(--text-muted); line-height: 1.8; max-width: 700px;">With each session, hair regrowth becomes finer, lighter, and significantly reduced as different growth cycles are treated.</p>
+      <div class="timeline-step">
+        <div class="timeline-dot"></div>
+        <h4 class="timeline-title">Progressive Reduction Phase</h4>
+        <p class="timeline-desc">With each session, hair regrowth becomes finer, lighter, and significantly reduced as different growth cycles are treated.</p>
       </div>
       
       <!-- Step 4 -->
-      <div class="timeline-step" style="position: relative;">
-        <div class="timeline-dot" style="position: absolute; left: -31px; top: 5px; width: 15px; height: 15px; background: var(--gold); border-radius: 50%; box-shadow: 0 0 15px rgba(201,169,110,0.4);"></div>
-        <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 400; color: var(--gold); margin-bottom: 10px;">Visible Results & Skin Refinement</h4>
-        <p style="font-size: 14px; color: var(--text-muted); line-height: 1.8; max-width: 700px;">Clients experience smoother skin, reduced ingrowth, and improved texture over time.</p>
+      <div class="timeline-step">
+        <div class="timeline-dot"></div>
+        <h4 class="timeline-title">Visible Results & Skin Refinement</h4>
+        <p class="timeline-desc">Clients experience smoother skin, reduced ingrowth, and improved texture over time.</p>
       </div>
     </div>
   </div>
@@ -767,72 +834,63 @@
 
 
 <!-- Before & After Section -->
-<div style="padding: 100px 0; background: var(--black); text-align: center;">
-  <div style="max-width: 1300px; margin: 0 auto; padding: 0 40px;">
+<div class="ba-section-custom">
+  <div class="ba-inner-custom">
     
-    <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 400; color: var(--gold); margin-bottom: 12px;">Before & After</h2>
-    <div style="width: 250px; height: 1px; border-bottom: 2px dotted #e83e8c; margin: 0 auto 50px;"></div>
+    <h2 class="ba-header-custom">Before & After</h2>
+    <div class="ba-line-custom"></div>
 
-    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 50px;">
+    <div class="ba-grid-custom">
       
       <!-- Card 1: Face - Vertical Split -->
-      <div style="display: flex; height: 300px; border-radius: 10px; overflow: hidden; border: 1px solid rgba(201,169,110,0.2); position: relative;">
-        <!-- Left: Before (skin with hair - darker filter) -->
-        <div style="flex: 1; position: relative;">
-          <img src="https://images.pexels.com/photos/5240678/pexels-photo-5240678.jpeg?auto=compress&cs=tinysrgb&w=400&q=90" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: sepia(0.5) contrast(1.1) brightness(0.8) saturate(1.3);" alt="Face Before LHR">
-          <div style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.8); color: #fff; padding: 3px 12px; border-radius: 20px; font-size: 11px; white-space: nowrap; font-family: sans-serif;">Before</div>
+      <div class="ba-card-custom">
+        <div class="ba-card-inner">
+          <img class="ba-card-img" src="https://images.pexels.com/photos/5240678/pexels-photo-5240678.jpeg?auto=compress&cs=tinysrgb&w=400&q=90" style="filter: sepia(0.5) contrast(1.1) brightness(0.8) saturate(1.3);" alt="Face Before LHR">
+          <div class="ba-card-label">Before</div>
         </div>
-        <!-- Divider line -->
-        <div style="width: 2px; background: rgba(255,255,255,0.5); flex-shrink: 0; z-index: 1;"></div>
-        <!-- Right: After (clean smooth skin) -->
-        <div style="flex: 1; position: relative;">
-          <img src="https://images.pexels.com/photos/3764016/pexels-photo-3764016.jpeg?auto=compress&cs=tinysrgb&w=400&q=90" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: brightness(1.1) contrast(1.05) saturate(1.1);" alt="Face After LHR">
-          <div style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.8); color: #fff; padding: 3px 12px; border-radius: 20px; font-size: 11px; white-space: nowrap; font-family: sans-serif;">After</div>
+        <div class="ba-card-divider"></div>
+        <div class="ba-card-inner">
+          <img class="ba-card-img" src="https://images.pexels.com/photos/3764016/pexels-photo-3764016.jpeg?auto=compress&cs=tinysrgb&w=400&q=90" style="filter: brightness(1.1) contrast(1.05) saturate(1.1);" alt="Face After LHR">
+          <div class="ba-card-label">After</div>
         </div>
       </div>
 
       <!-- Card 2: Legs - Vertical Split -->
-      <div style="display: flex; height: 300px; border-radius: 10px; overflow: hidden; border: 1px solid rgba(201,169,110,0.2); position: relative;">
-        <!-- Left: Before -->
-        <div style="flex: 1; position: relative;">
-          <img src="https://images.pexels.com/photos/6621461/pexels-photo-6621461.jpeg?auto=compress&cs=tinysrgb&w=400&q=90" style="width: 100%; height: 100%; object-fit: cover; object-position: center; filter: sepia(0.4) contrast(1.15) brightness(0.75) saturate(1.4);" alt="Legs Before LHR">
-          <div style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.8); color: #fff; padding: 3px 12px; border-radius: 20px; font-size: 11px; white-space: nowrap; font-family: sans-serif;">Before</div>
+      <div class="ba-card-custom">
+        <div class="ba-card-inner">
+          <img class="ba-card-img" src="https://images.pexels.com/photos/6621461/pexels-photo-6621461.jpeg?auto=compress&cs=tinysrgb&w=400&q=90" style="filter: sepia(0.4) contrast(1.15) brightness(0.75) saturate(1.4);" alt="Legs Before LHR">
+          <div class="ba-card-label">Before</div>
         </div>
-        <div style="width: 2px; background: rgba(255,255,255,0.5); flex-shrink: 0;"></div>
-        <!-- Right: After -->
-        <div style="flex: 1; position: relative;">
-          <img src="https://images.pexels.com/photos/5938421/pexels-photo-5938421.jpeg?auto=compress&cs=tinysrgb&w=400&q=90" style="width: 100%; height: 100%; object-fit: cover; object-position: center; filter: brightness(1.15) contrast(1.05) saturate(1.1);" alt="Legs After LHR">
-          <div style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.8); color: #fff; padding: 3px 12px; border-radius: 20px; font-size: 11px; white-space: nowrap; font-family: sans-serif;">After</div>
+        <div class="ba-card-divider"></div>
+        <div class="ba-card-inner">
+          <img class="ba-card-img" src="https://images.pexels.com/photos/5938421/pexels-photo-5938421.jpeg?auto=compress&cs=tinysrgb&w=400&q=90" style="filter: brightness(1.15) contrast(1.05) saturate(1.1);" alt="Legs After LHR">
+          <div class="ba-card-label">After</div>
         </div>
       </div>
 
       <!-- Card 3: Underarms - Vertical Split -->
-      <div style="display: flex; height: 300px; border-radius: 10px; overflow: hidden; border: 1px solid rgba(201,169,110,0.2); position: relative;">
-        <!-- Left: Before -->
-        <div style="flex: 1; position: relative;">
-          <img src="https://images.pexels.com/photos/6621462/pexels-photo-6621462.jpeg?auto=compress&cs=tinysrgb&w=400&q=90" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: sepia(0.5) contrast(1.1) brightness(0.8) saturate(1.3);" alt="Underarms Before LHR">
-          <div style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.8); color: #fff; padding: 3px 12px; border-radius: 20px; font-size: 11px; white-space: nowrap; font-family: sans-serif;">Before</div>
+      <div class="ba-card-custom">
+        <div class="ba-card-inner">
+          <img class="ba-card-img" src="https://images.pexels.com/photos/6621462/pexels-photo-6621462.jpeg?auto=compress&cs=tinysrgb&w=400&q=90" style="filter: sepia(0.5) contrast(1.1) brightness(0.8) saturate(1.3);" alt="Underarms Before LHR">
+          <div class="ba-card-label">Before</div>
         </div>
-        <div style="width: 2px; background: rgba(255,255,255,0.5); flex-shrink: 0;"></div>
-        <!-- Right: After -->
-        <div style="flex: 1; position: relative;">
-          <img src="https://images.pexels.com/photos/3997987/pexels-photo-3997987.jpeg?auto=compress&cs=tinysrgb&w=400&q=90" style="width: 100%; height: 100%; object-fit: cover; object-position: center; filter: brightness(1.12) contrast(1.05) saturate(1.1);" alt="Underarms After LHR">
-          <div style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.8); color: #fff; padding: 3px 12px; border-radius: 20px; font-size: 11px; white-space: nowrap; font-family: sans-serif;">After</div>
+        <div class="ba-card-divider"></div>
+        <div class="ba-card-inner">
+          <img class="ba-card-img" src="https://images.pexels.com/photos/3997987/pexels-photo-3997987.jpeg?auto=compress&cs=tinysrgb&w=400&q=90" style="filter: brightness(1.12) contrast(1.05) saturate(1.1);" alt="Underarms After LHR">
+          <div class="ba-card-label">After</div>
         </div>
       </div>
 
       <!-- Card 4: Full Body - Vertical Split -->
-      <div style="display: flex; height: 300px; border-radius: 10px; overflow: hidden; border: 1px solid rgba(201,169,110,0.2); position: relative;">
-        <!-- Left: Before -->
-        <div style="flex: 1; position: relative;">
-          <img src="https://images.pexels.com/photos/5240677/pexels-photo-5240677.jpeg?auto=compress&cs=tinysrgb&w=400&q=90" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: sepia(0.45) contrast(1.1) brightness(0.78) saturate(1.3);" alt="Body Before LHR">
-          <div style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.8); color: #fff; padding: 3px 12px; border-radius: 20px; font-size: 11px; white-space: nowrap; font-family: sans-serif;">Before</div>
+      <div class="ba-card-custom">
+        <div class="ba-card-inner">
+          <img class="ba-card-img" src="https://images.pexels.com/photos/5240677/pexels-photo-5240677.jpeg?auto=compress&cs=tinysrgb&w=400&q=90" style="filter: sepia(0.45) contrast(1.1) brightness(0.78) saturate(1.3);" alt="Body Before LHR">
+          <div class="ba-card-label">Before</div>
         </div>
-        <div style="width: 2px; background: rgba(255,255,255,0.5); flex-shrink: 0;"></div>
-        <!-- Right: After -->
-        <div style="flex: 1; position: relative;">
-          <img src="https://images.pexels.com/photos/5938619/pexels-photo-5938619.jpeg?auto=compress&cs=tinysrgb&w=400&q=90" style="width: 100%; height: 100%; object-fit: cover; object-position: center; filter: brightness(1.15) contrast(1.05) saturate(1.1);" alt="Body After LHR">
-          <div style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.8); color: #fff; padding: 3px 12px; border-radius: 20px; font-size: 11px; white-space: nowrap; font-family: sans-serif;">After</div>
+        <div class="ba-card-divider"></div>
+        <div class="ba-card-inner">
+          <img class="ba-card-img" src="https://images.pexels.com/photos/5938619/pexels-photo-5938619.jpeg?auto=compress&cs=tinysrgb&w=400&q=90" style="filter: brightness(1.15) contrast(1.05) saturate(1.1);" alt="Body After LHR">
+          <div class="ba-card-label">After</div>
         </div>
       </div>
       
@@ -859,8 +917,7 @@
         <div class="pricing-area">Small Area</div>
         <div class="pricing-name">Upper Lip / Chin</div>
         <div class="pricing-divider"></div>
-        <div class="pricing-price"><sup>₹</sup>1,999</div>
-        <div class="pricing-session">per session · 6-session package available</div>
+
         <ul class="pricing-features">
           <li>FDA-approved diode laser</li>
           <li>Skin patch test included</li>
@@ -874,8 +931,7 @@
         <div class="pricing-area">Full Package</div>
         <div class="pricing-name">Full Body LHR</div>
         <div class="pricing-divider"></div>
-        <div class="pricing-price"><sup>₹</sup>29,999</div>
-        <div class="pricing-session">complete package · 8 sessions included</div>
+
         <ul class="pricing-features">
           <li>All body zones covered</li>
           <li>Priority appointment slots</li>
@@ -889,8 +945,7 @@
         <div class="pricing-area">Medium Area</div>
         <div class="pricing-name">Arms / Legs / Bikini</div>
         <div class="pricing-divider"></div>
-        <div class="pricing-price"><sup>₹</sup>4,999</div>
-        <div class="pricing-session">per session · 6-session package available</div>
+
         <ul class="pricing-features">
           <li>FDA-approved diode laser</li>
           <li>Skin patch test included</li>
@@ -929,17 +984,7 @@
         <div class="testimonial-role">Face & Underarm LHR</div>
       </div>
     </div>
-    <div class="rating-bar">
-      <div class="rating-score">4.9</div>
-      <div class="rating-details">
-        <div class="rating-stars">★★★★★</div>
-        <div class="rating-label">Based on 98+ Google Reviews</div>
-      </div>
-      <div class="google-badge">
-        <div class="google-g">G</div>
-        <div class="google-text">Verified<br>Google Reviews</div>
-      </div>
-    </div>
+
   </div>
 </div>
 

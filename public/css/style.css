@@ -415,70 +415,99 @@ footer{background:#0a0a0a; border-top:1px solid rgba(212,181,160,0.1); padding:1
 .wa:hover{transform:scale(1.1);}
 .wa svg{fill:white;width:24px;height:24px;}
 
-/* MOBILE */
-@media(max-width:860px){
-  #navbar{padding:0 24px;}
-  .nav-book{display:none;}
-  .menu-toggle{display:flex;}
-  
-  .nav-links{
-    position:fixed;top:0;right:-100%;width:100%;height:100vh;
-    background:rgba(26,26,26,0.98);backdrop-filter:blur(30px);
-    flex-direction:column;align-items:center;justify-content:center;
-    gap:40px;transition:0.5s cubic-bezier(0.77,0,0.18,1);z-index:2050;
+/* MOBILE OVERHAUL */
+@media (max-width: 900px) {
+  nav#navbar { padding: 0 20px; height: 64px; }
+  .nav-links {
+    position: fixed; top: 0; right: -100%; width: 85%; height: 100vh;
+    background: #111; backdrop-filter: blur(40px);
+    flex-direction: column; align-items: flex-start; justify-content: flex-start;
+    padding: 100px 40px; gap: 30px; transition: right 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    z-index: 2050; box-shadow: -10px 0 30px rgba(0,0,0,0.5);
   }
-  .nav-links.open{right:0;}
-  .nav-links a{font-size:18px;letter-spacing:0.3em;color:rgba(255,255,255,0.7);}
-  .nav-links a:hover{color:var(--white);}
+  .nav-links.open { right: 0; }
+  .nav-links li { width: 100%; }
+  .nav-links a { 
+    font-size: 18px; letter-spacing: 4px; color: var(--white); 
+    display: block; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 15px;
+  }
+  .nav-links a.active { color: var(--skin); }
+  .nav-cta, .nav-book { display: none; }
+  .menu-toggle { display: flex; z-index: 2200; }
+  
+  .cnt { padding: 0 20px; }
+  section, #about, #skin-treatments-home, #booking, #khs-strip { padding: 60px 0; }
 
-  #hero-slider{height:100vh;}
-  .hero-bg { width: 100%; height: 50%; }
-  .hero-bg-salon { top: 50%; bottom: 0; left: 0; right: auto; }
-  .hero-circle-container{width:90vw;flex-direction:column;}
-  .circle-salon{border-left:none;border-top:1px solid rgba(255,255,255,0.08);}
-  .hero-scroll{bottom:20px;}
+  /* Hero: perfect circle on mobile like desktop */
+  #hero-slider { 
+    height: 100vh; 
+    overflow: hidden;
+    padding-top: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-bg { width: 50%; height: 100%; top: 0; bottom: 0; position: absolute; }
+  .hero-bg-clinic { left: 0; right: auto; }
+  .hero-bg-salon { right: 0; left: auto; top: 0; }
+  
+  /* Force perfect circle by setting same width & height */
+  .hero-circle-container { 
+    width: 85vw;
+    height: 85vw;
+    max-width: 380px;
+    max-height: 380px;
+    flex-direction: row;
+    border-radius: 50%;
+    overflow: hidden;
+    aspect-ratio: unset;
+  }
+  .circle-half { 
+    width: 50%;
+    height: 100%;
+    flex: none;
+    padding: 0 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  .circle-salon { border-left: 1px solid rgba(255,255,255,0.08); border-top: none; }
+  .ch-heading { font-size: clamp(18px, 6vw, 28px); line-height: 1.0; }
+  .ch-label { font-size: 7px; letter-spacing: 0.2em; margin-bottom: 8px; }
 
-  .about-grid,.lhr-home-grid,.khs-box,.bk-grid,.foot-grid,.lhr-2col,.khs-feature-grid,.lhr-hl-grid,.grid-3,.lhr-zones,.lhr-proc{grid-template-columns:1fr!important;gap:40px!important;}
-  .cnt,.sp-cnt,.lhr-details,.sp-hero-cnt,.lhr-big-cnt,.skin-cta{padding-left:24px!important;padding-right:24px!important;}
-  .skin-cta{padding:60px 24px!important;flex-direction:column;text-align:center;gap:30px;}
-  .cta-btns{justify-content:center;}
+  .about-grid, .sth-grid, .lhr-home-grid, .khs-box, .bk-grid, .foot-grid, .lhr-2col, .khs-feature-grid, .lhr-hl-grid, .grid-3, .lhr-zones, .lhr-proc { 
+    grid-template-columns: 1fr !important; gap: 40px !important; 
+  }
   
-  .ab-img-sm{display:none;}
-  .ab-h{font-size:38px;}
-  .ast-n{font-size:32px;}
+  .sth-left { order: 2; text-align: center; }
+  .sth-right { order: 1; }
+  .sth-visual { height: 400px; margin-left: 0; }
+  .sth-pills { justify-content: center; }
+  .sth-h { font-size: 36px; }
+
+  .lhr-img-col { height: 400px; }
+  .lhr-txt { padding: 40px 0 !important; text-align: center; }
+  .lhr-why { grid-template-columns: 1fr; }
+  .lhr-btns { justify-content: center; }
+
+  .khs-txt { padding: 40px 20px !important; border-left: none; border-top: 1px solid var(--border-b); text-align: center; }
+  .kf { justify-content: center; }
+
+  .foot-grid { text-align: center; gap: 48px !important; }
+  .fsoc { justify-content: center; display: flex; }
+  .foot-bot { flex-direction: column; gap: 20px; text-align: center; padding: 40px 0; }
   
-  .lhr-txt{padding:60px 0!important;min-height:auto!important;}
-  .khs-txt{padding:40px 0!important;border-left:none;border-top:1px solid var(--border-b);}
-  
-  .bk-l,.bk-r{padding:40px 24px!important;}
-  .fg-row{grid-template-columns:1fr!important;}
-  
-  .sp-sec-head{flex-direction:column;gap:14px;align-items:flex-start;}
-  .sp-sec-note,.sp-sec-note-b{text-align:left;max-width:100%;}
-  .sp-pgnum{display:none;}
-  .sp-heading{font-size:46px!important;}
-  .sp-title{font-size:52px!important;}
-  .sp-hero-cnt,.lhr-big-cnt{padding:0 24px 60px!important;}
-  
-  .lhr-zones{grid-template-columns:1fr 1fr!important;gap:12px!important;}
-  .lhr-proc{display:flex;flex-wrap:wrap;justify-content:center;gap:30px;}
-  .lhr-proc::before{display:none;}
-  .lhr-ps p{max-width:100%;}
-  
-  .foot-bot{flex-direction:column;gap:12px;text-align:center;}
-  
-  .split-content{padding:0 24px 60px!important;}
+  .sp-hero { min-height: 60vh; }
+  .sp-hero-cnt { padding: 0 20px 60px !important; text-align: center; }
+  .sp-title { font-size: 52px !important; }
+  .sp-pgnum { display: none; }
 }
 
-@media(max-width:480px){
-  .sp-heading{font-size:38px!important;}
-  .sp-title{font-size:44px!important;}
-  .sp-desc{font-size:14px;}
-  .ab-h{font-size:32px;}
-  .khs-h{font-size:28px;}
-  .btn-skin,.btn-bk,.btn-wh,.btn-ow{width:100%;text-align:center;}
-  .lhr-zones{grid-template-columns:1fr!important;}
+@media (max-width: 480px) {
+  .hero-circle-container { border-radius: 12px; }
+  .ch-heading { font-size: 34px; }
+  .btn-skin, .btn-bk, .btn-wh, .btn-ow, .btn-bd { width: 100%; text-align: center; }
 }
+
 
 /* ============ SKIN TREATMENTS HOME SECTION ============ */
 #skin-treatments-home{background:var(--off-white);padding:96px 0;border-top:1px solid var(--border-b);border-bottom:1px solid var(--border-b);}
@@ -570,8 +599,26 @@ footer{background:#0a0a0a; border-top:1px solid rgba(212,181,160,0.1); padding:1
   .s-cards { grid-template-columns: repeat(2, 1fr); }
 }
 @media(max-width: 600px) {
-  .s-cards { grid-template-columns: 1fr; }
-  .s-card { padding: 40px 24px; }
+  .s-cards { 
+    grid-template-columns: 1fr; 
+    gap: 0;
+    border: none;
+    background: transparent;
+  }
+  .s-card { 
+    padding: 36px 24px; 
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    border-right: none;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .s-card:last-child { border-bottom: none; }
   .s-dept-head { flex-direction: column; align-items: flex-start; gap: 20px; }
   .s-dept-h { font-size: 38px; }
+  .sp-cnt { padding: 0 20px !important; }
+  .s-dept { padding: 50px 0; }
+  .btn-bk { width: 100%; text-align: center; }
+  .khs-feature-grid { grid-template-columns: 1fr !important; gap: 0 !important; }
+  .khs-fi img { aspect-ratio: 16/9; }
+  .khs-steps { grid-template-columns: 1fr !important; }
 }
