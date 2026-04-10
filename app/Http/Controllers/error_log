@@ -1,0 +1,8 @@
+[25-Mar-2026 03:15:17 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Controller" not found in /home/unrremqx/skinnovation.trivoraconsultancy.com/app/Http/Controllers/Controller.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/unrremqx/skinnovation.trivoraconsultancy.com/app/Http/Controllers/Controller.php on line 10
+[25-Mar-2026 07:17:48 UTC] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/unrremqx/skinnovation.trivoraconsultancy.com/app/Http/Controllers/HomeController.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/unrremqx/skinnovation.trivoraconsultancy.com/app/Http/Controllers/HomeController.php on line 7

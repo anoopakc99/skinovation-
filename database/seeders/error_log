@@ -1,0 +1,4 @@
+[24-Mar-2026 22:13:58 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Seeder" not found in /home/unrremqx/skinnovation.trivoraconsultancy.com/database/seeders/DatabaseSeeder.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/unrremqx/skinnovation.trivoraconsultancy.com/database/seeders/DatabaseSeeder.php on line 8

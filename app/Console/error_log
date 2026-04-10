@@ -1,0 +1,4 @@
+[25-Mar-2026 03:10:07 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/unrremqx/skinnovation.trivoraconsultancy.com/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/unrremqx/skinnovation.trivoraconsultancy.com/app/Console/Kernel.php on line 8

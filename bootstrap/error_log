@@ -1,0 +1,12 @@
+[21-Mar-2026 14:36:50 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Application" not found in /home/unrremqx/skinnovation.trivoraconsultancy.com/bootstrap/app.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/unrremqx/skinnovation.trivoraconsultancy.com/bootstrap/app.php on line 14
+[24-Mar-2026 20:32:32 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Application" not found in /home/unrremqx/skinnovation.trivoraconsultancy.com/bootstrap/app.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/unrremqx/skinnovation.trivoraconsultancy.com/bootstrap/app.php on line 14
+[29-Mar-2026 10:34:15 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Application" not found in /home/unrremqx/skinnovation.trivoraconsultancy.com/bootstrap/app.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/unrremqx/skinnovation.trivoraconsultancy.com/bootstrap/app.php on line 14

@@ -1,0 +1,8 @@
+[21-Mar-2026 14:36:51 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Testing\TestCase" not found in /home/unrremqx/skinnovation.trivoraconsultancy.com/tests/TestCase.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/unrremqx/skinnovation.trivoraconsultancy.com/tests/TestCase.php on line 7
+[24-Mar-2026 23:18:43 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Testing\TestCase" not found in /home/unrremqx/skinnovation.trivoraconsultancy.com/tests/TestCase.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/unrremqx/skinnovation.trivoraconsultancy.com/tests/TestCase.php on line 7

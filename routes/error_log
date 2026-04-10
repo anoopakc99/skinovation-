@@ -1,0 +1,48 @@
+[21-Mar-2026 14:36:50 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/unrremqx/skinnovation.trivoraconsultancy.com/routes/api.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/unrremqx/skinnovation.trivoraconsultancy.com/routes/api.php on line 17
+[21-Mar-2026 14:36:50 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/unrremqx/skinnovation.trivoraconsultancy.com/routes/web.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/unrremqx/skinnovation.trivoraconsultancy.com/routes/web.php on line 17
+[21-Mar-2026 14:36:51 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Artisan" not found in /home/unrremqx/skinnovation.trivoraconsultancy.com/routes/console.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/unrremqx/skinnovation.trivoraconsultancy.com/routes/console.php on line 17
+[21-Mar-2026 14:36:51 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Broadcast" not found in /home/unrremqx/skinnovation.trivoraconsultancy.com/routes/channels.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/unrremqx/skinnovation.trivoraconsultancy.com/routes/channels.php on line 16
+[24-Mar-2026 20:31:28 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/unrremqx/skinnovation.trivoraconsultancy.com/routes/web.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/unrremqx/skinnovation.trivoraconsultancy.com/routes/web.php on line 17
+[24-Mar-2026 20:31:29 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/unrremqx/skinnovation.trivoraconsultancy.com/routes/api.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/unrremqx/skinnovation.trivoraconsultancy.com/routes/api.php on line 17
+[24-Mar-2026 20:36:01 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Artisan" not found in /home/unrremqx/skinnovation.trivoraconsultancy.com/routes/console.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/unrremqx/skinnovation.trivoraconsultancy.com/routes/console.php on line 17
+[24-Mar-2026 20:57:23 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Broadcast" not found in /home/unrremqx/skinnovation.trivoraconsultancy.com/routes/channels.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/unrremqx/skinnovation.trivoraconsultancy.com/routes/channels.php on line 16
+[29-Mar-2026 10:33:54 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/unrremqx/skinnovation.trivoraconsultancy.com/routes/web.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/unrremqx/skinnovation.trivoraconsultancy.com/routes/web.php on line 17
+[29-Mar-2026 10:33:54 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/unrremqx/skinnovation.trivoraconsultancy.com/routes/api.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/unrremqx/skinnovation.trivoraconsultancy.com/routes/api.php on line 17
+[29-Mar-2026 10:38:52 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Artisan" not found in /home/unrremqx/skinnovation.trivoraconsultancy.com/routes/console.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/unrremqx/skinnovation.trivoraconsultancy.com/routes/console.php on line 17
+[29-Mar-2026 10:59:26 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Broadcast" not found in /home/unrremqx/skinnovation.trivoraconsultancy.com/routes/channels.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/unrremqx/skinnovation.trivoraconsultancy.com/routes/channels.php on line 16
