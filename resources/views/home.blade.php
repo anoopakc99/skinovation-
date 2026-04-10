@@ -205,7 +205,7 @@
               <div style="width:24px; height:24px; border:1px solid #d4b5a0; border-radius:50%; position:relative;">
                 <div style="width:4px; height:4px; background:#d4b5a0; border-radius:50%; position:absolute; top:2px; right:-1px;"></div>
               </div>
-              <div class="foot-logo" style="margin-bottom:0; font-size:24px;">Skinnov<span>a</span>tion</div>
+              <div class="foot-logo" style="margin-bottom:0; font-size:24px;">Skinnovation</div>
             </div>
             <p class="foot-p" style="font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.4); max-width: 320px; margin-bottom: 30px;">Lucknow's premier aesthetic studio where medical-grade skin science meets luxury salon artistry.</p>
             <div class="fsoc">
@@ -617,7 +617,7 @@
               <div style="width:24px; height:24px; border:1px solid #d4b5a0; border-radius:50%; position:relative;">
                 <div style="width:4px; height:4px; background:#d4b5a0; border-radius:50%; position:absolute; top:2px; right:-1px;"></div>
               </div>
-              <div class="foot-logo" style="margin-bottom:0; font-size:24px;">Skinnov<span>a</span>tion</div>
+              <div class="foot-logo" style="margin-bottom:0; font-size:24px;">Skinnovation</div>
             </div>
             <p class="foot-p" style="font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.4); max-width: 320px; margin-bottom: 30px;">Lucknow's premier aesthetic studio where medical-grade skin science meets luxury salon artistry.</p>
             <div class="fsoc">
