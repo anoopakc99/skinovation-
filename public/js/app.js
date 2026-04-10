@@ -1,8 +1,8 @@
 /* CURSOR */
 const cur=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
 let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx-4+'px';cur.style.top=my-4+'px';});
-(function anim(){rx+=(mx-rx-16)*0.1;ry+=(my-ry-16)*0.1;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(anim);})();
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
+(function anim(){rx+=(mx-rx-15)*0.15;ry+=(my-ry-15)*0.15;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(anim);})();
 document.querySelectorAll('a,button,.oval-half,.scard,.lhr-zone').forEach(el=>{
   el.addEventListener('mouseenter',()=>{cur.style.transform='scale(2.5)';ring.style.transform='scale(1.6)';});
   el.addEventListener('mouseleave',()=>{cur.style.transform='scale(1)';ring.style.transform='scale(1)';});
