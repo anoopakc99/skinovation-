@@ -438,7 +438,7 @@ footer{background:#0a0a0a; border-top:1px solid rgba(212,181,160,0.1); padding:1
   .cnt { padding: 0 20px; }
   section, #about, #skin-treatments-home, #booking, #khs-strip { padding: 60px 0; }
 
-  /* Hero: perfect circle on mobile like desktop */
+  /* Hero: circular top/bottom split on mobile */
   #hero-slider { 
     height: 100vh; 
     overflow: hidden;
@@ -447,14 +447,15 @@ footer{background:#0a0a0a; border-top:1px solid rgba(212,181,160,0.1); padding:1
     align-items: center;
     justify-content: center;
   }
-  .hero-bg { width: 50%; height: 100%; top: 0; bottom: 0; position: absolute; }
-  .hero-bg-clinic { left: 0; right: auto; }
-  .hero-bg-salon { right: 0; left: auto; top: 0; }
+  /* Background images split top/bottom */
+  .hero-bg { width: 100%; height: 50%; left: 0; position: absolute; }
+  .hero-bg-clinic { top: 0; bottom: auto; }
+  .hero-bg-salon { top: 50%; bottom: 0; }
   
-  /* Force perfect circle by setting same width & height AND aspect-ratio to 1 */
+  /* Force perfect circle by setting same width & height */
   .hero-circle-container { 
     display: flex !important;
-    flex-direction: row !important;
+    flex-direction: column !important;
     width: 85vw !important;
     height: 85vw !important;
     max-width: 380px !important;
@@ -465,16 +466,16 @@ footer{background:#0a0a0a; border-top:1px solid rgba(212,181,160,0.1); padding:1
     margin: 0 auto;
   }
   .circle-half { 
-    width: 50% !important;
-    height: 100% !important;
+    width: 100% !important;
+    height: 50% !important;
     flex: none !important;
-    padding: 0 10px;
+    padding: 10px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .circle-salon { border-left: 1px solid rgba(255,255,255,0.08); border-top: none; }
+  .circle-salon { border-top: 1px solid rgba(255,255,255,0.08); border-left: none; }
   .ch-heading { font-size: clamp(18px, 6vw, 26px); line-height: 1.0; margin-bottom: 0; }
   .ch-label { font-size: 7px; letter-spacing: 0.15em; margin-bottom: 8px; text-align: center; }
 
