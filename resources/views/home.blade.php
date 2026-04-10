@@ -568,24 +568,45 @@
 
 
     <!-- Premium Booking Section -->
-    <section class="sp-booking-sec">
-      <div class="book-wrap">
-        <h2 class="book-title">Book Your <em>Appointment</em></h2>
-        <p class="book-subtitle">Book your appointment and experience premium hair and beauty services.</p>
+    <section class="sp-booking-sec" style="background: #0a0a0a; padding: 100px 0;">
+      <div class="book-wrap" style="max-width: 650px; margin: 0 auto; padding: 0 20px;">
+        <div class="book-card rv" style="background: #111; border: 1px solid rgba(255,255,255,0.05); padding: 60px 50px; border-radius: 8px; text-align: left;">
+          <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 400; color: #fff; margin-bottom: 40px;">Request Appointment</h2>
 
-        <div class="book-card rv" style="background:#000;border:1px solid rgba(255,255,255,0.12);">
-          <div class="bk-row">
-            <div class="bk-group"><label>Full Name</label><input type="text" class="bk-input" placeholder="Your name"></div>
-            <div class="bk-group"><label>Phone</label><input type="tel" class="bk-input" placeholder="+91 00000 00000"></div>
+          <div class="bk-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px;">
+            <div class="bk-group">
+              <label style="display: block; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 12px;">Full Name</label>
+              <input type="text" placeholder="Your name" style="width: 100%; padding: 14px 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; color: #fff; font-family: 'Jost', sans-serif; font-size: 14px; outline: none; transition: border-color 0.3s;" onfocus="this.style.borderColor='#d4b5a0'" onblur="this.style.borderColor='rgba(255,255,255,0.1)'">
+            </div>
+            <div class="bk-group">
+              <label style="display: block; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 12px;">Phone</label>
+              <input type="tel" placeholder="+91 00000 00000" style="width: 100%; padding: 14px 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; color: #fff; font-family: 'Jost', sans-serif; font-size: 14px; outline: none; transition: border-color 0.3s;" onfocus="this.style.borderColor='#d4b5a0'" onblur="this.style.borderColor='rgba(255,255,255,0.1)'">
+            </div>
           </div>
-          <button class="bk-btn" onclick="submitForm(this)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-            Book Appointment
+
+          <button onclick="submitForm(this)" style="width: 100%; background: #d4b5a0; color: #111; font-weight: 500; padding: 18px; border: none; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; border-radius: 4px; cursor: pointer; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
+            Book Appointment &rarr;
           </button>
         </div>
 
-        <a class="bk-back-btn" onclick="showPage('home')">← Back to Home</a>
+        <div style="text-align: center; margin-top: 40px;">
+            <a onclick="showPage('home')" style="color: rgba(255,255,255,0.4); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: color 0.3s;" onmouseover="this.style.color='#d4b5a0'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">← Back to Home</a>
+        </div>
       </div>
+
+      <style>
+        @media (max-width: 600px) {
+          .sp-booking-sec .bk-row {
+            grid-template-columns: 1fr !important;
+          }
+          .sp-booking-sec .book-card {
+            padding: 40px 24px !important;
+          }
+          .sp-booking-sec h2 {
+            font-size: 26px !important;
+          }
+        }
+      </style>
     </section>
     <!-- SALON FOOTER -->
     <footer style="background: #0a0a0a; border-top: 1px solid rgba(212,181,160,0.1); padding: 100px 0 50px;">
