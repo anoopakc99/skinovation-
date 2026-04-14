@@ -582,9 +582,9 @@ footer{background:#0a0a0a; border-top:1px solid rgba(212,181,160,0.1); padding:1
 .s-dept:nth-child(even) { background: var(--white); }
 .s-dept:nth-child(odd) { background: var(--off-white); border-top: 1px solid var(--border-b); border-bottom: 1px solid var(--border-b); }
 
-/* Salon page (SPA) dark canvas like Clinic/LHR */
-#page-salon { background: #0a0a0a; }
-#page-salon .s-dept { background: #0a0a0a; border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); }
+/* Salon page (SPA): match Korean Head Spa dark canvas */
+#page-salon { background: var(--black); }
+#page-salon .s-dept { background: var(--black); border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); }
 #page-salon .s-dept-head { border-bottom-color: rgba(255,255,255,0.10); }
 #page-salon .s-dept-h { color: var(--white); }
 #page-salon .sp-sec-note-b { color: rgba(255,255,255,0.55); }
