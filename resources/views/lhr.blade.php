@@ -63,34 +63,32 @@
 
   /* ── HERO ── */
   .hero {
-    min-height: 100vh; position: relative;
-    display: flex; align-items: center;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
     overflow: hidden;
-    margin-top: 72px;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
   }
   .hero-bg {
-    position: absolute; inset: 0;
-    background: linear-gradient(135deg, #0A0A0A 0%, #1a1208 50%, #0A0A0A 100%);
+    position: absolute;
+    inset: 0;
+    background: url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&q=80') 78% center/cover no-repeat;
+    filter: brightness(0.35);
   }
-  .hero-bg::before {
-    content: '';
-    position: absolute; inset: 0;
-    background-image:
-      radial-gradient(ellipse 60% 80% at 70% 50%, rgba(201,169,110,0.08) 0%, transparent 70%),
-      radial-gradient(ellipse 40% 60% at 20% 30%, rgba(201,169,110,0.05) 0%, transparent 60%);
-  }
-  .hero-img {
-    position: absolute; right: 0; top: 0; bottom: 0; width: 55%;
-    object-fit: cover; opacity: 0.35;
-  }
-  .hero-img-overlay {
-    position: absolute; right: 0; top: 0; bottom: 0; width: 60%;
-    background: linear-gradient(to right, var(--black) 0%, transparent 40%);
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(17, 17, 17, 0.7) 0%, rgba(17, 17, 17, 0.2) 60%, transparent 100%);
   }
   .hero-content {
-    position: relative; z-index: 2;
-    max-width: 1300px; margin: 0 auto; padding: 120px 60px;
-    width: 100%;
+    position: relative;
+    z-index: 2;
+    padding: 0 60px;
+    max-width: 700px;
   }
   .hero-tag {
     display: inline-block;
@@ -151,7 +149,9 @@
   }
 
   /* ── SECTION COMMON ── */
+  /* Keep consistent section widths, but let hero span full-bleed */
   section { padding: 100px 60px; max-width: 1300px; margin: 0 auto; }
+  section.hero { padding: 0; max-width: none; margin: 0; }
   .section-tag {
     font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
     color: var(--gold); margin-bottom: 16px; display: block;
@@ -162,6 +162,9 @@
     line-height: 1.15; color: var(--text-light);
   }
   .section-title em { color: var(--gold); font-style: italic; }
+
+  /* Slightly smaller for long LHR science heading */
+  .lhr-science-title { font-size: clamp(26px, 3.1vw, 42px); }
   .section-line {
     width: 60px; height: 1px; background: var(--gold);
     margin: 24px 0 36px;
@@ -273,8 +276,17 @@
     padding: 48px 36px;
     border-right: 1px solid rgba(201,169,110,0.15);
     position: relative;
+    background: rgba(10,10,10,0.25);
+    transition: transform 0.4s ease, background 0.35s ease, border-color 0.35s ease;
   }
   .process-step:last-child { border-right: none; }
+  .process-step:hover{
+    transform: translateY(-6px);
+    background: rgba(10,10,10,0.40);
+    border-right-color: rgba(201,169,110,0.28);
+  }
+  .process-step:last-child:hover { border-right-color: transparent; }
+
   .process-num {
     font-family: 'Cormorant Garamond', serif;
     font-size: 56px; font-weight: 300; color: rgba(201,169,110,0.18);
@@ -284,8 +296,24 @@
     width: 48px; height: 48px;
     border: 1px solid rgba(201,169,110,0.4);
     display: flex; align-items: center; justify-content: center;
-    color: var(--gold); font-size: 20px; margin-bottom: 20px;
+    color: var(--gold); margin-bottom: 20px;
+    background: rgba(201,169,110,0.06);
+    transition: background 0.35s ease, color 0.35s ease, transform 0.4s ease, border-color 0.35s ease;
   }
+  .process-step:hover .process-step-icon{
+    background: var(--gold);
+    color: #0a0a0a;
+    border-color: rgba(255,255,255,0.08);
+    transform: translateY(-1px);
+  }
+  .process-step-icon svg{
+    width: 22px;
+    height: 22px;
+    display: block;
+  }
+
+  /* Hide step numbers (01/02/03/04) */
+  .process-num { display: none; }
   .process-step-title {
     font-size: 13px; letter-spacing: 2px; text-transform: uppercase;
     color: var(--text-light); font-weight: 500; margin-bottom: 12px;
@@ -518,12 +546,116 @@
   /* ── CUSTOM SECTIONS (LHR) ── */
   .path-section { background: var(--black); padding: 100px 0; border-bottom: 1px solid rgba(201,169,110,0.1); }
   .path-inner { max-width: 1300px; margin: 0 auto; padding: 0 60px; }
-  .timeline-container { position: relative; padding-left: 40px; margin-top: 40px; }
-  .timeline-line { position: absolute; left: 16px; top: 0; bottom: 0; width: 1px; background: rgba(201,169,110,0.3); }
-  .timeline-step { position: relative; margin-bottom: 50px; }
-  .timeline-dot { position: absolute; left: -31px; top: 5px; width: 15px; height: 15px; background: var(--gold); border-radius: 50%; box-shadow: 0 0 15px rgba(201,169,110,0.4); }
-  .timeline-title { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 400; color: var(--gold); margin-bottom: 10px; }
-  .timeline-desc { font-size: 14px; color: var(--text-muted); line-height: 1.8; max-width: 700px; }
+  /* Center the section header; keep timeline readable */
+  .path-section .section-line { margin: 24px auto 36px; }
+  .path-section .section-desc { margin: 0 auto; text-align: center; max-width: 720px; }
+  .path-section .path-inner { text-align: center; }
+  /* Treatment-process timeline (use provided reference structure) */
+  .path-section .tp-wrap{
+    padding: 40px 0 80px;
+    position: relative;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  /* tp-heading removed in markup */
+  .path-section .tp-vline{
+    position: absolute;
+    left: 55%;
+    top: 70px;
+    bottom: 72px;
+    width: 1px;
+    background: rgba(201,169,110,0.28);
+    transform: translateX(-50%);
+  }
+  .path-section .tp-vline::before,
+  .path-section .tp-vline::after{
+    content:'';
+    position:absolute;
+    left:50%;
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background: rgba(201,169,110,0.55);
+    transform: translateX(-50%);
+    box-shadow: 0 0 0 7px rgba(201,169,110,0.06);
+  }
+  .path-section .tp-vline::before{ top: -5px; }
+  .path-section .tp-vline::after{ bottom: -5px; }
+  .path-section .tp-step{
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    min-height: 130px;
+  }
+  .path-section .tp-dot{
+    position: absolute;
+    left: 55%;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--gold);
+    transform: translateX(-50%);
+    margin-top: 6px;
+    z-index: 2;
+    box-shadow: 0 0 0 7px rgba(201,169,110,0.08);
+  }
+  .path-section .tp-hline-right{
+    position: absolute;
+    left: calc(55% + 7px);
+    height: 1px;
+    background: rgba(201,169,110,0.28);
+    width: 28px;
+    top: 12px;
+  }
+  .path-section .tp-hline-left{
+    position: absolute;
+    right: calc(45% + 7px);
+    height: 1px;
+    background: rgba(201,169,110,0.28);
+    width: 28px;
+    top: 12px;
+  }
+  .path-section .tp-text-right{
+    position: absolute;
+    left: calc(55% + 35px);
+    width: 40%;
+    padding-top: 2px;
+    text-align: left;
+  }
+  .path-section .tp-text-left{
+    width: calc(55% - 35px);
+    padding-right: 35px;
+    text-align: right;
+    padding-top: 2px;
+  }
+  .path-section .tp-title{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 6px;
+  }
+  .path-section .tp-sub{
+    font-size: 13px;
+    color: rgba(245,240,232,0.55);
+    line-height: 1.6;
+    font-family: 'Jost', sans-serif;
+  }
+  @media (max-width: 860px){
+    .path-section .tp-wrap{ max-width: 760px; padding: 32px 0 64px; }
+    .path-section .tp-vline{ left: 18px; transform: none; }
+    .path-section .tp-dot{ left: 18px; transform: none; }
+    .path-section .tp-hline-right,
+    .path-section .tp-hline-left{ left: 24px; right: auto; width: 18px; }
+    .path-section .tp-text-right,
+    .path-section .tp-text-left{
+      position: static;
+      width: auto;
+      padding: 0 0 0 52px;
+      text-align: left;
+    }
+    .path-section .tp-step{ min-height: auto; padding-bottom: 16px; }
+  }
 
   .ba-section-custom { padding: 100px 0; background: var(--black); text-align: center; }
   .ba-inner-custom { max-width: 1300px; margin: 0 auto; padding: 0 60px; }
@@ -554,8 +686,7 @@
     .hero h1 { font-size: 38px; max-width: 100%; margin: 0 auto 20px; }
     .hero-sub { margin: 0 auto 30px; font-size: 14px; }
     .hero-btns { justify-content: center; }
-    .hero-img { position: relative; width: 100%; height: 350px; opacity: 1; margin-top: 20px; order: 2; }
-    .hero-img-overlay { display: none; }
+    /* hero is background-only on mobile too */
     .hero { flex-direction: column; }
     
     .hero-stats { position: static; max-width: 100%; margin-top: 30px; display: grid; grid-template-columns: 1fr 1fr; }
@@ -613,10 +744,9 @@
 
 
 <!-- Hero -->
-<div class="hero">
+<section class="hero">
   <div class="hero-bg"></div>
-  <img class="hero-img" src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&q=80" alt="Laser Hair Removal">
-  <div class="hero-img-overlay"></div>
+  <div class="hero-overlay"></div>
   <div class="hero-content">
 
     <h1>Permanent Hair<br><em>Freedom.</em><br>Effortlessly.</h1>
@@ -625,7 +755,7 @@
       <a href="https://wa.me/919140971129?text=I+want+to+book+a+free+LHR+consultation" target="_blank" class="btn-primary">Book Free Consultation</a>
     </div>
   </div>
-</div>
+</section>
 
 <!-- Why LHR -->
 <div class="why-section">
@@ -637,7 +767,7 @@
       </div>
       <div>
 
-        <h2 class="section-title">The Science of<br><em>Permanent Smoothness</em></h2>
+        <h2 class="section-title lhr-science-title">The Science of <em>Permanent Smoothness</em> With Our Laser Hair Removal Treatment</h2>
         <div class="section-line"></div>
         <p class="section-desc">Our FDA-approved diode laser technology targets hair follicles with precision — delivering permanent hair reduction that is safe for all skin tones and all body areas.</p>
         <div class="why-points">
@@ -682,37 +812,49 @@
     <div class="section-line"></div>
     <p class="section-desc">Your Laser Hair Reduction journey at Skinnovation is designed as a progressive, result-oriented experience.</p>
     
-    <div class="timeline-container">
-      <!-- Vertical Line -->
-      <div class="timeline-line"></div>
-      
-      <!-- Step 1 -->
-      <div class="timeline-step">
-        <div class="timeline-dot"></div>
-        <h4 class="timeline-title">Consultation & Skin Analysis</h4>
-        <p class="timeline-desc">A detailed assessment is conducted to understand your skin type, hair growth pattern, and treatment suitability.</p>
+    <div class="tp-wrap">
+      <div class="tp-vline"></div>
+
+      <!-- Step 1: RIGHT -->
+      <div class="tp-step" style="margin-top: 110px;">
+        <div class="tp-dot"></div>
+        <div class="tp-hline-right"></div>
+        <div class="tp-text-right">
+          <div class="tp-title">Consultation &amp; Skin Analysis</div>
+          <div class="tp-sub">A detailed assessment is conducted to understand your skin type, hair growth pattern, and treatment suitability.</div>
+        </div>
       </div>
-      
-      <!-- Step 2 -->
-      <div class="timeline-step">
-        <div class="timeline-dot"></div>
-        <h4 class="timeline-title">Patch Test & Calibration</h4>
-        <p class="timeline-desc">A patch test ensures optimal laser settings are selected for your skin, prioritizing both safety and effectiveness.</p>
+
+      <!-- Step 2: LEFT -->
+      <div class="tp-step" style="margin-top: 10px;">
+        <div class="tp-dot"></div>
+        <div class="tp-hline-left"></div>
+        <div class="tp-text-left">
+          <div class="tp-title">Patch Test &amp; Calibration</div>
+          <div class="tp-sub">A patch test ensures optimal laser settings are selected for your skin, prioritizing both safety and effectiveness.</div>
+        </div>
       </div>
-      
-      <!-- Step 3 -->
-      <div class="timeline-step">
-        <div class="timeline-dot"></div>
-        <h4 class="timeline-title">Progressive Reduction Phase</h4>
-        <p class="timeline-desc">With each session, hair regrowth becomes finer, lighter, and significantly reduced as different growth cycles are treated.</p>
+
+      <!-- Step 3: RIGHT -->
+      <div class="tp-step" style="margin-top: 10px;">
+        <div class="tp-dot"></div>
+        <div class="tp-hline-right"></div>
+        <div class="tp-text-right">
+          <div class="tp-title">Progressive Reduction Phase</div>
+          <div class="tp-sub">With each session, hair regrowth becomes finer, lighter, and significantly reduced as different growth cycles are treated.</div>
+        </div>
       </div>
-      
-      <!-- Step 4 -->
-      <div class="timeline-step">
-        <div class="timeline-dot"></div>
-        <h4 class="timeline-title">Visible Results & Skin Refinement</h4>
-        <p class="timeline-desc">Clients experience smoother skin, reduced ingrowth, and improved texture over time.</p>
+
+      <!-- Step 4: LEFT -->
+      <div class="tp-step" style="margin-top: 10px; padding-bottom: 20px;">
+        <div class="tp-dot"></div>
+        <div class="tp-hline-left"></div>
+        <div class="tp-text-left">
+          <div class="tp-title">Visible Results &amp; Skin Refinement</div>
+          <div class="tp-sub">Clients experience smoother skin, reduced ingrowth, and improved texture over time.</div>
+        </div>
       </div>
+
     </div>
   </div>
 </div>
@@ -797,26 +939,47 @@
     <div class="section-line"></div>
     <div class="process-steps">
       <div class="process-step">
-        <div class="process-num">01</div>
-        <div class="process-step-icon">◈</div>
+        <div class="process-step-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M16.2 16.2L21 21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M8.5 11h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+          </svg>
+        </div>
         <div class="process-step-title">Skin Analysis</div>
         <div class="process-step-desc">Our dermatologist assesses your skin tone, hair type, and creates a personalized treatment plan.</div>
       </div>
       <div class="process-step">
-        <div class="process-num">02</div>
-        <div class="process-step-icon">◈</div>
+        <div class="process-step-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M10 3h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M11 3v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M13 3v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M8.5 6.5h7c.9 0 1.5.6 1.5 1.5V20c0 1-.7 1.7-1.7 1.7H8.7C7.7 21.7 7 21 7 20V8c0-.9.6-1.5 1.5-1.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M9.5 12h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+          </svg>
+        </div>
         <div class="process-step-title">Pre-Treatment</div>
         <div class="process-step-desc">Gentle cleansing and cooling gel is applied to protect and prepare your skin for laser energy.</div>
       </div>
       <div class="process-step">
-        <div class="process-num">03</div>
-        <div class="process-step-icon">◈</div>
+        <div class="process-step-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M13 2L4 14h7l-1 8 10-14h-7l0-6Z" fill="currentColor" opacity="0.25"/>
+            <path d="M13 2L4 14h7l-1 8 10-14h-7l0-6Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+          </svg>
+        </div>
         <div class="process-step-title">Laser Application</div>
         <div class="process-step-desc">FDA-approved diode laser precisely targets follicles. Most sessions take just 15–45 minutes.</div>
       </div>
       <div class="process-step">
-        <div class="process-num">04</div>
-        <div class="process-step-icon">◈</div>
+        <div class="process-step-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 2l1.2 4.2L17.5 7.5l-4.3 1.2L12 13l-1.2-4.3L6.5 7.5l4.3-1.3L12 2Z" fill="currentColor" opacity="0.25"/>
+            <path d="M6.5 14l.8 2.7L10 17.5l-2.7.8-.8 2.7-.8-2.7L3 17.5l2.7-.8.8-2.7Z" fill="currentColor" opacity="0.25"/>
+            <path d="M17 13l.9 3.1L21 17l-3.1.9L17 21l-.9-3.1L13 17l3.1-.9L17 13Z" fill="currentColor" opacity="0.25"/>
+          </svg>
+        </div>
         <div class="process-step-title">Aftercare & Follow-up</div>
         <div class="process-step-desc">Soothing aftercare, detailed home instructions, and scheduled follow-up for optimal results.</div>
       </div>
@@ -827,92 +990,9 @@
 
 
 
-<!-- Pricing -->
-<div class="pricing-section">
-  <div class="pricing-inner">
-
-    <h2 class="section-title">Transparent Pricing,<br><em>Exceptional Results</em></h2>
-    <div class="section-line"></div>
-    <div class="pricing-grid">
-      <div class="pricing-card">
-        <div class="pricing-area">Small Area</div>
-        <div class="pricing-name">Upper Lip / Chin</div>
-        <div class="pricing-divider"></div>
-
-        <ul class="pricing-features">
-          <li>FDA-approved diode laser</li>
-          <li>Skin patch test included</li>
-          <li>Dermatologist supervised</li>
-          <li>Post-care guidance</li>
-        </ul>
-        <a href="https://wa.me/919140971129?text=I+want+to+book+LHR+for+Small+Area" target="_blank" style="text-decoration:none; text-align:center; display:block;" class="pricing-book">Book Session</a>
-      </div>
-      <div class="pricing-card featured">
-        <div class="pricing-badge">Most Popular</div>
-        <div class="pricing-area">Full Package</div>
-        <div class="pricing-name">Full Body LHR</div>
-        <div class="pricing-divider"></div>
-
-        <ul class="pricing-features">
-          <li>All body zones covered</li>
-          <li>Priority appointment slots</li>
-          <li>Dedicated care coordinator</li>
-          <li>Free touch-up sessions</li>
-          <li>55% off — limited offer</li>
-        </ul>
-        <a href="https://wa.me/919140971129?text=I+want+to+book+Full+Body+LHR+Offer" target="_blank" style="text-decoration:none; text-align:center; display:block;" class="pricing-book">Claim This Offer</a>
-      </div>
-      <div class="pricing-card">
-        <div class="pricing-area">Medium Area</div>
-        <div class="pricing-name">Arms / Legs / Bikini</div>
-        <div class="pricing-divider"></div>
-
-        <ul class="pricing-features">
-          <li>FDA-approved diode laser</li>
-          <li>Skin patch test included</li>
-          <li>Dermatologist supervised</li>
-          <li>Post-care guidance</li>
-        </ul>
-        <a href="https://wa.me/919140971129?text=I+want+to+book+LHR+for+Medium+Area" target="_blank" style="text-decoration:none; text-align:center; display:block;" class="pricing-book">Book Session</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Testimonials -->
-<div class="testimonials-section">
-  <div class="testimonials-inner">
-
-    <h2 class="section-title">Words from Our<br><em>Happy Clients</em></h2>
-    <div class="section-line"></div>
-    <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">"After years of painful waxing, Skinnovation completely changed my life. My skin is smooth and I haven't touched a razor in over a year."</p>
-        <div class="testimonial-author">Priya Sharma</div>
-        <div class="testimonial-role">Full Body Treatment</div>
-      </div>
-      <div class="testimonial-card">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">"The team is incredibly professional and the technology is top-notch. Very comfortable experience, and the results after just 4 sessions are unbelievable."</p>
-        <div class="testimonial-author">Rahul Verma</div>
-        <div class="testimonial-role">Back & Chest Treatment</div>
-      </div>
-      <div class="testimonial-card">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">"I was worried about my dark skin tone but the doctor was so knowledgeable. Perfect results with zero side effects. Highly recommended!"</p>
-        <div class="testimonial-author">Anjali Singh</div>
-        <div class="testimonial-role">Face & Underarm LHR</div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
 <!-- FAQ -->
 <div class="faq-section">
   <div class="faq-inner">
-    <span class="section-tag">Common Questions</span>
     <h2 class="section-title">Frequently Asked<br><em>Questions</em></h2>
     <div class="section-line"></div>
     <div class="faq-grid">
