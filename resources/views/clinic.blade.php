@@ -66,7 +66,7 @@
     }
     .nav-links a:hover, .nav-links a.active { color: #c8a090; }
 
-    .nav-right { display: flex; align-items: center; gap: 24px; min-width: 200px; justify-content: flex-end; }
+    .nav-right { display: flex; align-items: center; gap: 24px; }
     .nav-cta {
       padding: 10px 28px; background: transparent;
       color: #c8a090; border: 1px solid #c8a090;
@@ -1367,18 +1367,7 @@
 <body>
 
   <!-- NAVBAR -->
-  <nav>
-    <a href="/" class="nav-logo">Skinnovation</a>
-    <ul class="nav-links">
-      <li><a href="/">Home</a></li>
-      <li><a href="/?page=salon">Salon</a></li>
-      <li><a href="/clinic" class="active">Clinic</a></li>
-      <li><a href="/lhr">LHR</a></li>
-    </ul>
-    <div class="nav-right">
-      <button class="mobile-toggle" id="menuOpen" aria-label="Open Menu">☰</button>
-    </div>
-  </nav>
+  @include('partials.navbar')
 
   <!-- MOBILE MENU -->
   <div class="mobile-overlay" id="menuOverlay"></div>
@@ -1919,15 +1908,17 @@
     const mobileMenu = document.getElementById('mobileMenu');
     const menuOverlay = document.getElementById('menuOverlay');
 
-    function toggleMenu(show) {
-      mobileMenu.classList.toggle('active', show);
-      menuOverlay.classList.toggle('active', show);
-      document.body.style.overflow = show ? 'hidden' : '';
-    }
+    if (menuOpen && menuClose && mobileMenu && menuOverlay) {
+      function toggleMenu(show) {
+        mobileMenu.classList.toggle('active', show);
+        menuOverlay.classList.toggle('active', show);
+        document.body.style.overflow = show ? 'hidden' : '';
+      }
 
-    menuOpen.addEventListener('click', () => toggleMenu(true));
-    menuClose.addEventListener('click', () => toggleMenu(false));
-    menuOverlay.addEventListener('click', () => toggleMenu(false));
+      menuOpen.addEventListener('click', () => toggleMenu(true));
+      menuClose.addEventListener('click', () => toggleMenu(false));
+      menuOverlay.addEventListener('click', () => toggleMenu(false));
+    }
   </script>
 </body>
 

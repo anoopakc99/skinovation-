@@ -30,27 +30,28 @@
 
   /* ── NAVBAR ── */
   nav {
-    position: fixed; top: 0; width: 100%; z-index: 999;
-    background: rgba(10,10,10,0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(201,169,110,0.2);
+    position: fixed; top: 0; left: 0; right: 0; z-index: 2000;
     display: flex; align-items: center; justify-content: space-between;
-    padding: 18px 60px;
+    padding: 0 60px; height: 72px;
+    background: rgba(10, 10, 10, 0.96); backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(201, 169, 110, 0.15);
+    transition: all 0.4s;
   }
-  .nav-right { min-width: 140px; }
+  .nav-right { display: flex; align-items: center; gap: 24px; }
   .nav-logo {
     font-family: 'Cormorant Garamond', serif;
     font-size: 24px; font-weight: 600; letter-spacing: 4px;
     color: var(--white); text-transform: uppercase; text-decoration: none;
+    cursor: pointer;
   }
-  .nav-logo span { color: var(--white); }
   .nav-links { display: flex; gap: 36px; list-style: none; }
   .nav-links a {
-    color: var(--text-muted); text-decoration: none;
-    font-size: 13px; letter-spacing: 2px; text-transform: uppercase; font-weight: 400;
-    transition: color 0.3s;
+    font-size: 11px; font-weight: 500; letter-spacing: 3px;
+    text-transform: uppercase; color: #9A9080;
+    text-decoration: none; transition: all 0.3s;
+    cursor: pointer;
   }
-  .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+  .nav-links a:hover, .nav-links a.active { color: #c8a090; }
   .nav-cta {
     background: transparent; border: 1px solid var(--gold);
     color: var(--gold); padding: 10px 28px;
@@ -607,16 +608,7 @@
 <body>
 
 <!-- Navbar -->
-<nav>
-  <a href="/" class="nav-logo">Skin<span>novation</span></a>
-  <ul class="nav-links">
-    <li><a href="/">Home</a></li>
-    <li><a href="/?page=salon">Salon</a></li>
-    <li><a href="/clinic">Clinic</a></li>
-    <li><a href="/lhr" class="active">LHR</a></li>
-  </ul>
-  <div class="nav-right"></div>
-</nav>
+@include('partials.navbar')
 
 
 

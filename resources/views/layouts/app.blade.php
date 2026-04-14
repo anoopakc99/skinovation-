@@ -14,22 +14,7 @@
     <div class="cursor-ring" id="cursorRing"></div>
 
     <!-- NAVBAR -->
-    <nav id="navbar">
-        <div class="nav-logo" onclick="showPage('home')">Skinnovation</div>
-        <ul class="nav-links" id="navLinks">
-            <li><a data-page="home" onclick="showPage('home'); toggleMenu();">Home</a></li>
-            <li><a data-page="salon" onclick="showPage('salon'); toggleMenu();">Salon</a></li>
-            <li><a data-page="clinic" onclick="showPage('clinic'); toggleMenu();">Clinic</a></li>
-            <li><a data-page="lhr" onclick="showPage('lhr'); toggleMenu();">LHR</a></li>
-        </ul>
-        <div class="nav-right">
-            <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+    @include('partials.navbar')
 
     @yield('content')
 

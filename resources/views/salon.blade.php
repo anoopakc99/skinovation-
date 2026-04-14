@@ -627,16 +627,7 @@
 <body>
 
   <!-- NAVBAR -->
-  <nav>
-    <a href="/" class="nav-logo">Skinnovation</a>
-    <ul class="nav-links">
-      <li><a href="/">Home</a></li>
-      <li><a href="/?page=salon" class="active">Salon</a></li>
-      <li><a href="/clinic">Clinic</a></li>
-      <li><a href="/lhr">LHR</a></li>
-    </ul>
-    <div class="nav-right"></div>
-  </nav>
+  @include('partials.navbar')
 
   <!-- HERO -->
   <section class="hero">
