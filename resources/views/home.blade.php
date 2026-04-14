@@ -83,8 +83,8 @@
     <!-- LHR HOME SECTION -->
     <section id="lhr-home">
       <div class="lhr-home-grid">
-        <div class="lhr-img-col rv">
-          <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=1200&q=95&fit=crop" alt="Laser Hair Reduction Treatment" onerror="this.src='https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=900&q=90&fit=crop'">
+        <div class="lhr-img-col rv" style="--lhrHomeImg: url('{{ asset('images/lhr-home.png') }}');">
+          <img src="{{ asset('images/lhr-home.png') }}" alt="Laser Hair Reduction Treatment">
           <div class="lhr-img-grad"></div>
         </div>
         <div class="lhr-txt rv d2">
