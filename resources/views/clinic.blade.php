@@ -100,15 +100,9 @@
       position: absolute;
       inset: 0;
       background: url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1920&q=80') center/cover no-repeat;
-      transform: scale(1.1);
-      animation: heroZoom 8s ease forwards;
+      transform: none;
+      animation: none;
       filter: brightness(0.35);
-    }
-
-    @keyframes heroZoom {
-      to {
-        transform: scale(1);
-      }
     }
 
     .hero-overlay {
@@ -362,9 +356,9 @@
 
     .lhr-text h2 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(38px, 4vw, 58px);
+      font-size: clamp(30px, 3.2vw, 48px);
       font-weight: 300;
-      line-height: 1.15;
+      line-height: 1.12;
       margin-bottom: 28px;
       color: var(--white);
     }
@@ -497,7 +491,8 @@
       padding: 48px 36px;
       position: relative;
       overflow: hidden;
-      transition: background 0.4s;
+      transition: background 0.4s, transform 0.4s, border-color 0.4s;
+      border: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     .step-card::before {
@@ -511,6 +506,8 @@
 
     .step-card:hover {
       background: #222;
+      transform: translateY(-6px);
+      border-color: rgba(201, 160, 138, 0.28);
     }
 
     .step-card:hover::before {
@@ -541,12 +538,22 @@
       align-items: center;
       justify-content: center;
       margin-bottom: 24px;
-      font-size: 22px;
-      transition: background 0.3s;
+      color: var(--rose);
+      background: rgba(201, 160, 138, 0.06);
+      transition: background 0.3s, color 0.3s, border-color 0.3s, transform 0.4s;
     }
 
     .step-card:hover .step-icon {
       background: var(--rose);
+      color: var(--dark);
+      border-color: rgba(255,255,255,0.08);
+      transform: translateY(-1px);
+    }
+
+    .step-icon svg {
+      width: 22px;
+      height: 22px;
+      display: block;
     }
 
     .step-card h3 {
@@ -798,7 +805,7 @@
     .treatment-box h3 {
       font-family: 'Cormorant Garamond', serif;
       font-size: 24px;
-      color: var(--rose-light);
+      color: var(--white);
       margin-bottom: 12px;
     }
 
@@ -1260,14 +1267,6 @@
       transform: translateX(0);
     }
 
-    /* ===== 3D FLOATING PARTICLES ===== */
-    .particles-canvas {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      z-index: 1;
-    }
-
     /* ===== COUNTER ANIMATION ===== */
     .count-up {
       display: inline;
@@ -1381,30 +1380,10 @@
 
   <!-- HERO -->
   <section class="hero">
-    <canvas class="particles-canvas" id="particles"></canvas>
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>Our Clinic<br><em>Services</em></h1>
-      <p>Clinically-proven, permanent hair reduction using the most advanced FDA-grade laser technology. Safe for all Indian skin types. Zero downtime.</p>
-      <div class="hero-btns">
-        <a href="#booking" class="btn-primary"><span>Book Free Consultation</span></a>
-        <a href="#pricing" class="btn-outline">View Treatment Areas</a>
-      </div>
-    </div>
-    <div class="hero-stats">
-      <div class="stat-item">
-        <span class="stat-num" data-target="95">0</span><span class="stat-num">%</span>
-        <span class="stat-label">Hair Reduction</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-num" data-target="6">0</span>
-        <span class="stat-label">Sessions Avg.</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-num" data-target="2000">0</span><span class="stat-num">+</span>
-        <span class="stat-label">Happy Clients</span>
-      </div>
     </div>
 
   </section>
@@ -1474,9 +1453,12 @@
   <!-- WHAT IS LHR -->
   <section class="what-lhr">
     <div class="lhr-text reveal-left">
-      <h2>The Science of <em>Permanent</em> Smoothness</h2>
+      <h2>The Science of <em>Permanent</em> Smoothness With Our Laser Hair Removal Treatment</h2>
       <p>Our FDA-approved diode laser technology targets hair follicles with precision — delivering permanent hair reduction that is safe for all skin tones and all body areas.</p>
       <p>At Skinnovation, we use only internationally certified laser platforms proven safe and effective for Indian skin tones (Fitzpatrick III–VI). Advanced cooling technology ensures each session is comfortable — even in sensitive areas.</p>
+      <div class="hero-btns" style="margin-top: 22px;">
+        <a href="/lhr" class="btn-primary"><span>More details LHR</span></a>
+      </div>
       <div class="lhr-benefits">
         <div class="benefit-chip">Painless Technology</div>
         <div class="benefit-chip">All Skin Tones</div>
@@ -1496,107 +1478,60 @@
   <!-- HOW IT WORKS -->
   <section class="how-it-works">
     <div class="section-header reveal">
-      <span class="section-tag">Our Process</span>
       <h2>Your Journey to <em>Silky Skin</em></h2>
     </div>
     <div class="steps-grid reveal">
       <div class="step-card">
-        <div class="step-num">01</div>
-        <div class="step-icon">🔍</div>
+        <div class="step-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M16.2 16.2L21 21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M8.5 11h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+          </svg>
+        </div>
         <h3>Skin Analysis</h3>
         <p>Our certified dermatologist analyzes your Fitzpatrick skin type, hair texture, and density to customize a
           protocol.</p>
       </div>
       <div class="step-card">
-        <div class="step-num">02</div>
-        <div class="step-icon">🧴</div>
+        <div class="step-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M10 3h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M11 3v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M13 3v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M8.5 6.5h7c.9 0 1.5.6 1.5 1.5V20c0 1-.7 1.7-1.7 1.7H8.7C7.7 21.7 7 21 7 20V8c0-.9.6-1.5 1.5-1.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M9.5 12h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+          </svg>
+        </div>
         <h3>Pre-Treatment Prep</h3>
         <p>Area is shaved, cleansed thoroughly, and a cooling gel is applied to protect the skin surface during the
           procedure.</p>
       </div>
       <div class="step-card">
-        <div class="step-num">03</div>
-        <div class="step-icon">⚡</div>
+        <div class="step-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M13 2L4 14h7l-1 8 10-14h-7l0-6Z" fill="currentColor" opacity="0.25"/>
+            <path d="M13 2L4 14h7l-1 8 10-14h-7l0-6Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+          </svg>
+        </div>
         <h3>Laser Application</h3>
         <p>FDA-grade laser pulses are delivered with built-in cooling. Each session targets follicles in the active
           growth phase.</p>
       </div>
       <div class="step-card">
-        <div class="step-num">04</div>
-        <div class="step-icon">✨</div>
+        <div class="step-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 2l1.2 4.2L17.5 7.5l-4.3 1.2L12 13l-1.2-4.3L6.5 7.5l4.3-1.3L12 2Z" fill="currentColor" opacity="0.25"/>
+            <path d="M6.5 14l.8 2.7L10 17.5l-2.7.8-.8 2.7-.8-2.7L3 17.5l2.7-.8.8-2.7Z" fill="currentColor" opacity="0.25"/>
+            <path d="M17 13l.9 3.1L21 17l-3.1.9L17 21l-.9-3.1L13 17l3.1-.9L17 13Z" fill="currentColor" opacity="0.25"/>
+          </svg>
+        </div>
         <h3>Post-Care & Follow-Up</h3>
         <p>Soothing treatment applied. We schedule your next session and guide you through a personalized aftercare
           routine.</p>
       </div>
     </div>
   </section>
-
-  <!-- MACHINES / DEVICES -->
-  <section class="machines">
-    <div class="machines-intro reveal">
-      <h2>Advanced <em>Laser</em> Devices</h2>
-      <p>We invest in globally acclaimed technology platforms to deliver consistent, safe, and effective results for
-        every skin type.</p>
-    </div>
-    <div class="machines-scroll reveal">
-      <div class="machine-card">
-        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=700&q=80" alt="Primelase HR"
-          class="machine-img">
-        <div class="machine-overlay">
-        </div>
-      </div>
-      <div class="machine-card">
-        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=700&q=80" alt="Clarity II"
-          class="machine-img">
-        <div class="machine-overlay">
-        </div>
-      </div>
-      <div class="machine-card">
-        <img src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=700&q=80" alt="Elysion Pro"
-          class="machine-img">
-        <div class="machine-overlay">
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-  <!-- SKIN TYPES -->
-  <section class="skin-types">
-    <div class="section-header reveal">
-
-      <h2>Every Skin Tone, <em>Every Texture</em></h2>
-    </div>
-    <div class="skin-grid reveal">
-      <div class="skin-card">
-        <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=300&q=80" alt="Skin Type I">
-
-      </div>
-      <div class="skin-card">
-        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=300&q=80" alt="Skin Type II">
-
-      </div>
-      <div class="skin-card">
-        <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=300&q=80" alt="Skin Type III">
-
-      </div>
-      <div class="skin-card">
-        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=300&q=80" alt="Skin Type IV">
-
-      </div>
-      <div class="skin-card">
-        <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=300&q=80" alt="Skin Type V">
-
-      </div>
-      <div class="skin-card">
-        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=300&q=80" alt="Skin Type VI">
-
-      </div>
-    </div>
-  </section>
-
-
 
   <!-- WHY CHOOSE -->
   <section class="why-choose">
@@ -1606,7 +1541,6 @@
 
     </div>
     <div class="why-content reveal-right">
-      <span class="section-tag">Why Skinnovation</span>
       <h2>Where <em>Science</em> Meets Beauty</h2>
       <div class="why-reasons">
         <div class="reason-item">
@@ -1774,67 +1708,6 @@
   </footer>
 
   <script>
-    // ===== PARTICLES CANVAS =====
-    const canvas = document.getElementById('particles');
-    const ctx = canvas.getContext('2d');
-    let particles = [];
-
-    function resizeCanvas() {
-      canvas.width = canvas.parentElement.offsetWidth;
-      canvas.height = canvas.parentElement.offsetHeight;
-    }
-
-    class Particle {
-      constructor() {
-        this.reset();
-      }
-      reset() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 2 + 0.5;
-        this.speedX = (Math.random() - 0.5) * 0.4;
-        this.speedY = -Math.random() * 0.5 - 0.2;
-        this.opacity = Math.random() * 0.4 + 0.1;
-        this.life = 0;
-        this.maxLife = Math.random() * 200 + 100;
-      }
-      update() {
-        this.x += this.speedX;
-        this.y += this.speedY;
-        this.life++;
-        if (this.life > this.maxLife || this.y < 0) this.reset();
-      }
-      draw() {
-        ctx.save();
-        ctx.globalAlpha = this.opacity * (1 - this.life / this.maxLife);
-        ctx.fillStyle = '#c9a08a';
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.restore();
-      }
-    }
-
-    function initParticles() {
-      particles = [];
-      for (let i = 0; i < 60; i++) {
-        const p = new Particle();
-        p.life = Math.random() * p.maxLife;
-        particles.push(p);
-      }
-    }
-
-    function animateParticles() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      particles.forEach(p => { p.update(); p.draw(); });
-      requestAnimationFrame(animateParticles);
-    }
-
-    resizeCanvas();
-    initParticles();
-    animateParticles();
-    window.addEventListener('resize', () => { resizeCanvas(); initParticles(); });
-
     // ===== SCROLL REVEAL =====
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
