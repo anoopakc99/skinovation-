@@ -17,13 +17,11 @@
 
         <!-- LEFT: CLINIC (White) -->
         <div class="circle-half circle-clinic" onclick="showPage('clinic')">
-          <span class="ch-label">Medical Aesthetics</span>
           <h1 class="ch-heading">Explore<br>Clinic</h1>
         </div>
 
         <!-- RIGHT: SALON (Black) -->
         <div class="circle-half circle-salon" onclick="showPage('salon')">
-          <span class="ch-label">Hair &amp; Beauty</span>
           <h1 class="ch-heading">Explore<br>Salon</h1>
         </div>
 
@@ -62,7 +60,7 @@
               <span class="sth-pill">IV Nutrient Therapy</span>
               <span class="sth-pill">Anti-Ageing</span>
             </div>
-            <a class="btn-skin sth-btn" onclick="showPage('clinic')" style="cursor:pointer">Learn More →</a>
+            <a class="btn-skin sth-btn" onclick="showPage('clinic')" style="cursor:pointer">Visit Explore Clinic</a>
           </div>
           <div class="sth-right rv d2">
             <div class="sth-visual">
@@ -94,12 +92,6 @@
           <h2 class="lhr-h">Laser Hair<br><em>Reduction</em></h2>
           <p class="lhr-p" style="margin-bottom: 24px;">Laser Hair Reduction is a scientifically proven solution for long-term reduction of unwanted hair. The treatment uses controlled laser energy to target hair follicles, gradually reducing hair growth while maintaining skin safety and comfort.</p>
           <p class="lhr-p">Powered by state-of-the-art FDA-approved technology, we ensure pain-free sessions that are proven safe and highly effective for all Indian skin types, delivering permanent results with zero downtime.</p>
-          <div class="lhr-why">
-            <div class="lw"><h4>FDA-Grade Lasers</h4><p>Diode & Nd:YAG medical-class</p></div>
-            <div class="lw"><h4>All Skin Types</h4><p>Safe for Fitzpatrick III–VI</p></div>
-            <div class="lw"><h4>90% Reduction</h4><p>In 6–8 sessions</p></div>
-            <div class="lw"><h4>Zero Downtime</h4><p>Resume routine same day</p></div>
-          </div>
           <div class="lhr-btns">
             <a class="btn-skin" onclick="openLHR()">Explore LHR in Detail →</a>
             <a href="https://wa.me/919140971129?text=I+want+to+book+an+LHR+session" target="_blank" class="btn-ghost">Book Session</a>
@@ -109,7 +101,31 @@
     </section>
 
 
-    <!-- BOOKING -->
+    <!-- KHS STRIP (LAST ON HOMEPAGE) -->
+    <section id="khs-strip">
+      <div class="cnt">
+        <div class="khs-box rv">
+          <div class="khs-img">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1000&q=95&fit=crop" alt="Korean Head Spa" onerror="this.src='https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=90&fit=crop'">
+          </div>
+          <div class="khs-txt">
+            <span class="khs-sub">Salon ·</span>
+            <h2 class="khs-h">Korean<br><em>Head Spa</em></h2>
+            <p class="khs-p">Our Korean Head Spa is a multi-step journey that deeply detoxifies the scalp, boosts blood circulation, relieves stress, and nourishes every strand.</p>
+            <div class="khs-feats" style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;">
+              <div class="kf" style="font-size:12.5px;">1. Scalp consultation & diagnosis</div>
+              <div class="kf" style="font-size:12.5px;">2. Brushing & scalp exfoliation</div>
+              <div class="kf" style="font-size:12.5px;">3. Scalp cleansing shampoo</div>
+              <div class="kf" style="font-size:12.5px;">4. Water therapy (jet or flow rinse)</div>
+              <div class="kf" style="font-size:12.5px;">5. Detox scalp mask or clay</div>
+            </div>
+            <p style="font-size: 13px; line-height: 1.6; color: rgba(0,0,0,0.55); margin-bottom: 28px; font-style: italic;">"This treatment isn’t just about hair — it’s about self-care, relaxation, and glowing confidence from scalp to soul."</p>
+            <a onclick="showPage('salon')" class="btn-bd" style="cursor:pointer">Explore More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- BOOKING -->
     <section id="booking" style="padding: 100px 20px; background: var(--cream);">
       <div style="max-width: 650px; margin: 0 auto; background: #111; border-radius: 8px; overflow: hidden; box-shadow: 0 40px 80px rgba(0,0,0,0.2); color: #fff; padding: 60px 50px;">
@@ -120,8 +136,6 @@
           <h2 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(34px, 4vw, 42px); font-weight: 300; line-height: 1.1; margin-bottom: 20px;">Begin Your<br><em style="font-style: italic;">Transformation</em></h2>
           <p style="font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.6); max-width: 450px; margin: 0 auto;">Our expert team will confirm your appointment and guide you to the best treatment for your unique needs.</p>
         </div>
-
-
 
         <!-- BOTTOM PART: Form -->
         <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 30px;">
@@ -157,73 +171,30 @@
       </style>
     </section>
 
-    <!-- KHS STRIP (LAST ON HOMEPAGE) -->
-    <section id="khs-strip">
-      <div class="cnt">
-        <div class="khs-box rv">
-          <div class="khs-img">
-            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1000&q=95&fit=crop" alt="Korean Head Spa" onerror="this.src='https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=90&fit=crop'">
-          </div>
-          <div class="khs-txt">
-            <span class="khs-sub">Salon ·</span>
-            <h2 class="khs-h">Korean<br><em>Head Spa</em></h2>
-            <p class="khs-p">A 90-minute scalp and hair wellness ritual inspired by K-beauty. Cleanse, massage, ampoule treatment, steam conditioning — the ultimate luxury hair experience.</p>
-            <div class="khs-feats" style="max-height: 145px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; padding-right: 12px; margin-bottom: 20px;">
-              <style>
-                .khs-feats::-webkit-scrollbar { width: 3px; }
-                .khs-feats::-webkit-scrollbar-track { background: rgba(0,0,0,0.03); }
-                .khs-feats::-webkit-scrollbar-thumb { background: var(--rose); border-radius: 3px; }
-              </style>
-              <div class="kf" style="font-size:12.5px;">1. Scalp consultation & diagnosis</div>
-              <div class="kf" style="font-size:12.5px;">2. Brushing & scalp exfoliation</div>
-              <div class="kf" style="font-size:12.5px;">3. Scalp cleansing shampoo</div>
-              <div class="kf" style="font-size:12.5px;">4. Water therapy (jet or flow rinse)</div>
-              <div class="kf" style="font-size:12.5px;">5. Detox scalp mask or clay</div>
-              <div class="kf" style="font-size:12.5px;">6. Vampire mask for face collagen</div>
-              <div class="kf" style="font-size:12.5px;">7. Steam therapy</div>
-              <div class="kf" style="font-size:12.5px;">8. Relaxing scalp massage</div>
-              <div class="kf" style="font-size:12.5px;">9. Hair treatment ampoule</div>
-              <div class="kf" style="font-size:12.5px;">10. Neck & shoulder massage</div>
-              <div class="kf" style="font-size:12.5px;">11. Thick cream application</div>
-              <div class="kf" style="font-size:12.5px;">12. Ultrasonic therapy on head/face</div>
-              <div class="kf" style="font-size:12.5px;">13. Blow dry & styling</div>
-              <div class="kf" style="font-size:12.5px;">14. Final serum + aftercare tips</div>
-            </div>
-            <p style="font-size: 13px; line-height: 1.6; color: rgba(0,0,0,0.55); margin-bottom: 28px; font-style: italic;">"This treatment isn’t just about hair — it’s about self-care, relaxation, and glowing confidence from scalp to soul."</p>
-            <a onclick="showPage('salon')" class="btn-bd" style="cursor:pointer">Explore All Salon Services</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- FOOTER -->
     <footer style="background: #0a0a0a; border-top: 1px solid rgba(212,181,160,0.1); padding: 100px 0 50px;">
       <div class="cnt">
         <div class="foot-grid">
           <div style="padding-right: 40px;">
             <div style="display:flex; align-items:center; gap:10px; margin-bottom: 24px; cursor:pointer;" onclick="showPage('home')">
-              <div style="width:24px; height:24px; border:1px solid #d4b5a0; border-radius:50%; position:relative;">
-                <div style="width:4px; height:4px; background:#d4b5a0; border-radius:50%; position:absolute; top:2px; right:-1px;"></div>
-              </div>
               <div class="foot-logo" style="margin-bottom:0; font-size:24px;">Skinnovation</div>
             </div>
-            <p class="foot-p" style="font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.4); max-width: 320px; margin-bottom: 30px;">Lucknow's premier aesthetic studio where medical-grade skin science meets luxury salon artistry.</p>
+            <p class="foot-p" style="font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.4); max-width: 320px; margin-bottom: 30px;">Skinnovation premier aesthetic studio where medical-grade skin science meets luxury salon artistry.</p>
             <div class="fsoc">
               <a href="https://www.instagram.com/skinnovation_lucknow" target="_blank" class="foot-insta-link" style="display: flex; align-items: center; gap: 12px; color: #fff; text-decoration: none; font-size: 13px; font-weight: 300;">
                 <div style="width: 34px; height: 34px; background: rgba(212,181,160,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #d4b5a0;">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                 </div>
-                <span>Follow our story on Instagram</span>
+                <span>Follow on Instagram</span>
               </a>
             </div>
           </div>
           <div class="fc"><h4>Clinic</h4><ul><li><a onclick="openLHR()">Laser Hair Reduction</a></li><li><a onclick="showPage('clinic')">Medi Facials</a></li><li><a onclick="showPage('clinic')">Skin Boosters</a></li><li><a onclick="showPage('clinic')">IV Therapy</a></li><li><a onclick="showPage('clinic')">Microneedling</a></li></ul></div>
           <div class="fc"><h4>Salon</h4><ul><li><a onclick="showPage('salon')">Korean Head Spa</a></li><li><a onclick="showPage('salon')">Hair Spa</a></li><li><a onclick="showPage('salon')">Smoothening</a></li><li><a onclick="showPage('salon')">Styling & Cuts</a></li><li><a onclick="showPage('salon')">Color & Balayage</a></li></ul></div>
-          <div class="fc"><h4>Studio</h4><ul><li><a onclick="showPage('home')">About Us</a></li><li><a onclick="goBooking()">Book Appointment</a></li><li><a href="https://wa.me/919140971129" target="_blank">WhatsApp</a></li><li><a onclick="showPage('clinic')">Lucknow, U.P.</a></li></ul></div>
         </div>
         <div class="foot-bot">
           <span>&copy; 2025 Skinnovation Aesthetic Studio &middot; Lucknow &middot; All rights reserved.</span>
-          <span>Developed by <a href="http://trivoraconsultancy.com/" target="_blank" style="color:var(--skin-lt); text-decoration:none; font-weight: 500; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">Trivora Consultancy</a></span>
+          <span>Designed & Developed By <a href="http://trivoraconsultancy.com/" target="_blank" style="color:var(--skin-lt); text-decoration:none; font-weight: 500; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">Trivora Consultancy</a></span>
         </div>
       </div>
     </footer>
@@ -614,28 +585,26 @@
         <div class="foot-grid">
           <div style="padding-right: 40px;">
             <div style="display:flex; align-items:center; gap:10px; margin-bottom: 24px; cursor:pointer;" onclick="showPage('home')">
-              <div style="width:24px; height:24px; border:1px solid #d4b5a0; border-radius:50%; position:relative;">
-                <div style="width:4px; height:4px; background:#d4b5a0; border-radius:50%; position:absolute; top:2px; right:-1px;"></div>
-              </div>
+
               <div class="foot-logo" style="margin-bottom:0; font-size:24px;">Skinnovation</div>
             </div>
-            <p class="foot-p" style="font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.4); max-width: 320px; margin-bottom: 30px;">Lucknow's premier aesthetic studio where medical-grade skin science meets luxury salon artistry.</p>
+            <p class="foot-p" style="font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.4); max-width: 320px; margin-bottom: 30px;">Skinnovation premier aesthetic studio where medical-grade skin science meets luxury salon artistry.</p>
             <div class="fsoc">
               <a href="https://www.instagram.com/skinnovation_lucknow" target="_blank" class="foot-insta-link" style="display: flex; align-items: center; gap: 12px; color: #fff; text-decoration: none; font-size: 13px; font-weight: 300;">
                 <div style="width: 34px; height: 34px; background: rgba(212,181,160,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #d4b5a0;">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                 </div>
-                <span>Follow our story on Instagram</span>
+                <span>Follow on Instagram</span>
               </a>
             </div>
           </div>
           <div class="fc"><h4>Clinic</h4><ul><li><a onclick="openLHR()">Laser Hair Reduction</a></li><li><a onclick="showPage('clinic')">Medi Facials</a></li><li><a onclick="showPage('clinic')">Skin Boosters</a></li><li><a onclick="showPage('clinic')">IV Therapy</a></li><li><a onclick="showPage('clinic')">Microneedling</a></li></ul></div>
           <div class="fc"><h4>Salon</h4><ul><li><a onclick="showPage('salon')">Korean Head Spa</a></li><li><a onclick="showPage('salon')">Hair Spa</a></li><li><a onclick="showPage('salon')">Smoothening</a></li><li><a onclick="showPage('salon')">Styling & Cuts</a></li><li><a onclick="showPage('salon')">Color & Balayage</a></li></ul></div>
-          <div class="fc"><h4>Studio</h4><ul><li><a onclick="showPage('home')">About Us</a></li><li><a onclick="goBooking()">Book Appointment</a></li><li><a href="https://wa.me/919140971129" target="_blank">WhatsApp</a></li><li><a onclick="showPage('clinic')">Lucknow, U.P.</a></li></ul></div>
+
         </div>
         <div class="foot-bot">
           <span>&copy; 2025 Skinnovation Aesthetic Studio &middot; Lucknow &middot; All rights reserved.</span>
-          <span>Developed by <a href="http://trivoraconsultancy.com/" target="_blank" style="color:var(--skin-lt); text-decoration:none; font-weight: 500; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">Trivora Consultancy</a></span>
+          <span>Designed & Developed By <a href="http://trivoraconsultancy.com/" target="_blank" style="color:var(--skin-lt); text-decoration:none; font-weight: 500; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">Trivora Consultancy</a></span>
         </div>
       </div>
     </footer>
@@ -721,28 +690,24 @@
         <div class="foot-grid">
           <div style="padding-right: 40px;">
             <div style="display:flex; align-items:center; gap:10px; margin-bottom: 24px; cursor:pointer;" onclick="showPage('home')">
-              <div style="width:24px; height:24px; border:1px solid #d4b5a0; border-radius:50%; position:relative;">
-                <div style="width:4px; height:4px; background:#d4b5a0; border-radius:50%; position:absolute; top:2px; right:-1px;"></div>
-              </div>
               <div class="foot-logo" style="margin-bottom:0; font-size:24px;">Skinnovation</div>
             </div>
-            <p class="foot-p" style="font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.4); max-width: 320px; margin-bottom: 30px;">Lucknow's premier aesthetic studio where medical-grade skin science meets luxury salon artistry.</p>
+            <p class="foot-p" style="font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.4); max-width: 320px; margin-bottom: 30px;">Skinnovation premier aesthetic studio where medical-grade skin science meets luxury salon artistry.</p>
             <div class="fsoc">
               <a href="https://www.instagram.com/skinnovation_lucknow" target="_blank" class="foot-insta-link" style="display: flex; align-items: center; gap: 12px; color: #fff; text-decoration: none; font-size: 13px; font-weight: 300;">
                 <div style="width: 34px; height: 34px; background: rgba(212,181,160,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #d4b5a0;">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                 </div>
-                <span>Follow our story on Instagram</span>
+                <span>Follow on Instagram</span>
               </a>
             </div>
           </div>
           <div class="fc"><h4>Clinic</h4><ul><li><a onclick="openLHR()">Laser Hair Reduction</a></li><li><a onclick="showPage('clinic')">Medi Facials</a></li><li><a onclick="showPage('clinic')">Skin Boosters</a></li><li><a onclick="showPage('clinic')">IV Therapy</a></li><li><a onclick="showPage('clinic')">Microneedling</a></li></ul></div>
           <div class="fc"><h4>Salon</h4><ul><li><a onclick="showPage('salon')">Korean Head Spa</a></li><li><a onclick="showPage('salon')">Hair Spa</a></li><li><a onclick="showPage('salon')">Smoothening</a></li><li><a onclick="showPage('salon')">Styling & Cuts</a></li><li><a onclick="showPage('salon')">Color & Balayage</a></li></ul></div>
-          <div class="fc"><h4>Studio</h4><ul><li><a onclick="showPage('home')">About Us</a></li><li><a onclick="goBooking()">Book Appointment</a></li><li><a href="https://wa.me/919140971129" target="_blank">WhatsApp</a></li><li><a onclick="showPage('clinic')">Lucknow, U.P.</a></li></ul></div>
         </div>
         <div class="foot-bot">
           <span>&copy; 2025 Skinnovation Aesthetic Studio &middot; Lucknow &middot; All rights reserved.</span>
-          <span>Developed by <a href="http://trivoraconsultancy.com/" target="_blank" style="color:var(--skin-lt); text-decoration:none; font-weight: 500; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">Trivora Consultancy</a></span>
+          <span>Designed & Developed By <a href="http://trivoraconsultancy.com/" target="_blank" style="color:var(--skin-lt); text-decoration:none; font-weight: 500; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">Trivora Consultancy</a></span>
         </div>
       </div>
     </footer>
