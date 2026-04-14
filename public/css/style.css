@@ -582,6 +582,22 @@ footer{background:#0a0a0a; border-top:1px solid rgba(212,181,160,0.1); padding:1
 .s-dept:nth-child(even) { background: var(--white); }
 .s-dept:nth-child(odd) { background: var(--off-white); border-top: 1px solid var(--border-b); border-bottom: 1px solid var(--border-b); }
 
+/* Salon page (SPA) dark canvas like Clinic/LHR */
+#page-salon { background: #0a0a0a; }
+#page-salon .s-dept { background: #0a0a0a; border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); }
+#page-salon .s-dept-head { border-bottom-color: rgba(255,255,255,0.10); }
+#page-salon .s-dept-h { color: var(--white); }
+#page-salon .sp-sec-note-b { color: rgba(255,255,255,0.55); }
+
+/* Salon cards: match Clinic's dark "Advanced Treatments" vibe (no content/icon changes) */
+#page-salon .s-cards { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.08); }
+#page-salon .s-card { background: #111; }
+#page-salon .s-card:hover { box-shadow: 0 24px 60px rgba(0,0,0,0.45); }
+#page-salon .s-card-h { color: var(--white); }
+#page-salon .s-card-p { color: rgba(245, 240, 235, 0.65); }
+#page-salon .s-card-n { color: rgba(255,255,255,0.06); }
+#page-salon .s-divl { background: var(--skin); }
+
 .s-dept-head { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 52px; gap: 24px; flex-wrap: wrap; border-bottom: 0.5px solid rgba(0,0,0,0.1); padding-bottom: 32px; }
 .s-dept-tag { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: var(--skin); display: block; margin-bottom: 12px; }
 .s-dept-h { font-family: 'Cormorant Garamond', serif; font-size: clamp(40px,5vw,62px); font-weight: 300; color: var(--black); line-height: 1.05; }

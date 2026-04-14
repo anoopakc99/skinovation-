@@ -34,7 +34,7 @@
     }
 
     body {
-      background: var(--dark);
+      background: #0a0a0a;
       color: var(--cream);
       font-family: 'Jost', sans-serif;
       font-weight: 300;
