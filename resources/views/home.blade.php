@@ -128,7 +128,18 @@
 
     <!-- BOOKING -->
     <section id="booking" style="padding: 100px 20px; background: var(--cream);">
-      <div style="max-width: 650px; margin: 0 auto; background: #111; border-radius: 8px; overflow: hidden; box-shadow: 0 40px 80px rgba(0,0,0,0.2); color: #fff; padding: 60px 50px;">
+      <div style="max-width: 650px; margin: 0 auto; background: #111; border-radius: 8px; overflow: hidden; box-shadow: 0 40px 80px rgba(0,0,0,0.2); color: #fff; padding: 60px 50px; position: relative;">
+
+        <!-- Decor Graphic (Matches User Reference) -->
+        <div style="position: absolute; top: 15px; left: 15px; opacity: 0.4; pointer-events: none;">
+          <div style="width: 70px; height: 70px; border: 1px solid rgba(212,181,160,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+            <div style="width: 50px; height: 50px; border: 1px solid rgba(212,181,160,0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <div style="width: 30px; height: 30px; border: 1.5px solid rgba(212,181,160,0.7); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 3V21L9 15L11 20L13 19L11 14L18 14L3 3Z" fill="#d4b5a0" stroke="black" stroke-width="0.5"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <!-- TOP PART: Info -->
         <div style="text-align: center; margin-bottom: 40px;">
@@ -278,7 +289,51 @@
     </div><!-- /lhr-details -->
     </div><!-- /black wrapper -->
 
-    <div class="skin-cta rv">
+    <!-- Premium Booking Section -->
+    <section id="booking" style="padding: 100px 20px; background: #0a0a0a;">
+      <div style="max-width: 650px; margin: 0 auto; background: #111; border-radius: 8px; overflow: hidden; box-shadow: 0 40px 80px rgba(0,0,0,0.2); color: #fff; padding: 60px 50px; position: relative;">
+
+        <!-- Decor Graphic -->
+        <div style="position: absolute; top: 15px; left: 15px; opacity: 0.4; pointer-events: none;">
+          <div style="width: 70px; height: 70px; border: 1px solid rgba(212,181,160,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+            <div style="width: 50px; height: 50px; border: 1px solid rgba(212,181,160,0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <div style="width: 30px; height: 30px; border: 1.5px solid rgba(212,181,160,0.7); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 3V21L9 15L11 20L13 19L11 14L18 14L3 3Z" fill="#d4b5a0" stroke="black" stroke-width="0.5"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TOP PART: Info -->
+        <div style="text-align: center; margin-bottom: 40px;">
+          <span style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #d4b5a0; display: block; margin-bottom: 16px;">Get In Touch</span>
+          <h2 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(34px, 4vw, 42px); font-weight: 300; line-height: 1.1; margin-bottom: 20px;">Begin Your<br><em style="font-style: italic;">Transformation</em></h2>
+          <p style="font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.6); max-width: 450px; margin: 0 auto;">Our expert team will confirm your appointment and guide you to the best treatment for your unique needs.</p>
+        </div>
+
+        <!-- BOTTOM PART: Form -->
+        <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 30px;">
+          <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; color: #fff; margin-bottom: 24px;">Request Appointment</h3>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px;">
+            <div style="text-align: left;">
+              <label style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); display: block; margin-bottom: 8px;">Full Name</label>
+              <input type="text" placeholder="Your name" style="width: 100%; padding: 14px 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; outline: none; font-family: 'Jost', sans-serif; font-size: 14px; color: #fff;">
+            </div>
+            <div style="text-align: left;">
+              <label style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); display: block; margin-bottom: 8px;">Phone</label>
+              <input type="tel" placeholder="+91 00000 00000" style="width: 100%; padding: 14px 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; outline: none; font-family: 'Jost', sans-serif; font-size: 14px; color: #fff;">
+            </div>
+          </div>
+
+          <button onclick="submitForm(this)" style="width: 100%; background: #d4b5a0; color: #111; font-weight: 500; padding: 18px; border: none; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; border-radius: 4px; cursor: pointer; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
+            Book Appointment &rarr;
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="skin-cta rv" style="background:#0a0a0a; border-top: 1px solid rgba(255,255,255,0.05);">
       <h3>Ready for <em>Permanent</em> Hair Freedom?</h3>
       <div class="cta-btns">
         <a href="https://wa.me/919140971129?text=I+want+to+book+an+LHR+session" target="_blank" class="btn-wh">Book LHR Session</a>
@@ -297,13 +352,9 @@
       <div class="sp-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1562322140-8baeececf3df?w=1920&q=95&fit=crop'),linear-gradient(#0a0a0a,#1a1a1a);"></div>
       <div class="sp-hero-ov"></div>
       <div class="sp-hero-cnt">
-        <button class="sp-back" onclick="showPage('home')">Home</button>
-        <span class="sp-etag">Our Salon Services</span>
         <h1 class="sp-title">Our Salon <em>Services</em></h1>
-        <p class="sp-desc">A sanctuary of artistry. Korean Head Spa, precision cuts, creative colour, expert treatments — this is where hair becomes art.</p>
-        <a href="#" onclick="return false;" class="btn-skin">View All Services ↓</a>
+        <p class="sp-desc">A sanctuary of artistry. Korean Head Spa, precision cuts, creative colour, expert treatments</p>
       </div>
-      <div class="sp-pgnum">01</div>
     </div>
 
     <!-- KHS Feature -->
@@ -314,25 +365,24 @@
             <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=1000&q=95&fit=crop" alt="Korean Head Spa" onerror="this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&q=90&fit=crop'">
           </div>
           <div class="rv d2">
-            <span class="sp-etag">Our Salon Services</span>
             <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(34px,4vw,54px);font-weight:300;color:var(--white);line-height:1.1;margin-bottom:18px;">Korean<br><em style="font-style:italic;color:var(--skin-lt)">Head Spa</em></h2>
             <div style="width:40px;height:1px;background:var(--skin);margin-bottom:18px;"></div>
             <p style="font-size:14px;line-height:1.8;color:rgba(255,255,255,0.5);font-weight:300;margin-bottom:24px;">Our Korean Head Spa is a multi-step journey that deeply detoxifies the scalp, boosts blood circulation, relieves stress, and nourishes every strand.</p>
             <div class="khs-steps" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:0px;margin-bottom:24px;">
-              <div class="khs-step" style="align-items:center;margin-bottom:0;"><div class="khs-sn" style="width:22px;height:22px;font-size:11px;">1</div><div class="khs-stxt"><h4 style="margin:0;font-size:11.5px;">Scalp diagnosis</h4></div></div>
-              <div class="khs-step" style="align-items:center;margin-bottom:0;"><div class="khs-sn" style="width:22px;height:22px;font-size:11px;">2</div><div class="khs-stxt"><h4 style="margin:0;font-size:11.5px;">Brushing & exfoliation</h4></div></div>
-              <div class="khs-step" style="align-items:center;margin-bottom:0;"><div class="khs-sn" style="width:22px;height:22px;font-size:11px;">3</div><div class="khs-stxt"><h4 style="margin:0;font-size:11.5px;">Scalp cleansing</h4></div></div>
-              <div class="khs-step" style="align-items:center;margin-bottom:0;"><div class="khs-sn" style="width:22px;height:22px;font-size:11px;">4</div><div class="khs-stxt"><h4 style="margin:0;font-size:11.5px;">Water therapy</h4></div></div>
-              <div class="khs-step" style="align-items:center;margin-bottom:0;"><div class="khs-sn" style="width:22px;height:22px;font-size:11px;">5</div><div class="khs-stxt"><h4 style="margin:0;font-size:11.5px;">Detox scalp mask</h4></div></div>
-              <div class="khs-step" style="align-items:center;margin-bottom:0;"><div class="khs-sn" style="width:22px;height:22px;font-size:11px;">6</div><div class="khs-stxt"><h4 style="margin:0;font-size:11.5px;">Vampire mask</h4></div></div>
-              <div class="khs-step" style="align-items:center;margin-bottom:0;"><div class="khs-sn" style="width:22px;height:22px;font-size:11px;">7</div><div class="khs-stxt"><h4 style="margin:0;font-size:11.5px;">Steam therapy</h4></div></div>
-              <div class="khs-step" style="align-items:center;margin-bottom:0;"><div class="khs-sn" style="width:22px;height:22px;font-size:11px;">8</div><div class="khs-stxt"><h4 style="margin:0;font-size:11.5px;">Scalp massage</h4></div></div>
-              <div class="khs-step" style="align-items:center;margin-bottom:0;"><div class="khs-sn" style="width:22px;height:22px;font-size:11px;">9</div><div class="khs-stxt"><h4 style="margin:0;font-size:11.5px;">Hair treatment ampoule</h4></div></div>
-              <div class="khs-step" style="align-items:center;margin-bottom:0;"><div class="khs-sn" style="width:22px;height:22px;font-size:11px;">10</div><div class="khs-stxt"><h4 style="margin:0;font-size:11.5px;">Neck & shoulder massage</h4></div></div>
-              <div class="khs-step" style="align-items:center;margin-bottom:0;"><div class="khs-sn" style="width:22px;height:22px;font-size:11px;">11</div><div class="khs-stxt"><h4 style="margin:0;font-size:11.5px;">Thick cream application</h4></div></div>
-              <div class="khs-step" style="align-items:center;margin-bottom:0;"><div class="khs-sn" style="width:22px;height:22px;font-size:11px;">12</div><div class="khs-stxt"><h4 style="margin:0;font-size:11.5px;">Ultrasonic therapy</h4></div></div>
-              <div class="khs-step" style="align-items:center;margin-bottom:0;"><div class="khs-sn" style="width:22px;height:22px;font-size:11px;">13</div><div class="khs-stxt"><h4 style="margin:0;font-size:11.5px;">Blow dry & styling</h4></div></div>
-              <div class="khs-step" style="align-items:center;margin-bottom:0;"><div class="khs-sn" style="width:22px;height:22px;font-size:11px;">14</div><div class="khs-stxt"><h4 style="margin:0;font-size:11.5px;">Final scalp serum</h4></div></div>
+              <div class="khs-step" style="align-items:center;margin-bottom:0;"><div class="khs-sn" style="width:22px;height:22px;font-size:11px;color:var(--skin);border-color:rgba(200,160,144,0.4)">1</div><div class="khs-stxt"><h4 style="margin:0;font-size:11.5px;color:rgba(255,255,255,0.8)">Scalp diagnosis</h4></div></div>
+              <div class="khs-step" style="align-items:center;margin-bottom:0;"><div class="khs-sn" style="width:22px;height:22px;font-size:11px;color:var(--skin);border-color:rgba(200,160,144,0.4)">2</div><div class="khs-stxt"><h4 style="margin:0;font-size:11.5px;color:rgba(255,255,255,0.8)">Brushing & exfoliation</h4></div></div>
+              <div class="khs-step" style="align-items:center;margin-bottom:0;"><div class="khs-sn" style="width:22px;height:22px;font-size:11px;color:var(--skin);border-color:rgba(200,160,144,0.4)">3</div><div class="khs-stxt"><h4 style="margin:0;font-size:11.5px;color:rgba(255,255,255,0.8)">Scalp cleansing</h4></div></div>
+              <div class="khs-step" style="align-items:center;margin-bottom:0;"><div class="khs-sn" style="width:22px;height:22px;font-size:11px;color:var(--skin);border-color:rgba(200,160,144,0.4)">4</div><div class="khs-stxt"><h4 style="margin:0;font-size:11.5px;color:rgba(255,255,255,0.8)">Water therapy</h4></div></div>
+              <div class="khs-step" style="align-items:center;margin-bottom:0;"><div class="khs-sn" style="width:22px;height:22px;font-size:11px;color:var(--skin);border-color:rgba(200,160,144,0.4)">5</div><div class="khs-stxt"><h4 style="margin:0;font-size:11.5px;color:rgba(255,255,255,0.8)">Detox scalp mask</h4></div></div>
+              <div class="khs-step" style="align-items:center;margin-bottom:0;"><div class="khs-sn" style="width:22px;height:22px;font-size:11px;color:var(--skin);border-color:rgba(200,160,144,0.4)">6</div><div class="khs-stxt"><h4 style="margin:0;font-size:11.5px;color:rgba(255,255,255,0.8)">Vampire mask</h4></div></div>
+              <div class="khs-step" style="align-items:center;margin-bottom:0;"><div class="khs-sn" style="width:22px;height:22px;font-size:11px;color:var(--skin);border-color:rgba(200,160,144,0.4)">7</div><div class="khs-stxt"><h4 style="margin:0;font-size:11.5px;color:rgba(255,255,255,0.8)">Steam therapy</h4></div></div>
+              <div class="khs-step" style="align-items:center;margin-bottom:0;"><div class="khs-sn" style="width:22px;height:22px;font-size:11px;color:var(--skin);border-color:rgba(200,160,144,0.4)">8</div><div class="khs-stxt"><h4 style="margin:0;font-size:11.5px;color:rgba(255,255,255,0.8)">Scalp massage</h4></div></div>
+              <div class="khs-step" style="align-items:center;margin-bottom:0;"><div class="khs-sn" style="width:22px;height:22px;font-size:11px;color:var(--skin);border-color:rgba(200,160,144,0.4)">9</div><div class="khs-stxt"><h4 style="margin:0;font-size:11.5px;color:rgba(255,255,255,0.8)">Hair treatment ampoule</h4></div></div>
+              <div class="khs-step" style="align-items:center;margin-bottom:0;"><div class="khs-sn" style="width:22px;height:22px;font-size:11px;color:var(--skin);border-color:rgba(200,160,144,0.4)">10</div><div class="khs-stxt"><h4 style="margin:0;font-size:11.5px;color:rgba(255,255,255,0.8)">Neck & shoulder massage</h4></div></div>
+              <div class="khs-step" style="align-items:center;margin-bottom:0;"><div class="khs-sn" style="width:22px;height:22px;font-size:11px;color:var(--skin);border-color:rgba(200,160,144,0.4)">11</div><div class="khs-stxt"><h4 style="margin:0;font-size:11.5px;color:rgba(255,255,255,0.8)">Thick cream application</h4></div></div>
+              <div class="khs-step" style="align-items:center;margin-bottom:0;"><div class="khs-sn" style="width:22px;height:22px;font-size:11px;color:var(--skin);border-color:rgba(200,160,144,0.4)">12</div><div class="khs-stxt"><h4 style="margin:0;font-size:11.5px;color:rgba(255,255,255,0.8)">Ultrasonic therapy</h4></div></div>
+              <div class="khs-step" style="align-items:center;margin-bottom:0;"><div class="khs-sn" style="width:22px;height:22px;font-size:11px;color:var(--skin);border-color:rgba(200,160,144,0.4)">13</div><div class="khs-stxt"><h4 style="margin:0;font-size:11.5px;color:rgba(255,255,255,0.8)">Blow dry & styling</h4></div></div>
+              <div class="khs-step" style="align-items:center;margin-bottom:0;"><div class="khs-sn" style="width:22px;height:22px;font-size:11px;color:var(--skin);border-color:rgba(200,160,144,0.4)">14</div><div class="khs-stxt"><h4 style="margin:0;font-size:11.5px;color:rgba(255,255,255,0.8)">Final scalp serum</h4></div></div>
             </div>
             <p style="font-size:13.5px;line-height:1.7;color:rgba(255,255,255,0.7);font-weight:300;margin-bottom:28px;font-style:italic;">This treatment isn’t just about hair — it’s about self-care, relaxation, and glowing confidence from scalp to soul.</p>
             <a href="https://wa.me/919140971129?text=I+want+to+book+Korean+Head+Spa" target="_blank" class="btn-skin">Book Korean Head Spa</a>
@@ -349,7 +399,6 @@
       <div class="sp-cnt">
         <div class="s-dept-head">
           <div>
-            <span class="s-dept-tag">Service Department</span>
             <h2 class="s-dept-h">Hair <em>Studio</em></h2>
             <p class="sp-sec-note-b" style="text-align:left; margin-top:12px; max-width:500px;">From classic cuts to bold colour transformations — our hair artists craft each look with precision, passion, and the finest products.</p>
           </div>
@@ -357,36 +406,28 @@
         </div>
         <div class="s-cards">
           <div class="s-card">
-            <div class="s-card-n">01</div>
             <div class="scc-icon">💇</div>
             <h3 class="s-card-h">Hair Spa &amp; Recovery</h3>
             <div class="s-divl"></div>
             <p class="s-card-p">Intense deep-conditioning and restorative rituals to bring life back to damaged or dry hair. Our advanced formula penetrates deep into the follicles for lasting health.</p>
-            <span class="s-card-tag">Signature</span>
           </div>
           <div class="s-card">
-            <div class="s-card-n">02</div>
             <div class="scc-icon">✨</div>
             <h3 class="s-card-h">Smoothening &amp; Texture</h3>
             <div class="s-divl"></div>
             <p class="s-card-p">Professional chemical treatments for silkier, manageable hair with long-lasting frizz control. Ideal for those seeking a smooth finish that lasts for months with proper care.</p>
-            <span class="s-card-tag">Long-Lasting</span>
           </div>
           <div class="s-card">
-            <div class="s-card-n">03</div>
             <div class="scc-icon">🌟</div>
             <h3 class="s-card-h">Styling &amp; Blowouts</h3>
             <div class="s-divl"></div>
             <p class="s-card-p">Expert styling for every occasion, from voluminous daily wear to high-glam evening looks. We use premium thermal protectants to ensure your hair stays healthy.</p>
-            <span class="s-card-tag">Professional</span>
           </div>
           <div class="s-card">
-            <div class="s-card-n">04</div>
             <div class="scc-icon">✂️</div>
             <h3 class="s-card-h">Precision Cuts</h3>
             <div class="s-divl"></div>
             <p class="s-card-p">Technically superior cuts tailored to your face shape and hair type. Our stylists are trained in international cutting techniques to provide the perfect edge.</p>
-            <span class="s-card-tag">Essential</span>
           </div>
         </div>
       </div>
@@ -397,7 +438,6 @@
       <div class="sp-cnt">
         <div class="s-dept-head">
           <div>
-            <span class="s-dept-tag">Wellness Department</span>
             <h2 class="s-dept-h">Body <em>Wellness</em></h2>
             <p class="sp-sec-note-b" style="text-align:left; margin-top:12px; max-width:500px;">Surrender to deeply restorative body rituals designed to melt stress, revive tired muscles, and awaken a radiant glow from within.</p>
           </div>
@@ -405,36 +445,28 @@
         </div>
         <div class="s-cards">
           <div class="s-card">
-            <div class="s-card-n">01</div>
             <div class="scc-icon">🍃</div>
             <h3 class="s-card-h">Relaxation Massage</h3>
             <div class="s-divl"></div>
             <p class="s-card-p">Full-body therapy focused on de-stressing and easing tension with calming aromatherapy oils. Experience a profound sense of tranquility as our therapists melt away worries.</p>
-            <span class="s-card-tag">Relaxation</span>
           </div>
           <div class="s-card">
-            <div class="s-card-n">02</div>
             <div class="scc-icon">🌸</div>
             <h3 class="s-card-h">Aromatherapy Spa</h3>
             <div class="s-divl"></div>
             <p class="s-card-p">Combining the therapeutic power of essential oils with advanced massage techniques for total bliss. Each scent is handpicked to promote healing and rejuvenation of mind.</p>
-            <span class="s-card-tag">Wellness</span>
           </div>
           <div class="s-card">
-            <div class="s-card-n">03</div>
             <div class="scc-icon">🧖‍♀️</div>
             <h3 class="s-card-h">Body Polishing</h3>
             <div class="s-divl"></div>
             <p class="s-card-p">Luxury exfoliation and skin-softening treatments to reveal your most radiant, hydrated skin. Includes a nutrient-rich mask that infuses your skin with essential minerals.</p>
-            <span class="s-card-tag">Glow</span>
           </div>
           <div class="s-card">
-            <div class="s-card-n">04</div>
             <div class="scc-icon">🌿</div>
             <h3 class="s-card-h">De-stress Rituals</h3>
             <div class="s-divl"></div>
             <p class="s-card-p">Targeted sessions for neck, back, and shoulders to melt away the pressures of daily life. A rapid yet deeply effective way to re-energize your body and focus.</p>
-            <span class="s-card-tag">Therapy</span>
           </div>
         </div>
       </div>
@@ -445,7 +477,6 @@
       <div class="sp-cnt">
         <div class="s-dept-head">
           <div>
-            <span class="s-dept-tag">Artistry Department</span>
             <h2 class="s-dept-h">Nail <em>Artistry</em></h2>
             <p class="sp-sec-note-b" style="text-align:left; margin-top:12px; max-width:500px;">Expressive, long-lasting, and flawlessly finished. Our nail artists blend artistry with technique to give you hands and feet you'll love to show off.</p>
           </div>
@@ -453,36 +484,28 @@
         </div>
         <div class="s-cards">
           <div class="s-card">
-            <div class="s-card-n">01</div>
             <div class="scc-icon">💅</div>
             <h3 class="s-card-h">Gel Paints &amp; Art</h3>
             <div class="s-divl"></div>
             <p class="s-card-p">Long-lasting, high-shine gel colors and creative nail art to suit your personal style. Our UV-cured polishes ensure a chip-free finish that looks perfect for weeks.</p>
-            <span class="s-card-tag">Artisan</span>
           </div>
           <div class="s-card">
-            <div class="s-card-n">02</div>
             <div class="scc-icon">✨</div>
             <h3 class="s-card-h">Acrylic Extensions</h3>
             <div class="s-divl"></div>
             <p class="s-card-p">Strong and beautifully sculpted nail extensions with a flawless, natural appearance. Perfect for those desiring extra length and a steady base for artistic designs.</p>
-            <span class="s-card-tag">Precision</span>
           </div>
           <div class="s-card">
-            <div class="s-card-n">03</div>
             <div class="scc-icon">💎</div>
             <h3 class="s-card-h">Builder Gel</h3>
             <div class="s-divl"></div>
             <p class="s-card-p">Nail strengthening and sculpting using high-grade builder gel for enhanced durability. Provides a strong layer that protects your natural nails while adding structure.</p>
-            <span class="s-card-tag">Premium</span>
           </div>
           <div class="s-card">
-            <div class="s-card-n">04</div>
             <div class="scc-icon">💅</div>
             <h3 class="s-card-h">Custom Designs</h3>
             <div class="s-divl"></div>
             <p class="s-card-p">From French ombré to intricate hand-painted designs, our artists make your vision come alive. We use precision tools to create bespoke art that reflects your personality.</p>
-            <span class="s-card-tag">Exotics</span>
           </div>
         </div>
       </div>
@@ -493,7 +516,6 @@
       <div class="sp-cnt">
         <div class="s-dept-head">
           <div>
-            <span class="s-dept-tag">Grooming Department</span>
             <h2 class="s-dept-h">Personal <em>Grooming</em></h2>
             <p class="sp-sec-note-b" style="text-align:left; margin-top:12px; max-width:500px;">The little rituals that make the biggest difference. Polished, precise, and deeply personal — every grooming service is crafted to bring out your best self.</p>
           </div>
@@ -501,36 +523,28 @@
         </div>
         <div class="s-cards">
           <div class="s-card">
-            <div class="s-card-n">01</div>
             <div class="scc-icon">✋</div>
             <h3 class="s-card-h">Luxury Manicure</h3>
             <div class="s-divl"></div>
             <p class="s-card-p">Complete hand care inclusive of shaping and cuticle care. We use organic scrubs and hydrating creams to leave your hands feeling soft and thoroughly pampered.</p>
-            <span class="s-card-tag">Hygiene</span>
           </div>
           <div class="s-card">
-            <div class="s-card-n">02</div>
             <div class="scc-icon">🦶</div>
             <h3 class="s-card-h">Spa Pedicure</h3>
             <div class="s-divl"></div>
             <p class="s-card-p">Deeply relaxing foot soak, exfoliation, and nail grooming for tired feet. Our signature foot massage stimulates pressure points to improve circulation and relaxation.</p>
-            <span class="s-card-tag">Essential</span>
           </div>
           <div class="s-card">
-            <div class="s-card-n">03</div>
             <div class="scc-icon">🌿</div>
             <h3 class="s-card-h">Threading &amp; Waxing</h3>
             <div class="s-divl"></div>
             <p class="s-card-p">Precision eyebrow shaping and hair removal using high-quality wax variants. Our techniques are designed to minimize discomfort while providing smooth results.</p>
-            <span class="s-card-tag">Precision</span>
           </div>
           <div class="s-card">
-            <div class="s-card-n">04</div>
             <div class="scc-icon">🍃</div>
             <h3 class="s-card-h">Foot Reflexology</h3>
             <div class="s-divl"></div>
             <p class="s-card-p">Targeted pressure-point therapy to improve circulation and promote overall healing. A specialized treatment that balances energy flow and revitalizes your wellbeing.</p>
-            <span class="s-card-tag">Therapy</span>
           </div>
         </div>
       </div>
@@ -538,20 +552,39 @@
 
 
 
-    <!-- Premium Booking Section -->
-    <section class="sp-booking-sec" style="background: #0a0a0a; padding: 100px 0;">
-      <div class="book-wrap" style="max-width: 650px; margin: 0 auto; padding: 0 20px;">
-        <div class="book-card rv" style="background: #111; border: 1px solid rgba(255,255,255,0.05); padding: 60px 50px; border-radius: 8px; text-align: left;">
-          <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 400; color: #fff; margin-bottom: 40px;">Request Appointment</h2>
+    <section class="sp-booking-sec" style="background: #0a0a0a; padding: 100px 20px;">
+      <div style="max-width: 650px; margin: 0 auto; background: #111; border-radius: 8px; overflow: hidden; box-shadow: 0 40px 80px rgba(0,0,0,0.2); color: #fff; padding: 60px 50px; position: relative;">
 
-          <div class="bk-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px;">
-            <div class="bk-group">
-              <label style="display: block; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 12px;">Full Name</label>
-              <input type="text" placeholder="Your name" style="width: 100%; padding: 14px 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; color: #fff; font-family: 'Jost', sans-serif; font-size: 14px; outline: none; transition: border-color 0.3s;" onfocus="this.style.borderColor='#d4b5a0'" onblur="this.style.borderColor='rgba(255,255,255,0.1)'">
+        <!-- Decor Graphic -->
+        <div style="position: absolute; top: 15px; left: 15px; opacity: 0.4; pointer-events: none;">
+          <div style="width: 70px; height: 70px; border: 1px solid rgba(212,181,160,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+            <div style="width: 50px; height: 50px; border: 1px solid rgba(212,181,160,0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <div style="width: 30px; height: 30px; border: 1.5px solid rgba(212,181,160,0.7); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 3V21L9 15L11 20L13 19L11 14L18 14L3 3Z" fill="#d4b5a0" stroke="black" stroke-width="0.5"/></svg>
+              </div>
             </div>
-            <div class="bk-group">
-              <label style="display: block; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 12px;">Phone</label>
-              <input type="tel" placeholder="+91 00000 00000" style="width: 100%; padding: 14px 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; color: #fff; font-family: 'Jost', sans-serif; font-size: 14px; outline: none; transition: border-color 0.3s;" onfocus="this.style.borderColor='#d4b5a0'" onblur="this.style.borderColor='rgba(255,255,255,0.1)'">
+          </div>
+        </div>
+
+        <!-- TOP PART: Info -->
+        <div style="text-align: center; margin-bottom: 40px;">
+          <span style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #d4b5a0; display: block; margin-bottom: 16px;">Get In Touch</span>
+          <h2 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(34px, 4vw, 42px); font-weight: 300; line-height: 1.1; margin-bottom: 20px;">Begin Your<br><em style="font-style: italic;">Transformation</em></h2>
+          <p style="font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.6); max-width: 450px; margin: 0 auto;">Our expert team will confirm your appointment and guide you to the best treatment for your unique needs.</p>
+        </div>
+
+        <!-- BOTTOM PART: Form -->
+        <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 30px;">
+          <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; color: #fff; margin-bottom: 24px;">Request Appointment</h3>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px;">
+            <div style="text-align: left;">
+              <label style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); display: block; margin-bottom: 8px;">Full Name</label>
+              <input type="text" placeholder="Your name" style="width: 100%; padding: 14px 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; outline: none; font-family: 'Jost', sans-serif; font-size: 14px; color: #fff;">
+            </div>
+            <div style="text-align: left;">
+              <label style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); display: block; margin-bottom: 8px;">Phone</label>
+              <input type="tel" placeholder="+91 00000 00000" style="width: 100%; padding: 14px 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; outline: none; font-family: 'Jost', sans-serif; font-size: 14px; color: #fff;">
             </div>
           </div>
 
@@ -559,11 +592,9 @@
             Book Appointment &rarr;
           </button>
         </div>
-
-        <div style="text-align: center; margin-top: 40px;">
-            <a onclick="showPage('home')" style="color: rgba(255,255,255,0.4); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: color 0.3s;" onmouseover="this.style.color='#d4b5a0'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">← Back to Home</a>
-        </div>
       </div>
+    </section>
+    </section>
 
       <style>
         @media (max-width: 600px) {
@@ -664,24 +695,48 @@
       </div>
     </section>
 
-    <!-- Premium Booking Section -->
-    <section class="sp-booking-sec">
-      <div class="book-wrap">
-        <h2 class="book-title">Book Your <em>Appointment</em></h2>
-        <p class="book-subtitle">Begin your journey to enhanced beauty and wellness with Lucknow's elite skin clinic.</p>
+    <section id="booking" style="padding: 100px 20px; background: #0a0a0a;">
+      <div style="max-width: 650px; margin: 0 auto; background: #111; border-radius: 8px; overflow: hidden; box-shadow: 0 40px 80px rgba(0,0,0,0.2); color: #fff; padding: 60px 50px; position: relative;">
 
-        <div class="book-card rv" style="background:#000;border:1px solid rgba(255,255,255,0.12);">
-          <div class="bk-row">
-            <div class="bk-group"><label>Full Name</label><input type="text" class="bk-input" placeholder="Your name"></div>
-            <div class="bk-group"><label>Phone</label><input type="tel" class="bk-input" placeholder="+91 00000 00000"></div>
+        <!-- Decor Graphic -->
+        <div style="position: absolute; top: 15px; left: 15px; opacity: 0.4; pointer-events: none;">
+          <div style="width: 70px; height: 70px; border: 1px solid rgba(212,181,160,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+            <div style="width: 50px; height: 50px; border: 1px solid rgba(212,181,160,0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <div style="width: 30px; height: 30px; border: 1.5px solid rgba(212,181,160,0.7); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 3V21L9 15L11 20L13 19L11 14L18 14L3 3Z" fill="#d4b5a0" stroke="black" stroke-width="0.5"/></svg>
+              </div>
+            </div>
           </div>
-          <button class="bk-btn" onclick="submitForm(this)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-            Book Appointment
+        </div>
+
+        <!-- TOP PART: Info -->
+        <div style="text-align: center; margin-bottom: 40px;">
+          <span style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #d4b5a0; display: block; margin-bottom: 16px;">Get In Touch</span>
+          <h2 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(34px, 4vw, 42px); font-weight: 300; line-height: 1.1; margin-bottom: 20px;">Begin Your<br><em style="font-style: italic;">Transformation</em></h2>
+          <p style="font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.6); max-width: 450px; margin: 0 auto;">Our expert team will confirm your appointment and guide you to the best treatment for your unique needs.</p>
+        </div>
+
+        <!-- BOTTOM PART: Form -->
+        <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 30px;">
+          <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; color: #fff; margin-bottom: 24px;">Request Appointment</h3>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px;">
+            <div style="text-align: left;">
+              <label style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); display: block; margin-bottom: 8px;">Full Name</label>
+              <input type="text" placeholder="Your name" style="width: 100%; padding: 14px 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; outline: none; font-family: 'Jost', sans-serif; font-size: 14px; color: #fff;">
+            </div>
+            <div style="text-align: left;">
+              <label style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); display: block; margin-bottom: 8px;">Phone</label>
+              <input type="tel" placeholder="+91 00000 00000" style="width: 100%; padding: 14px 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; outline: none; font-family: 'Jost', sans-serif; font-size: 14px; color: #fff;">
+            </div>
+          </div>
+
+          <button onclick="submitForm(this)" style="width: 100%; background: #d4b5a0; color: #111; font-weight: 500; padding: 18px; border: none; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; border-radius: 4px; cursor: pointer; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
+            Book Appointment &rarr;
           </button>
         </div>
 
-        <a class="bk-back-btn" onclick="showPage('home')">← Back to Home</a>
+        <a class="bk-back-btn" onclick="showPage('home')" style="color: rgba(255,255,255,0.4); text-align: center; display: block; margin-top: 30px;">← Back to Home</a>
       </div>
     </section>
     <!-- CLINIC FOOTER -->

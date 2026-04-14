@@ -7,9 +7,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --gold: #C9A96E;
-    --gold-light: #E8D5B0;
-    --gold-dark: #9B7A45;
+    --gold: #c8a090;
+    --gold-light: #e8c4b4;
+    --gold-dark: #a07060;
     --black: #0A0A0A;
     --dark: #111111;
     --dark2: #181818;
@@ -37,6 +37,7 @@
     display: flex; align-items: center; justify-content: space-between;
     padding: 18px 60px;
   }
+  .nav-right { min-width: 140px; }
   .nav-logo {
     font-family: 'Cormorant Garamond', serif;
     font-size: 24px; font-weight: 600; letter-spacing: 4px;
@@ -57,7 +58,7 @@
     font-family: 'Jost', sans-serif; cursor: pointer; text-decoration: none;
     transition: all 0.3s;
   }
-  .nav-cta:hover { background: var(--gold); color: var(--black); }
+  .nav-cta:hover { background: var(--gold); color: var(--white); }
 
   /* ── HERO ── */
   .hero {
@@ -110,7 +111,7 @@
   }
   .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
   .btn-primary {
-    background: var(--gold); color: var(--black);
+    background: var(--gold); color: var(--white);
     padding: 16px 40px; font-size: 12px; letter-spacing: 3px;
     text-transform: uppercase; font-family: 'Jost', sans-serif;
     font-weight: 600; border: none; cursor: pointer; transition: all 0.3s;
@@ -187,7 +188,7 @@
   }
   .why-image-badge {
     position: absolute; bottom: -24px; right: -24px;
-    background: var(--gold); color: var(--black);
+    background: var(--gold); color: var(--white);
     padding: 28px 32px; text-align: center;
   }
   .why-image-badge-num {
@@ -350,7 +351,7 @@
   }
   .pricing-badge {
     position: absolute; top: -1px; left: 50%; transform: translateX(-50%);
-    background: var(--gold); color: var(--black);
+    background: var(--gold); color: var(--white);
     font-size: 9px; letter-spacing: 3px; text-transform: uppercase;
     padding: 5px 20px; font-weight: 600;
     white-space: nowrap;
@@ -385,8 +386,8 @@
     background: transparent; border: 1px solid rgba(201,169,110,0.4);
     color: var(--gold); cursor: pointer; transition: all 0.3s;
   }
-  .pricing-book:hover { background: var(--gold); color: var(--black); }
-  .pricing-card.featured .pricing-book { background: var(--gold); color: var(--black); }
+  .pricing-book:hover { background: var(--gold); color: var(--white); }
+  .pricing-card.featured .pricing-book { background: var(--gold); color: var(--white); }
   .pricing-card.featured .pricing-book:hover { background: var(--gold-light); }
 
   /* ── TESTIMONIALS ── */
@@ -457,7 +458,7 @@
     font-size: 13px; color: var(--text-muted); line-height: 1.8;
     margin-top: 16px; display: none; font-weight: 300;
   }
-  .faq-item.open .faq-toggle { background: var(--gold); color: var(--black); }
+  .faq-item.open .faq-toggle { background: var(--gold); color: var(--white); }
   .faq-item.open .faq-a { display: block; }
 
   /* ── CTA ── */
@@ -832,78 +833,7 @@
 </div>
 
 
-<!-- Before & After Section -->
-<div class="ba-section-custom">
-  <div class="ba-inner-custom">
-    
-    <h2 class="ba-header-custom">Before & After</h2>
-    <div class="ba-line-custom"></div>
 
-    <div class="ba-grid-custom">
-      
-      <!-- Card 1: Face - Vertical Split -->
-      <div class="ba-card-custom">
-        <div class="ba-card-inner">
-          <img class="ba-card-img" src="https://images.pexels.com/photos/5240678/pexels-photo-5240678.jpeg?auto=compress&cs=tinysrgb&w=400&q=90" style="filter: sepia(0.5) contrast(1.1) brightness(0.8) saturate(1.3);" alt="Face Before LHR">
-          <div class="ba-card-label">Before</div>
-        </div>
-        <div class="ba-card-divider"></div>
-        <div class="ba-card-inner">
-          <img class="ba-card-img" src="https://images.pexels.com/photos/3764016/pexels-photo-3764016.jpeg?auto=compress&cs=tinysrgb&w=400&q=90" style="filter: brightness(1.1) contrast(1.05) saturate(1.1);" alt="Face After LHR">
-          <div class="ba-card-label">After</div>
-        </div>
-      </div>
-
-      <!-- Card 2: Legs - Vertical Split -->
-      <div class="ba-card-custom">
-        <div class="ba-card-inner">
-          <img class="ba-card-img" src="https://images.pexels.com/photos/6621461/pexels-photo-6621461.jpeg?auto=compress&cs=tinysrgb&w=400&q=90" style="filter: sepia(0.4) contrast(1.15) brightness(0.75) saturate(1.4);" alt="Legs Before LHR">
-          <div class="ba-card-label">Before</div>
-        </div>
-        <div class="ba-card-divider"></div>
-        <div class="ba-card-inner">
-          <img class="ba-card-img" src="https://images.pexels.com/photos/5938421/pexels-photo-5938421.jpeg?auto=compress&cs=tinysrgb&w=400&q=90" style="filter: brightness(1.15) contrast(1.05) saturate(1.1);" alt="Legs After LHR">
-          <div class="ba-card-label">After</div>
-        </div>
-      </div>
-
-      <!-- Card 3: Underarms - Vertical Split -->
-      <div class="ba-card-custom">
-        <div class="ba-card-inner">
-          <img class="ba-card-img" src="https://images.pexels.com/photos/6621462/pexels-photo-6621462.jpeg?auto=compress&cs=tinysrgb&w=400&q=90" style="filter: sepia(0.5) contrast(1.1) brightness(0.8) saturate(1.3);" alt="Underarms Before LHR">
-          <div class="ba-card-label">Before</div>
-        </div>
-        <div class="ba-card-divider"></div>
-        <div class="ba-card-inner">
-          <img class="ba-card-img" src="https://images.pexels.com/photos/3997987/pexels-photo-3997987.jpeg?auto=compress&cs=tinysrgb&w=400&q=90" style="filter: brightness(1.12) contrast(1.05) saturate(1.1);" alt="Underarms After LHR">
-          <div class="ba-card-label">After</div>
-        </div>
-      </div>
-
-      <!-- Card 4: Full Body - Vertical Split -->
-      <div class="ba-card-custom">
-        <div class="ba-card-inner">
-          <img class="ba-card-img" src="https://images.pexels.com/photos/5240677/pexels-photo-5240677.jpeg?auto=compress&cs=tinysrgb&w=400&q=90" style="filter: sepia(0.45) contrast(1.1) brightness(0.78) saturate(1.3);" alt="Body Before LHR">
-          <div class="ba-card-label">Before</div>
-        </div>
-        <div class="ba-card-divider"></div>
-        <div class="ba-card-inner">
-          <img class="ba-card-img" src="https://images.pexels.com/photos/5938619/pexels-photo-5938619.jpeg?auto=compress&cs=tinysrgb&w=400&q=90" style="filter: brightness(1.15) contrast(1.05) saturate(1.1);" alt="Body After LHR">
-          <div class="ba-card-label">After</div>
-        </div>
-      </div>
-      
-    </div>
-      
-
-
-    <!-- Booking Button -->
-    <a href="https://wa.me/919140971129?text=I+want+to+book+a+free+LHR+consultation" target="_blank" style="display: inline-block; background: #e83e8c; color: #fff; font-family: sans-serif; font-size: 14px; font-weight: 500; padding: 14px 34px; border-radius: 30px; text-decoration: none; transition: background 0.3s;" onmouseover="this.style.background='#d82f7c'" onmouseout="this.style.background='#e83e8c'">
-      Book Your Consultation
-    </a>
-
-  </div>
-</div>
 
 <!-- Pricing -->
 <div class="pricing-section">
@@ -1022,9 +952,6 @@
           <div class="faq-a">There is zero downtime. You can resume normal activities immediately. Mild redness may occur for a few hours, which is completely normal and subsides quickly.</div>
         </div>
         <div class="faq-item" onclick="toggleFaq(this)">
-          <div class="faq-q">Can I get LHR during pregnancy? <span class="faq-toggle">+</span></div>
-          <div class="faq-a">LHR is generally not recommended during pregnancy. We advise waiting until after delivery and breastfeeding. Our doctor will guide you during your consultation.</div>
-        </div>
         <div class="faq-item" onclick="toggleFaq(this)">
           <div class="faq-q">What makes Skinnovation different? <span class="faq-toggle">+</span></div>
           <div class="faq-a">We combine 30+ state-of-the-art laser devices, experienced dermatologists with 10+ years expertise, and a patient-first approach — resulting in 10,000+ satisfied clients in Lucknow.</div>
@@ -1034,20 +961,61 @@
   </div>
 </div>
 
-<!-- CTA -->
-<div class="cta-section">
-  <div class="cta-inner">
-    <div>
-      <h2 class="cta-title">Begin Your Journey to<br><em>Permanent Smoothness</em></h2>
-      <p class="cta-sub">Book a free consultation today and avail upto 55% off on full body laser hair removal.</p>
+<!-- BOOKING SECTION -->
+<section id="booking" style="padding: 100px 20px; background: #0a0a0a;">
+  <div style="max-width: 650px; margin: 0 auto; background: #111; border-radius: 8px; overflow: hidden; box-shadow: 0 40px 80px rgba(0,0,0,0.2); color: #fff; padding: 60px 50px; position: relative;">
+
+    <!-- Decor Graphic (Matches User Screenshot) -->
+    <div style="position: absolute; top: 15px; left: 15px; opacity: 0.4; pointer-events: none;">
+      <div style="width: 70px; height: 70px; border: 1px solid rgba(212,181,160,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+        <div style="width: 50px; height: 50px; border: 1px solid rgba(212,181,160,0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+          <div style="width: 30px; height: 30px; border: 1.5px solid rgba(212,181,160,0.7); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+             <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 3V21L9 15L11 20L13 19L11 14L18 14L3 3Z" fill="#d4b5a0" stroke="black" stroke-width="0.5"/></svg>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="cta-actions">
-      <a href="https://wa.me/919140971129?text=I+want+to+book+a+free+LHR+consultation" target="_blank" class="btn-primary" style="text-align:center">Book Free Consultation</a>
-      <div class="cta-phone-label">Or Call Us Directly</div>
-      <div class="cta-phone"><a href="tel:+919140971129" style="text-decoration:none; color:inherit;">+91 91409 71129</a></div>
+
+    <!-- TOP PART: Info -->
+    <div style="text-align: center; margin-bottom: 40px;">
+      <span style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #d4b5a0; display: block; margin-bottom: 16px;">Get In Touch</span>
+      <h2 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(34px, 4vw, 42px); font-weight: 300; line-height: 1.1; margin-bottom: 20px;">Begin Your<br><em style="font-style: italic;">Transformation</em></h2>
+      <p style="font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.6); max-width: 450px; margin: 0 auto;">Our expert team will confirm your appointment and guide you to the best treatment for your unique needs.</p>
     </div>
+
+    <!-- BOTTOM PART: Form -->
+    <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 30px;">
+      <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; color: #fff; margin-bottom: 24px;">Request Appointment</h3>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px;">
+        <div style="text-align: left;">
+          <label style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); display: block; margin-bottom: 8px;">Full Name</label>
+          <input type="text" placeholder="Your name" style="width: 100%; padding: 14px 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; outline: none; font-family: 'Jost', sans-serif; font-size: 14px; color: #fff;">
+        </div>
+        <div style="text-align: left;">
+          <label style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); display: block; margin-bottom: 8px;">Phone</label>
+          <input type="tel" placeholder="+91 00000 00000" style="width: 100%; padding: 14px 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; outline: none; font-family: 'Jost', sans-serif; font-size: 14px; color: #fff;">
+        </div>
+      </div>
+
+      <button onclick="submitForm(this)" style="width: 100%; background: #d4b5a0; color: #111; font-weight: 500; padding: 16px; border: none; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; border-radius: 4px; cursor: pointer; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
+        Book Appointment &rarr;
+      </button>
+    </div>
+
   </div>
-</div>
+
+  <style>
+    @media (max-width: 600px) {
+      #booking > div > div:last-child > div {
+        grid-template-columns: 1fr !important;
+      }
+      #booking > div {
+        padding: 40px 24px !important;
+      }
+    }
+  </style>
+</section>
 
 <!-- Footer -->
 <footer style="background: #0a0a0a; border-top: 1px solid rgba(212,181,160,0.1); padding: 100px 0 50px;">

@@ -14,13 +14,13 @@
       --dark: #111111;
       --cream: #f5f0eb;
       --beige: #e8ddd4;
-      --rose: #c9a08a;
-      --rose-light: #d4b5a0;
-      --gold: #b8966e;
+      --rose: #c8a090;
+      --rose-light: #E8D5B0;
+      --gold: #c8a090;
       --white: #ffffff;
       --text-muted: #8a8a8a;
       --card-bg: #1e1e1e;
-      --border: rgba(201, 160, 138, 0.2);
+      --border: rgba(201, 169, 110, 0.2);
     }
 
     * {
@@ -64,17 +64,17 @@
       text-decoration: none; transition: all 0.3s;
       cursor: pointer;
     }
-    .nav-links a:hover, .nav-links a.active { color: #C9A96E; }
+    .nav-links a:hover, .nav-links a.active { color: #c8a090; }
 
-    .nav-right { display: flex; align-items: center; gap: 24px; }
+    .nav-right { display: flex; align-items: center; gap: 24px; min-width: 200px; justify-content: flex-end; }
     .nav-cta {
       padding: 10px 28px; background: transparent;
-      color: #C9A96E; border: 1px solid #C9A96E;
+      color: #c8a090; border: 1px solid #c8a090;
       font-size: 12px; font-weight: 500; letter-spacing: 2px;
       text-transform: uppercase; font-family: 'Jost', sans-serif;
       cursor: pointer; transition: all 0.3s; text-decoration: none;
     }
-    .nav-cta:hover { background: #C9A96E; color: #111111; }
+    .nav-cta:hover { background: #c8a090; color: #ffffff; }
       text-transform: uppercase;
       text-decoration: none;
       font-family: 'Jost', sans-serif;
@@ -180,15 +180,15 @@
     }
 
     .btn-primary {
-      background: var(--rose);
-      color: var(--white);
+      background: var(--gold);
+      color: #ffffff;
       padding: 14px 36px;
       font-size: 11px;
       letter-spacing: 2px;
       text-transform: uppercase;
       text-decoration: none;
       font-family: 'Jost', sans-serif;
-      font-weight: 400;
+      font-weight: 500;
       transition: all 0.3s;
       display: inline-block;
       position: relative;
@@ -214,7 +214,7 @@
     }
 
     .btn-outline {
-      border: 1px solid rgba(245, 240, 235, 0.4);
+      border: 1px solid rgba(201, 169, 110, 0.4);
       color: var(--cream);
       padding: 14px 36px;
       font-size: 11px;
@@ -226,8 +226,8 @@
     }
 
     .btn-outline:hover {
-      border-color: var(--rose);
-      color: var(--rose);
+      border-color: var(--gold);
+      color: var(--gold);
     }
 
     .hero-scroll {
@@ -1688,9 +1688,7 @@
       <div class="faq-item">
         <button class="faq-q">Is there any downtime? <div class="faq-icon">+</div></button>
         <div class="faq-a">Zero downtime. You can return to work and daily activities immediately after. Some temporary
-          redness for 1–2 hours is normal. Sun protection is advised for 48 hours post-treatment.</div>
-      </div>
-      <div class="faq-item">
+        <div class="faq-item">
         <button class="faq-q">Can men get laser hair reduction? <div class="faq-icon">+</div></button>
         <div class="faq-a">Yes, absolutely. We treat men for beard shaping, chest, back, shoulders, and full-body hair
           reduction. The protocol is customized based on hair coarseness and desired outcomes.</div>
@@ -1699,6 +1697,62 @@
   </section>
 
 
+
+  <!-- BOOKING SECTION -->
+  <section id="booking" style="padding: 100px 20px; background: #0a0a0a;">
+    <div style="max-width: 650px; margin: 0 auto; background: #111; border-radius: 8px; overflow: hidden; box-shadow: 0 40px 80px rgba(0,0,0,0.2); color: #fff; padding: 60px 50px; position: relative;">
+
+      <!-- Decor Graphic (Matches User Screenshot) -->
+      <div style="position: absolute; top: 15px; left: 15px; opacity: 0.4; pointer-events: none;">
+        <div style="width: 70px; height: 70px; border: 1px solid rgba(212,181,160,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+          <div style="width: 50px; height: 50px; border: 1px solid rgba(212,181,160,0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+            <div style="width: 30px; height: 30px; border: 1.5px solid rgba(212,181,160,0.7); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+               <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 3V21L9 15L11 20L13 19L11 14L18 14L3 3Z" fill="#d4b5a0" stroke="black" stroke-width="0.5"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TOP PART: Info -->
+      <div style="text-align: center; margin-bottom: 40px;">
+        <span style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #d4b5a0; display: block; margin-bottom: 16px;">Get In Touch</span>
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(34px, 4vw, 42px); font-weight: 300; line-height: 1.1; margin-bottom: 20px;">Begin Your<br><em style="font-style: italic;">Transformation</em></h2>
+        <p style="font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.6); max-width: 450px; margin: 0 auto;">Our expert team will confirm your appointment and guide you to the best treatment for your unique needs.</p>
+      </div>
+
+      <!-- BOTTOM PART: Form -->
+      <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 30px;">
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; color: #fff; margin-bottom: 24px;">Request Appointment</h3>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px;">
+          <div style="text-align: left;">
+            <label style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); display: block; margin-bottom: 8px;">Full Name</label>
+            <input type="text" placeholder="Your name" style="width: 100%; padding: 14px 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; outline: none; font-family: 'Jost', sans-serif; font-size: 14px; color: #fff;">
+          </div>
+          <div style="text-align: left;">
+            <label style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); display: block; margin-bottom: 8px;">Phone</label>
+            <input type="tel" placeholder="+91 00000 00000" style="width: 100%; padding: 14px 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; outline: none; font-family: 'Jost', sans-serif; font-size: 14px; color: #fff;">
+          </div>
+        </div>
+
+        <button onclick="submitForm(this)" style="width: 100%; background: #d4b5a0; color: #111; font-weight: 500; padding: 16px; border: none; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; border-radius: 4px; cursor: pointer; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
+          Book Appointment &rarr;
+        </button>
+      </div>
+
+    </div>
+
+    <style>
+      @media (max-width: 600px) {
+        #booking > div > div:last-child > div {
+          grid-template-columns: 1fr !important;
+        }
+        #booking > div {
+          padding: 40px 24px !important;
+        }
+      }
+    </style>
+  </section>
 
   <!-- FOOTER -->
   <footer style="background: #0a0a0a; border-top: 1px solid rgba(212,181,160,0.1); padding: 100px 0 50px;">
