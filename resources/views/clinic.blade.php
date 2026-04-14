@@ -1374,10 +1374,8 @@
       <li><a href="/?page=salon">Salon</a></li>
       <li><a href="/clinic" class="active">Clinic</a></li>
       <li><a href="/lhr">LHR</a></li>
-      <li><a href="#booking">Book</a></li>
     </ul>
     <div class="nav-right">
-      <a href="https://wa.me/919140971129?text=Hello%2C+I+want+to+book+an+appointment." target="_blank" class="nav-cta">Book Now</a>
       <button class="mobile-toggle" id="menuOpen" aria-label="Open Menu">☰</button>
     </div>
   </nav>
@@ -1390,7 +1388,6 @@
     <a href="/?page=salon">Salon</a>
     <a href="/clinic" class="active">Clinic</a>
     <a href="/lhr">LHR</a>
-    <a href="https://wa.me/919140971129" target="_blank">Book Now</a>
   </div>
 
   <!-- HERO -->

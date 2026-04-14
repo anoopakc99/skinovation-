@@ -21,10 +21,8 @@
             <li><a data-page="salon" onclick="showPage('salon'); toggleMenu();">Salon</a></li>
             <li><a data-page="clinic" onclick="showPage('clinic'); toggleMenu();">Clinic</a></li>
             <li><a data-page="lhr" onclick="showPage('lhr'); toggleMenu();">LHR</a></li>
-            <li><a data-page="book" onclick="goBooking(); toggleMenu();">Book</a></li>
         </ul>
         <div class="nav-right">
-            <a href="https://wa.me/919140971129?text=Hello%2C+I+want+to+book+an+appointment." target="_blank" class="nav-cta">Book Now</a>
             <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
