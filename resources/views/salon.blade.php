@@ -5,9 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Salon Services | Skinnovation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="{{ asset('css/appt-form.css') }}">
   <style>
     :root {
       --charcoal: #1a1a1a;
@@ -34,7 +37,7 @@
     }
 
     body {
-      background: #0a0a0a;
+      background: #1a1a1a;
       color: var(--cream);
       font-family: 'Jost', sans-serif;
       font-weight: 300;
@@ -46,7 +49,7 @@
       position: fixed; top: 0; left: 0; right: 0; z-index: 2000;
       display: flex; align-items: center; justify-content: space-between;
       padding: 0 60px; height: 72px;
-      background: rgba(10, 10, 10, 0.96); backdrop-filter: blur(20px);
+      background: rgba(26, 26, 26, 0.96); backdrop-filter: blur(20px);
       border-bottom: 1px solid rgba(201, 169, 110, 0.15);
       transition: all 0.4s;
     }
@@ -76,355 +79,136 @@
     .nav-cta:hover { background: #c8a090; color: #ffffff; }
     .nav-right { min-width: 200px; display: flex; align-items: center; justify-content: flex-end; }
 
-    /* ===== HERO ===== */
-    .hero {
-      height: 60vh;
-      position: relative;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-      margin-top: 80px;
+    
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --dark: #1a1a1a;
+      --cream: #FFF5EB;
+      --beige: #FAF5F0;
+      --white: #ffffff;
+      --rosegold: #C9A87C;
+      --rosegold-light: #d4ba95;
+      --text: #1a1a1a;
+      --text-muted: #777;
+      --text-light: rgba(255,255,255,0.4);
     }
 
+    .salon-wrapper { font-family: "Inter", sans-serif; color: var(--text); background: var(--beige); line-height: 1.6; }
+
+    .salon-wrapper h1, .salon-wrapper h2, .salon-wrapper h3, .salon-wrapper h4, .salon-wrapper h5, .salon-wrapper h6 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    img { max-width: 100%; display: block; }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* ─── HERO ─── */
+    .hero { margin-top: 72px; 
+      position: relative; min-height: 70vh; display: flex; align-items: flex-end;
+      background: var(--dark); padding-top: 80px;
+    }
     .hero-bg {
-      position: absolute;
-      inset: 0;
-      background: url('https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=1920&q=80') center/cover no-repeat;
-      transform: scale(1.1);
-      animation: heroZoom 8s ease forwards;
-      filter: brightness(0.4);
+      position: absolute; inset: 0;
+      background: url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920&q=80') center/cover;
+      opacity: 0.3;
     }
-
-    @keyframes heroZoom {
-      to {
-        transform: scale(1);
-      }
-    }
-
     .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(17, 17, 17, 0.3) 60%, transparent 100%);
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(26,26,26,0.4), rgba(26,26,26,0.6), var(--dark));
     }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      padding: 0 60px;
-      max-width: 600px;
-      opacity: 0;
-      animation: fadeUp 1.2s 0.5s ease forwards;
-    }
-
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
+    .hero-content { position: relative; z-index: 2; padding-bottom: 64px; width: 100%; }
     .hero-tag {
-      display: inline-block;
-      font-size: 11px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: var(--rose);
-      border: 1px solid var(--rose);
-      padding: 6px 16px;
-      margin-bottom: 30px;
-      animation: fadeUp 1.2s 0.3s ease forwards;
-      opacity: 0;
+      color: var(--rosegold); font-size: 11px; letter-spacing: 0.3em;
+      text-transform: uppercase; margin-bottom: 16px;
     }
+    .hero-title { color: #fff; font-size: 56px; line-height: 1.1; }
+    .hero-title em { color: var(--rosegold); font-style: italic; }
+    .hero-desc { color: rgba(255,255,255,0.6); font-size: 14px; margin-top: 16px; max-width: 420px; }
 
-    .hero h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(42px, 6vw, 72px);
-      font-weight: 300;
-      line-height: 1.1;
-      margin-bottom: 24px;
-      color: var(--white);
+    /* ─── KOREAN HEAD SPA ─── */
+    .head-spa { background: var(--cream); padding: 80px 0; }
+    .head-spa-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .head-spa-img-wrap { position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 25px 50px rgba(0,0,0,0.15); }
+    .head-spa-img-wrap img { width: 100%; height: 400px; object-fit: cover; transition: transform 0.7s; }
+    .head-spa-img-wrap:hover img { transform: scale(1.05); }
+    .head-spa-img-glow {
+      position: absolute; bottom: -16px; right: -16px;
+      width: 96px; height: 96px; background: rgba(201,168,124,0.2);
+      border-radius: 50%; filter: blur(32px);
     }
-
-    .hero h1 em {
-      font-style: italic;
-      color: var(--rose-light);
+    .spa-tag { color: var(--rosegold); font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 8px; }
+    .spa-title { font-size: 40px; margin-bottom: 4px; }
+    .spa-title-accent { font-size: 40px; margin-bottom: 24px; }
+    .spa-title-accent em { color: var(--rosegold); font-style: italic; }
+    .spa-desc { color: var(--text-muted); font-size: 13px; margin-bottom: 32px; max-width: 420px; }
+    .features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; margin-bottom: 32px; }
+    .feature-item { display: flex; align-items: center; gap: 8px; }
+    .feature-check { color: var(--rosegold); font-size: 14px; flex-shrink: 0; }
+    .feature-item span { font-size: 12px; color: rgba(26,26,26,0.8); }
+    .spa-quote { color: var(--text-muted); font-size: 12px; font-style: italic; margin-bottom: 24px; }
+    .btn-rosegold {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--rosegold); color: #fff; padding: 12px 32px;
+      font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+      border: none; cursor: pointer; transition: background 0.3s;
     }
-
-    .hero p {
-      font-size: 15px;
-      line-height: 1.8;
-      color: rgba(245, 240, 235, 0.75);
-      max-width: 420px;
-      margin-bottom: 40px;
-    }
-
-    .hero-btns {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .btn-primary {
-      background: var(--gold);
-      color: #ffffff;
-      padding: 14px 36px;
-      font-size: 11px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      text-decoration: none;
-      font-family: 'Jost', sans-serif;
-      font-weight: 500;
-      transition: all 0.3s;
-      display: inline-block;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .btn-primary::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: var(--gold);
-      transform: translateX(-100%);
-      transition: transform 0.3s;
-    }
-
-    .btn-primary:hover::before {
-      transform: translateX(0);
-    }
-
-    .btn-primary span {
-      position: relative;
-      z-index: 1;
-    }
-
+    .btn-rosegold:hover { background: var(--rosegold-light); }
     .btn-outline {
-      border: 1px solid rgba(201, 169, 110, 0.4);
-      color: var(--cream);
-      padding: 14px 36px;
-      font-size: 11px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      text-decoration: none;
-      font-family: 'Jost', sans-serif;
+      display: inline-flex; align-items: center; gap: 8px;
+      border: 1px solid var(--rosegold); color: var(--rosegold);
+      padding: 12px 32px; font-size: 11px; letter-spacing: 0.2em;
+      text-transform: uppercase; background: none; cursor: pointer;
       transition: all 0.3s;
     }
+    .btn-outline:hover { background: var(--rosegold); color: #fff; }
 
-    .btn-outline:hover {
-      border-color: var(--gold);
-      color: var(--gold);
-    }
-
-    /* ===== SERVICES GRID ===== */
-    .services-section {
-      padding: 120px 60px;
-      background: var(--dark);
-    }
-
-    .section-header {
-      text-align: center;
-      margin-bottom: 80px;
-    }
-
-    .section-tag {
-      font-size: 11px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: var(--rose);
-      display: block;
-      margin-bottom: 16px;
-    }
-
-    .section-header h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(36px, 4vw, 54px);
-      font-weight: 300;
-      color: var(--white);
-      line-height: 1.2;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .section-header h2 em {
-      font-style: italic;
-      color: var(--rose-light);
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      margin-top: 60px;
-    }
-
-    .service-card {
-      background: var(--charcoal);
-      border: 1px solid var(--border);
-      padding: 48px;
-      position: relative;
-      overflow: hidden;
-      transition: all 0.4s;
-      cursor: pointer;
-    }
-
-    .service-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: var(--rose);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.4s;
-    }
-
-    .service-card:hover {
-      background: #222;
-      border-color: var(--rose);
-    }
-
-    .service-card:hover::before {
-      transform: scaleX(1);
-    }
-
-    .service-card h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 32px;
-      font-weight: 400;
-      color: var(--white);
-      margin-bottom: 20px;
-    }
-
-    .service-list {
-      list-style: none;
-      margin-bottom: 28px;
-    }
-
-    .service-list li {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 14px;
-      color: rgba(245, 240, 235, 0.7);
-      padding: 10px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .service-list li::before {
-      content: '✓';
-      color: var(--rose);
-      font-weight: bold;
-      flex-shrink: 0;
-    }
-
-    .service-list li:last-child {
-      border-bottom: none;
-    }
-
-    .service-cta {
-      display: inline-block;
-      color: var(--rose);
-      text-decoration: none;
-      font-size: 12px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-top: 20px;
-      font-weight: 500;
+    /* ─── SERVICE SECTIONS ─── */
+    .section { padding: 80px 0; }
+    .section-header { margin-bottom: 56px; }
+    .section-title { font-size: 40px; }
+    .section-title em { color: var(--rosegold); font-style: italic; }
+    .section-subtitle { color: var(--text-muted); font-size: 13px; margin-top: 12px; max-width: 500px; }
+    .cards-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .card {
+      background: #fff; border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 12px; padding: 24px;
       transition: all 0.3s;
     }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); border-color: rgba(201,168,124,0.2); }
+    .card h4 { font-size: 18px; margin-bottom: 12px; }
+    .card p { color: var(--text-muted); font-size: 12px; line-height: 1.7; }
+    .section-cta { text-align: center; margin-top: 48px; }
 
-    .service-cta:hover {
-      color: var(--rose-light);
-      letter-spacing: 3px;
+    .bg-white-sec { background: var(--white); }
+    .bg-cream { background: var(--cream); }
+    .bg-beige { background: var(--beige); }
+
+    /* ─── SVG ICONS ─── */
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 768px) {
+      .nav { display: none; }
+      .hamburger { display: block; }
+      .hero-title { font-size: 36px; }
+      .head-spa-grid { grid-template-columns: 1fr; }
+      .cards-grid { grid-template-columns: 1fr 1fr; }
+      .section-title, .spa-title, .spa-title-accent,
+      .skin-appt-title, .skin-appt-title-acc { font-size: 32px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
     }
-
-    /* ===== CTA SECTION ===== */
-    .cta-section {
-      padding: 0 60px 120px;
-      background: var(--dark);
+    @media (max-width: 480px) {
+      .cards-grid { grid-template-columns: 1fr; }
+      .features-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
     }
+  
 
-    .cta-inner {
-      background: var(--rose);
-      padding: 80px;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: center;
-      gap: 60px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cta-inner::before {
-      content: '';
-      position: absolute;
-      top: -60px;
-      right: -60px;
-      width: 260px;
-      height: 260px;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 50%;
-    }
-
-    .cta-inner::after {
-      content: '';
-      position: absolute;
-      top: -20px;
-      right: -20px;
-      width: 180px;
-      height: 180px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 50%;
-    }
-
-    .cta-inner h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(32px, 3.5vw, 50px);
-      font-weight: 300;
-      color: var(--white);
-      line-height: 1.2;
-    }
-
-    .cta-inner h2 em {
-      font-style: italic;
-    }
-
-    .cta-inner p {
-      font-size: 14px;
-      color: rgba(255, 255, 255, 0.75);
-      margin-top: 12px;
-      line-height: 1.7;
-    }
-
-    .cta-btn {
-      background: var(--white);
-      color: var(--rose);
-      padding: 16px 44px;
-      font-size: 11px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      text-decoration: none;
-      font-family: 'Jost', sans-serif;
-      font-weight: 500;
-      white-space: nowrap;
-      transition: all 0.3s;
-      position: relative;
-      z-index: 1;
-    }
-
-    .cta-btn:hover {
-      background: var(--dark);
-      color: var(--white);
-    }
-
-    /* ===== FOOTER ===== */
+/* ===== FOOTER ===== */
     /* MASTER FOOTER CLASSES */
     .cnt { max-width: 1200px; margin: 0 auto; padding: 0 64px; }
     .foot-grid { display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr; gap: 56px; margin-bottom: 60px; }
@@ -623,149 +407,104 @@
     }
   </style>
 </head>
-
 <body>
+
 
   <!-- NAVBAR -->
   @include('partials.navbar')
 
-  <!-- HERO -->
+  <div class="salon-wrapper">
+<!-- HERO -->
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Our Salon <em>Services</em></h1>
-      <p>Indulge in our complete range of professional salon and grooming treatments. From luxurious hair care to elegant nail art and personalized grooming.</p>
-      <div class="hero-btns">
-      </div>
+    <div class="hero-content container">
+      <p class="hero-tag">Premium Beauty & Wellness</p>
+      <h1 class="hero-title">Our Salon<br><em>Services</em></h1>
+      <p class="hero-desc">Indulge in our curated collection of luxury salon services, designed to rejuvenate your body, mind, and spirit.</p>
     </div>
   </section>
 
-  <!-- SERVICES -->
-  <section class="services-section" id="services">
-    <div class="section-header reveal" style="text-align:center; margin-bottom:60px;">
-      <span class="section-tag" style="font-size:11px; letter-spacing:4px; text-transform:uppercase; color:var(--rose); display:block; margin-bottom:16px;">Professional Hair & Beauty Care</span>
-      <h2 style="font-family:'Cormorant Garamond', serif; font-size:clamp(36px, 4vw, 54px); font-weight:300; color:var(--white); line-height:1.2;">Premium Salon <em>Services</em></h2>
-      <div style="max-width:800px; margin: 24px auto 0; font-size:14px; line-height:1.8; color:rgba(245,240,235,0.65);">
-        <p style="margin-bottom:16px;">In addition to aesthetic treatments, Skinnovation offers a range of premium salon services designed to maintain healthy hair, enhance personal style, and support overall grooming.</p>
-        <p><strong>Hair Treatments:</strong> Our restorative hair therapies are designed to repair damage, strengthen hair fibers, and improve scalp health. These treatments help restore hydration, smoothness, and shine while addressing concerns such as dryness, breakage, and hair fall.</p>
-      </div>
-    </div>
-
-    <div class="services-grid reveal">
-      <!-- HAIR SERVICES -->
-      <div class="service-card">
-        <h3>💇 Hair</h3>
-        <ul class="service-list">
-          <li>Hair Spa & Deep Conditioning</li>
-          <li>Smoothing & Keratin Treatment</li>
-          <li>Professional Hair Styling</li>
-          <li>Expert Hair Cutting</li>
-          <li>Color & Highlights</li>
-          <li>Hair Treatments & Care</li>
-        </ul>
-        <a href="#booking" class="service-cta">Book Hair Service →</a>
-      </div>
-
-      <!-- BODY SERVICES -->
-      <div class="service-card">
-        <h3>✨ Body</h3>
-        <ul class="service-list">
-          <li>Full Body Massage</li>
-          <li>Thai Massage</li>
-          <li>Body Scrubs & Polishing</li>
-          <li>Spa Treatments</li>
-          <li>Aromatherapy</li>
-          <li>Relaxation & Wellness</li>
-        </ul>
-        <a href="#booking" class="service-cta">Book Body Service →</a>
-      </div>
-
-      <!-- NAIL SERVICES -->
-      <div class="service-card">
-        <h3>💅 Nails</h3>
-        <ul class="service-list">
-          <li>Gel paints</li>
-          <li>Acrylic Extension</li>
-          <li>Extension Gel</li>
-          <li>Nails Extension</li>
-        </ul>
-        <a href="#booking" class="service-cta">Book Nail Service →</a>
-      </div>
-
-      <!-- PERSONAL GROOMING SERVICES -->
-      <div class="service-card">
-        <h3>🪮 Personal Grooming</h3>
-        <ul class="service-list">
-          <li>Manicure</li>
-          <li>Pedicure</li>
-        <li>Threading</li>
-          <li>Foot Therapy</li>
-        </ul>
-        <a href="#booking" class="service-cta">Book Grooming Service →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- BOOKING SECTION -->
-  <section id="booking" style="padding: 100px 20px; background: #0a0a0a;">
-    <div style="max-width: 650px; margin: 0 auto; background: #111; border-radius: 8px; overflow: hidden; box-shadow: 0 40px 80px rgba(0,0,0,0.2); color: #fff; padding: 60px 50px; position: relative;">
-
-      <!-- Decor Graphic (Matches User Screenshot) -->
-      <div style="position: absolute; top: 15px; left: 15px; opacity: 0.4; pointer-events: none;">
-        <div style="width: 70px; height: 70px; border: 1px solid rgba(212,181,160,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-          <div style="width: 50px; height: 50px; border: 1px solid rgba(212,181,160,0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-            <div style="width: 30px; height: 30px; border: 1.5px solid rgba(212,181,160,0.7); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-               <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 3V21L9 15L11 20L13 19L11 14L18 14L3 3Z" fill="#d4b5a0" stroke="black" stroke-width="0.5"/></svg>
-            </div>
-          </div>
+  <!-- KOREAN HEAD SPA -->
+  <section class="head-spa">
+    <div class="container">
+      <div class="head-spa-grid">
+        <div class="head-spa-img-wrap">
+          <img src="{{ asset('images/korean-head-spa.jpg') }}" alt="Korean Head Spa treatment" loading="lazy" />
+          <div class="head-spa-img-glow"></div>
+        </div>
+        <div>
+          <p class="spa-tag">Salon</p>
+          <h2 class="spa-title">Korean</h2>
+          <h2 class="spa-title-accent"><em>Head Spa</em></h2>
+          <p class="spa-desc">Our Korean Head Spa is a must-have pampering treat that deeply detoxifies the scalp, boosts blood circulation, relieves stress, and nourishes every strand.</p>
+          <div class="features-grid" id="spaFeatures"></div>
+          <p class="spa-quote">"This treatment isn't just about hair — it's about self-care, relaxation, and glowing confidence from scalp to soul."</p>
+          <a href="#booking" class="btn-rosegold">Explore More <span>→</span></a>
         </div>
       </div>
-
-      <!-- TOP PART: Info -->
-      <div style="text-align: center; margin-bottom: 40px;">
-        
-        <h2 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(34px, 4vw, 42px); font-weight: 300; line-height: 1.1; margin-bottom: 20px;">Begin Your<br><em style="font-style: italic;">Transformation</em></h2>
-        <p style="font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.6); max-width: 450px; margin: 0 auto;">Our expert team will confirm your appointment and guide you to the best treatment for your unique needs.</p>
-      </div>
-
-      <!-- BOTTOM PART: Form -->
-      <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 30px;">
-        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; color: #fff; margin-bottom: 24px;">Request Appointment</h3>
-
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px;">
-          <div style="text-align: left;">
-            <label style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); display: block; margin-bottom: 8px;">Full Name</label>
-            <input type="text" placeholder="Your name" style="width: 100%; padding: 14px 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; outline: none; font-family: 'Jost', sans-serif; font-size: 14px; color: #fff;">
-          </div>
-          <div style="text-align: left;">
-            <label style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); display: block; margin-bottom: 8px;">Phone</label>
-            <input type="tel" placeholder="+91 00000 00000" style="width: 100%; padding: 14px 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; outline: none; font-family: 'Jost', sans-serif; font-size: 14px; color: #fff;">
-          </div>
-        </div>
-
-        <button onclick="submitForm(this)" style="width: 100%; background: #d4b5a0; color: #111; font-weight: 500; padding: 16px; border: none; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; border-radius: 4px; cursor: pointer; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
-          Book Appointment &rarr;
-        </button>
-      </div>
-
     </div>
-
-    <style>
-      @media (max-width: 600px) {
-        #booking > div > div:last-child > div {
-          grid-template-columns: 1fr !important;
-        }
-        #booking > div {
-          padding: 40px 24px !important;
-        }
-      }
-    </style>
   </section>
 
-  <!-- FOOTER -->
-  <!-- FOOTER -->
-  <footer style="background: #0a0a0a; border-top: 1px solid rgba(212,181,160,0.1); padding: 100px 0 50px;">
+  <!-- HAIR STUDIO -->
+  <section class="section bg-white-sec" id="hairStudio">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Hair <em>Studio</em></h2>
+        <p class="section-subtitle">From cuts and colors to transformations — our hair artists will craft a look that speaks your personality and matches your lifestyle.</p>
+      </div>
+      <div class="cards-grid" id="hairCards"></div>
+      <div class="section-cta"><a href="#booking" class="btn-outline">Book Appointment <span>›</span></a></div>
+    </div>
+  </section>
+
+  <!-- BODY WELLNESS -->
+  <section class="section bg-cream" id="bodyWellness">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Body <em>Wellness</em></h2>
+        <p class="section-subtitle">Surrender to tranquility with our holistic body treatments, mindful relaxation, and revitalizing rituals.</p>
+      </div>
+      <div class="cards-grid" id="bodyCards"></div>
+      <div class="section-cta"><a href="#booking" class="btn-outline">Book Appointment <span>›</span></a></div>
+    </div>
+  </section>
+
+  <!-- NAIL ARTISTRY -->
+  <section class="section bg-white-sec" id="nailArtistry">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Nail <em>Artistry</em></h2>
+        <p class="section-subtitle">Precision manicures, creative nail art, and long-lasting finishes — express your style right to your fingertips.</p>
+      </div>
+      <div class="cards-grid" id="nailCards"></div>
+      <div class="section-cta"><a href="#booking" class="btn-outline">Book Appointment <span>›</span></a></div>
+    </div>
+  </section>
+
+  <!-- PERSONAL GROOMING -->
+  <section class="section bg-beige" id="personalGrooming">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Personal <em>Grooming</em></h2>
+        <p class="section-subtitle">Self-care rituals designed for relaxation. Manicures, pedicures, threading, waxing, and facial reflexology.</p>
+      </div>
+      <div class="cards-grid" id="groomingCards"></div>
+      <div class="section-cta"><a href="#booking" class="btn-outline">Book Appointment <span>›</span></a></div>
+    </div>
+  </section>
+
+  @include('partials.appointment-form', [
+    'sectionId' => 'booking',
+    'formId' => 'apptFormSalonPage',
+    'context' => 'salon',
+    'variant' => 'dark',
+  ])
+
+  </div>
+
+<!-- FOOTER -->
+  <footer style="background: #1a1a1a; border-top: 1px solid rgba(212,181,160,0.1); padding: 100px 0 50px;">
     <div class="cnt">
       <div class="foot-grid">
         <div style="padding-right: 40px;">
@@ -817,7 +556,64 @@
         nav.style.borderBottomColor = 'rgba(201,160,138,0.2)';
       }
     });
+  
+
+    // ─── Spa Features ───
+    const spaFeatures = [
+      "Scalp consultation & distress", "Purifying & scalp relaxation",
+      "Scalp cleansing shampoo", "Warm therapy jet or flow rinse",
+      "Detox scalp mask or oils", "Gentle exfoliation",
+      "Aroma therapy", "Lymph drainage",
+      "Scalp massage", "Hair & Scalp serum",
+      "Head & shoulder massage", "Healthy style & finish"
+    ];
+    const featuresEl = document.getElementById('spaFeatures');
+    spaFeatures.forEach(f => {
+      featuresEl.innerHTML += `<div class="feature-item"><span class="feature-check">✓</span><span>${f}</span></div>`;
+    });
+
+    // ─── Service Cards Generator ───
+    function createCard(title, desc) {
+      return `<div class="card">
+        <h4>${title}</h4>
+        <p>${desc}</p>
+      </div>`;
+    }
+
+    // Hair Studio
+    document.getElementById('hairCards').innerHTML = [
+      createCard('Hair Spa & Recovery', 'Revitalize dull, damaged hair with deep conditioning treatments, keratin infusions, and intensive hydration therapy.'),
+      createCard('Straightening & Texture', 'Professional straightening, smoothening, and texture transformation using salon-grade products for lasting results.'),
+      createCard('Styling & Blowouts', 'Expert styling for any occasion — from sleek blowouts to glamorous updos, designed to turn heads.'),
+      createCard('Consultation Care', 'Personalized hair consultations with our stylists to find the perfect cut, color, and treatment for your hair type.')
+    ].join('');
+
+    // Body Wellness
+    document.getElementById('bodyCards').innerHTML = [
+      createCard('Relaxation Massage', 'Full-body relaxation with soothing strokes, gentle pressure, and calming aromatherapy for total stress relief.'),
+      createCard('Aromatherapy Spa', 'A blissful mix of essential oils, warm towels, and targeted massage for mind and body rejuvenation.'),
+      createCard('Body Polishing', 'Exfoliate and nourish your skin with premium body scrubs, leaving it silky smooth and radiant.'),
+      createCard('Detox Rituals', 'Deep cleansing body wraps that detoxify, hydrate, and restore your skin\'s natural glow and vitality.')
+    ].join('');
+
+    // Nail Artistry
+    document.getElementById('nailCards').innerHTML = [
+      createCard('Gel Paint & Art', 'Long-lasting gel polish with intricate nail art designs, from minimalist elegance to bold statement nails.'),
+      createCard('Acrylic Extensions', 'Durable acrylic nail extensions crafted to perfection, giving you the length and shape you desire.'),
+      createCard('Builder Gel', 'Natural-looking builder gel overlays for added strength, flexibility, and a flawless glossy finish.'),
+      createCard('Custom Designs', 'Bespoke nail designs tailored to your imagination — crystals, chrome, ombre, and trending styles.')
+    ].join('');
+
+    // Personal Grooming
+    document.getElementById('groomingCards').innerHTML = [
+      createCard('Luxury Manicure', 'Detailed nail care with cuticle grooming, hand massage, hydration therapy, and the perfect polish.'),
+      createCard('Spa Pedicure', 'Rejuvenating foot spa, gentle exfoliation, callus care, massage, and a flawless finish for happy feet.'),
+      createCard('Threading & Waxing', 'Precise, gentle hair removal — professional threading, face and body waxing for smooth, clean skin.'),
+      createCard('Face Reflexology', 'Targeted facial massage combining acupressure, lymph drainage, and relaxation techniques for radiant skin.')
+    ].join('');
+
   </script>
+  <script src="{{ asset('js/app.js') }}"></script>
 </body>
 
 </html>

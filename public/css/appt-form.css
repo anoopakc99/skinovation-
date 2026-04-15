@@ -1,0 +1,218 @@
+/* Unified "Begin Your Transformation" appointment block — salon-style */
+
+.skin-appt-section {
+  padding: 80px 20px;
+  background: #1a1a1a;
+}
+
+.skin-appt-section--pale {
+  background: #faf6f1;
+}
+
+.skin-appt-section--ink {
+  background: #0a0a0a;
+}
+
+.skin-appt-inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.skin-appt-card {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 640px;
+  padding: 56px 48px 52px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.12);
+}
+
+.skin-appt-section--pale .skin-appt-card {
+  background: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.22);
+}
+
+.skin-appt-deco {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 28px;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.skin-appt-ring {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.skin-appt-ring--outer {
+  width: 70px;
+  height: 70px;
+  border: 1px solid rgba(212, 181, 160, 0.22);
+}
+
+.skin-appt-ring--mid {
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(212, 181, 160, 0.4);
+}
+
+.skin-appt-ring--inner {
+  width: 30px;
+  height: 30px;
+  border: 1.5px solid rgba(212, 181, 160, 0.78);
+}
+
+.skin-appt-ring--inner svg {
+  display: block;
+}
+
+.skin-appt-head {
+  margin-bottom: 36px;
+}
+
+.skin-appt-title {
+  font-family: "Cormorant Garamond", "Playfair Display", serif;
+  font-size: clamp(32px, 4vw, 42px);
+  font-weight: 300;
+  color: #ffffff;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.skin-appt-title-acc {
+  font-family: "Cormorant Garamond", "Playfair Display", serif;
+  font-size: clamp(32px, 4vw, 42px);
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 18px;
+}
+
+.skin-appt-title-acc em {
+  font-style: italic;
+  color: #d4ba95;
+}
+
+.skin-appt-desc {
+  font-family: "Jost", "Inter", sans-serif;
+  font-size: 13px;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.55);
+  max-width: 460px;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+.skin-appt-form {
+  text-align: left;
+}
+
+.skin-appt-label {
+  color: #c9a87c;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+  font-family: "Jost", "Inter", sans-serif;
+  font-weight: 500;
+}
+
+.skin-appt-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 20px;
+  margin-bottom: 24px;
+}
+
+.skin-appt-field label {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
+  font-family: "Jost", "Inter", sans-serif;
+}
+
+.skin-appt-field input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  color: #fff;
+  font-size: 14px;
+  padding: 12px 4px;
+  outline: none;
+  font-family: "Jost", "Inter", sans-serif;
+  font-weight: 300;
+  transition: border-color 0.25s;
+}
+
+.skin-appt-field input::placeholder {
+  color: rgba(255, 255, 255, 0.22);
+}
+
+.skin-appt-field input:focus {
+  border-bottom-color: #c9a87c;
+}
+
+.skin-appt-submit {
+  width: 100%;
+  background: #c9a87c;
+  color: #ffffff;
+  border: none;
+  padding: 16px 20px;
+  cursor: pointer;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-family: "Jost", "Inter", sans-serif;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.25s, transform 0.2s;
+  border-radius: 2px;
+}
+
+.skin-appt-submit:hover {
+  background: #b89572;
+}
+
+.skin-appt-extras {
+  margin-top: 28px;
+  text-align: center;
+}
+
+.skin-appt-back {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "Jost", sans-serif;
+  background: none;
+  border: none;
+  display: inline-block;
+}
+
+.skin-appt-back:hover {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+@media (max-width: 600px) {
+  .skin-appt-card {
+    padding: 40px 22px 36px;
+  }
+
+  .skin-appt-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -40,7 +40,7 @@ body{font-family:'Jost',sans-serif;background:var(--white);color:var(--black);ov
   position: fixed; top: 0; left: 0; right: 0; z-index: 2000;
   display: flex; align-items: center; justify-content: space-between;
   padding: 0 60px; height: 72px;
-  background: rgba(10, 10, 10, 0.96); backdrop-filter: blur(20px);
+  background: rgba(26, 26, 26, 0.96); backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(201, 169, 110, 0.15);
   transition: all 0.4s;
 }
@@ -305,7 +305,7 @@ body{font-family:'Jost',sans-serif;background:var(--white);color:var(--black);ov
 .frm-sub:hover{background:var(--skin);}
 
 /* FOOTER */
-footer{background:#0a0a0a; border-top:1px solid rgba(212,181,160,0.1); padding:100px 0 50px;}
+footer{background:#1a1a1a; border-top:1px solid rgba(212,181,160,0.1); padding:100px 0 50px;}
 .foot-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:56px;margin-bottom:60px;}
 .foot-logo{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:var(--white);text-decoration:none;letter-spacing:0.1em;display:block;margin-bottom:0;cursor:pointer;}
 .foot-logo span{color:var(--skin);}
@@ -627,21 +627,7 @@ footer{background:#0a0a0a; border-top:1px solid rgba(212,181,160,0.1); padding:1
 .s-dept:nth-child(even) { background: var(--white); }
 .s-dept:nth-child(odd) { background: var(--off-white); border-top: 1px solid var(--border-b); border-bottom: 1px solid var(--border-b); }
 
-/* Salon page (SPA): match Korean Head Spa dark canvas */
-#page-salon { background: var(--black); }
-#page-salon .s-dept { background: var(--black); border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); }
-#page-salon .s-dept-head { border-bottom-color: rgba(255,255,255,0.10); }
-#page-salon .s-dept-h { color: var(--white); }
-#page-salon .sp-sec-note-b { color: rgba(255,255,255,0.55); }
-
-/* Salon cards: match Clinic's dark "Advanced Treatments" vibe (no content/icon changes) */
-#page-salon .s-cards { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.08); }
-#page-salon .s-card { background: #111; }
-#page-salon .s-card:hover { box-shadow: 0 24px 60px rgba(0,0,0,0.45); }
-#page-salon .s-card-h { color: var(--white); }
-#page-salon .s-card-p { color: rgba(245, 240, 235, 0.65); }
-#page-salon .s-card-n { color: rgba(255,255,255,0.06); }
-#page-salon .s-divl { background: var(--skin); }
+/* Salon page (SPA): Reverted to light theme canvas to match home page highlight */
 
 .s-dept-head { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 52px; gap: 24px; flex-wrap: wrap; border-bottom: 0.5px solid rgba(0,0,0,0.1); padding-bottom: 32px; }
 .s-dept-tag { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: var(--skin); display: block; margin-bottom: 12px; }
@@ -691,3 +677,66 @@ footer{background:#0a0a0a; border-top:1px solid rgba(212,181,160,0.1); padding:1
   .khs-fi img { aspect-ratio: 16/9; }
   .khs-steps { grid-template-columns: 1fr !important; }
 }
+
+
+    /* NEW SALON SPA UI CSS */
+    .salon-wrapper { width: 100%; overflow-x: hidden; font-family: "Inter", sans-serif; color: #1a1a1a; background: #FAF5F0; line-height: 1.6; }
+    .salon-wrapper h1, .salon-wrapper h2, .salon-wrapper h3, .salon-wrapper h4, .salon-wrapper h5, .salon-wrapper h6 { font-family: 'Playfair Display', serif; font-weight: 600; }
+    .salon-wrapper a { text-decoration: none; color: inherit; }
+    .salon-wrapper ul { list-style: none; }
+    .salon-wrapper img { max-width: 100%; display: block; }
+    .salon-wrapper .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .salon-wrapper .hero { position: relative; min-height: 100vh; width: 100%; display: flex; align-items: center; background: #0a0a0a; padding-top: 0; margin-top: 0; overflow: hidden; }
+    .salon-wrapper .hero-bg { position: absolute; top: 0; left: 0; width: 100% !important; height: 100% !important; background: url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920&q=80') center/cover no-repeat !important; opacity: 0.4; filter: none !important; z-index: 1; }
+    .salon-wrapper .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,10,10,0.3), rgba(10,10,10,0.5), #0a0a0a); z-index: 2; }
+    .salon-wrapper .hero-content { position: relative; z-index: 3; padding: 100px 0 60px; width: 100%; opacity:1; transform:none; }
+    .salon-wrapper .hero-tag { color: #C9A87C; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 16px; border:none; padding:0; animation:none; opacity:1; display:block; }
+    .salon-wrapper .hero-title { color: #fff; font-size: clamp(48px, 8vw, 80px); line-height: 1; margin-bottom: 20px; font-weight: 700; }
+    .salon-wrapper .hero-title em { color: #C9A87C; font-style: italic; }
+    .salon-wrapper .hero-desc { color: rgba(255,255,255,0.6); font-size: 14px; margin-top: 16px; max-width: 420px; }
+    .salon-wrapper .head-spa { background: #FFF5EB; padding: 80px 0; }
+    .salon-wrapper .head-spa-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .salon-wrapper .head-spa-img-wrap { position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 25px 50px rgba(0,0,0,0.15); }
+    .salon-wrapper .head-spa-img-wrap img { width: 100%; height: 400px; object-fit: cover; transition: transform 0.7s; }
+    .salon-wrapper .head-spa-img-wrap:hover img { transform: scale(1.05); }
+    .salon-wrapper .head-spa-img-glow { position: absolute; bottom: -16px; right: -16px; width: 96px; height: 96px; background: rgba(201,168,124,0.2); border-radius: 50%; filter: blur(32px); }
+    .salon-wrapper .spa-tag { color: #C9A87C; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 8px; }
+    .salon-wrapper .spa-title { font-size: 40px; margin-bottom: 4px; }
+    .salon-wrapper .spa-title-accent { font-size: 40px; margin-bottom: 24px; }
+    .salon-wrapper .spa-title-accent em { color: #C9A87C; font-style: italic; }
+    .salon-wrapper .spa-desc { color: #777; font-size: 13px; margin-bottom: 32px; max-width: 420px; }
+    .salon-wrapper .features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; margin-bottom: 32px; }
+    .salon-wrapper .feature-item { display: flex; align-items: center; gap: 8px; }
+    .salon-wrapper .feature-check { color: #C9A87C; font-size: 14px; flex-shrink: 0; }
+    .salon-wrapper .feature-item span { font-size: 12px; color: rgba(26,26,26,0.8); }
+    .salon-wrapper .spa-quote { color: #777; font-size: 12px; font-style: italic; margin-bottom: 24px; }
+    .salon-wrapper .btn-rosegold { display: inline-flex; align-items: center; gap: 8px; background: #C9A87C; color: #fff; padding: 12px 32px; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; border: none; cursor: pointer; transition: background 0.3s; }
+    .salon-wrapper .btn-rosegold:hover { background: #d4ba95; }
+    .salon-wrapper .btn-outline { display: inline-flex; align-items: center; gap: 8px; border: 1px solid #C9A87C; color: #C9A87C; padding: 12px 32px; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; background: none; cursor: pointer; transition: all 0.3s; }
+    .salon-wrapper .btn-outline:hover { background: #C9A87C; color: #fff; }
+    .salon-wrapper .section { padding: 80px 0; }
+    .salon-wrapper .section-header { margin-bottom: 56px; text-align: left; }
+    .salon-wrapper .section-title { font-size: 40px; }
+    .salon-wrapper .section-title em { color: #C9A87C; font-style: italic; }
+    .salon-wrapper .section-subtitle { color: #777; font-size: 13px; margin-top: 12px; max-width: 500px; }
+    .salon-wrapper .cards-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .salon-wrapper .card { background: #fff; border: 1px solid rgba(0,0,0,0.06); border-radius: 12px; padding: 24px; transition: all 0.3s; cursor:default; }
+    .salon-wrapper .card::before, .salon-wrapper .card::after { content:none; }
+    .salon-wrapper .card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); border-color: rgba(201,168,124,0.2); }
+    .salon-wrapper .card h4 { font-size: 18px; margin-bottom: 12px; color: #1a1a1a; }
+    .salon-wrapper .card p { color: #777; font-size: 12px; line-height: 1.7; margin-bottom: 0px; min-height:0; }
+    .salon-wrapper .section-cta { text-align: center; margin-top: 48px; }
+    .salon-wrapper .bg-white-sec { background: #ffffff; }
+    .salon-wrapper .bg-cream { background: #FFF5EB; }
+    .salon-wrapper .bg-beige { background: #FAF5F0; }
+    @media (max-width: 768px) {
+      .salon-wrapper .hero-title { font-size: 36px; }
+      .salon-wrapper .head-spa-grid { grid-template-columns: 1fr; }
+      .salon-wrapper .cards-grid { grid-template-columns: 1fr 1fr; }
+      .salon-wrapper .section-title, .salon-wrapper .spa-title, .salon-wrapper .spa-title-accent,
+      .salon-wrapper .skin-appt-title, .salon-wrapper .skin-appt-title-acc { font-size: 32px; }
+    }
+    @media (max-width: 480px) {
+      .salon-wrapper .cards-grid { grid-template-columns: 1fr; }
+      .salon-wrapper .features-grid { grid-template-columns: 1fr; }
+    }

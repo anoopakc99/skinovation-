@@ -5,22 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Laser Hair Reduction | Skinnovation</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ asset('css/appt-form.css') }}">
   <style>
     :root {
       --charcoal: #1a1a1a;
-      --dark: #111111;
-      --cream: #f5f0eb;
-      --beige: #e8ddd4;
-      --rose: #c8a090;
-      --rose-light: #E8D5B0;
-      --gold: #c8a090;
+      --dark: #1a1a1a;
+      --cream: #FFF5EB;
+      --beige: #FAF5F0;
+      --rose: #C9A87C;
+      --rose-light: #d4ba95;
+      --gold: #C9A87C;
       --white: #ffffff;
-      --text-muted: #8a8a8a;
-      --card-bg: #1e1e1e;
-      --border: rgba(201, 169, 110, 0.2);
+      --text-main: #1a1a1a;
+      --text-muted: #777;
+      --card-bg: #ffffff;
+      --border: rgba(201, 169, 110, 0.1);
     }
 
     * {
@@ -34,10 +35,11 @@
     }
 
     body {
-      background: var(--dark);
-      color: var(--cream);
-      font-family: 'Jost', sans-serif;
-      font-weight: 300;
+      background: var(--beige);
+      color: var(--text-main);
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
       overflow-x: hidden;
     }
 
@@ -46,13 +48,13 @@
       position: fixed; top: 0; left: 0; right: 0; z-index: 2000;
       display: flex; align-items: center; justify-content: space-between;
       padding: 0 60px; height: 72px;
-      background: rgba(10, 10, 10, 0.96); backdrop-filter: blur(20px);
+      background: rgba(26, 26, 26, 0.96); backdrop-filter: blur(20px);
       border-bottom: 1px solid rgba(201, 169, 110, 0.15);
       transition: all 0.4s;
     }
     .nav-logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 24px; font-weight: 600; letter-spacing: 4px;
+      font-family: 'Playfair Display', serif;
+      font-size: 24px; font-weight: 600; letter-spacing: 2px;
       color: var(--white); text-transform: uppercase; text-decoration: none;
       cursor: pointer;
     }
@@ -146,7 +148,7 @@
     }
 
     .hero h1 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Playfair Display', serif;
       font-size: clamp(52px, 7vw, 90px);
       font-weight: 300;
       line-height: 1.05;
@@ -154,15 +156,10 @@
       color: var(--white);
     }
 
-    .hero h1 em {
-      font-style: italic;
-      color: var(--rose-light);
-    }
-
     .hero p {
       font-size: 15px;
       line-height: 1.8;
-      color: rgba(245, 240, 235, 0.75);
+      color: rgba(255, 255, 255, 0.9);
       max-width: 480px;
       margin-bottom: 40px;
     }
@@ -288,7 +285,7 @@
     }
 
     .stat-num {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Playfair Display', serif;
       font-size: 36px;
       font-weight: 400;
       color: var(--rose-light);
@@ -343,6 +340,7 @@
       grid-template-columns: 1fr 1fr;
       gap: 80px;
       align-items: center;
+      background: var(--cream);
     }
 
     .lhr-text .section-tag {
@@ -355,12 +353,12 @@
     }
 
     .lhr-text h2 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Playfair Display', serif;
       font-size: clamp(30px, 3.2vw, 48px);
       font-weight: 300;
       line-height: 1.12;
       margin-bottom: 28px;
-      color: var(--white);
+      color: var(--text-main);
     }
 
     .lhr-text h2 em {
@@ -371,7 +369,7 @@
     .lhr-text p {
       font-size: 15px;
       line-height: 1.9;
-      color: rgba(245, 240, 235, 0.65);
+      color: rgba(0, 0, 0, 0.7);
       margin-bottom: 20px;
     }
 
@@ -388,7 +386,7 @@
       gap: 10px;
       font-size: 13px;
       letter-spacing: 0.5px;
-      color: var(--cream);
+      color: var(--text-main);
     }
 
     .benefit-chip::before {
@@ -431,7 +429,7 @@
     }
 
     .lhr-badge .badge-num {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Playfair Display', serif;
       font-size: 32px;
       color: var(--white);
       display: block;
@@ -447,7 +445,7 @@
 
     /* ===== HOW IT WORKS ===== */
     .how-it-works {
-      background: var(--charcoal);
+      background: var(--white);
       padding: 120px 60px;
     }
 
@@ -466,10 +464,10 @@
     }
 
     .section-header h2 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Playfair Display', serif;
       font-size: clamp(36px, 4vw, 54px);
       font-weight: 300;
-      color: var(--white);
+      color: var(--text-main);
       line-height: 1.2;
     }
 
@@ -515,7 +513,7 @@
     }
 
     .step-num {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Playfair Display', serif;
       font-size: 72px;
       font-weight: 300;
       color: rgba(201, 160, 138, 0.15);
@@ -557,10 +555,10 @@
     }
 
     .step-card h3 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Playfair Display', serif;
       font-size: 22px;
       font-weight: 400;
-      color: var(--white);
+      color: var(--text-main);
       margin-bottom: 12px;
     }
 
@@ -584,10 +582,10 @@
     }
 
     .machines-intro h2 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Playfair Display', serif;
       font-size: clamp(38px, 4vw, 56px);
       font-weight: 300;
-      color: var(--white);
+      color: var(--text-main);
       max-width: 500px;
       line-height: 1.15;
     }
@@ -601,7 +599,7 @@
       max-width: 340px;
       font-size: 14px;
       line-height: 1.8;
-      color: rgba(245, 240, 235, 0.5);
+      color: var(--text-muted);
       text-align: right;
     }
 
@@ -652,10 +650,10 @@
     }
 
     .machine-name {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Playfair Display', serif;
       font-size: 28px;
       font-weight: 400;
-      color: var(--white);
+      color: var(--text-main);
       margin-bottom: 10px;
     }
 
@@ -704,7 +702,7 @@
 
     /* ===== PRICE TABLE ===== */
     .pricing {
-      background: var(--charcoal);
+      background: var(--white);
       padding: 120px 60px;
     }
 
@@ -742,9 +740,9 @@
     }
 
     .price-table td:first-child {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Playfair Display', serif;
       font-size: 18px;
-      color: var(--white);
+      color: var(--text-main);
       font-weight: 400;
     }
 
@@ -781,7 +779,7 @@
     /* ===== ADVANCED TREATMENTS SECTION ===== */
     .adv-treatments {
       padding: 120px 60px;
-      background: var(--charcoal);
+      background: var(--white);
     }
 
     .treatments-grid {
@@ -803,7 +801,7 @@
     }
 
     .treatment-box h3 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Playfair Display', serif;
       font-size: 24px;
       color: var(--white);
       margin-bottom: 12px;
@@ -859,7 +857,7 @@
     }
 
     .skin-type-num {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Playfair Display', serif;
       font-size: 32px;
       color: var(--rose-light);
       font-weight: 300;
@@ -936,7 +934,7 @@
     }
 
     .ba-area {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Playfair Display', serif;
       font-size: 20px;
       color: var(--white);
       font-weight: 400;
@@ -952,7 +950,7 @@
     /* ===== WHY CHOOSE ===== */
     .why-choose {
       padding: 120px 60px;
-      background: var(--dark);
+      background: var(--beige);
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 80px;
@@ -981,9 +979,9 @@
     }
 
     .why-img-card .card-num {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Playfair Display', serif;
       font-size: 42px;
-      color: var(--white);
+      color: var(--text-main);
       font-weight: 300;
       display: block;
       line-height: 1;
@@ -1008,10 +1006,10 @@
     }
 
     .why-content h2 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Playfair Display', serif;
       font-size: clamp(36px, 4vw, 52px);
       font-weight: 300;
-      color: var(--white);
+      color: var(--text-main);
       line-height: 1.15;
       margin-bottom: 30px;
     }
@@ -1024,36 +1022,60 @@
     .why-reasons {
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      gap: 0;
       margin-top: 40px;
+      background: linear-gradient(165deg, #181818 0%, #121212 55%, #161616 100%);
+      border: 1px solid rgba(201, 160, 138, 0.22);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 28px 56px rgba(0, 0, 0, 0.07), inset 0 1px 0 rgba(255, 255, 255, 0.04);
     }
 
     .reason-item {
       display: flex;
-      gap: 20px;
-      padding: 24px;
-      background: var(--charcoal);
-      border-left: 2px solid transparent;
-      transition: all 0.3s;
+      gap: 22px;
+      align-items: flex-start;
+      padding: 26px 28px;
+      background: transparent;
+      border-left: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      transition: background 0.28s ease;
+    }
+
+    .reason-item:last-child {
+      border-bottom: none;
     }
 
     .reason-item:hover {
-      border-left-color: var(--rose);
-      background: #222;
+      background: rgba(201, 160, 138, 0.06);
     }
 
     .reason-icon {
-      font-size: 28px;
       flex-shrink: 0;
-      width: 52px;
-      height: 52px;
+      width: 48px;
+      height: 48px;
       display: flex;
       align-items: center;
       justify-content: center;
+      color: var(--rose);
+      background: rgba(201, 160, 138, 0.09);
+      border: 1px solid rgba(201, 160, 138, 0.22);
+      border-radius: 12px;
+    }
+
+    .reason-icon svg {
+      width: 22px;
+      height: 22px;
+      display: block;
+    }
+
+    .reason-text {
+      flex: 1;
+      min-width: 0;
     }
 
     .reason-text h4 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Playfair Display', serif;
       font-size: 20px;
       color: var(--white);
       font-weight: 400;
@@ -1091,7 +1113,7 @@
       align-items: center;
       padding: 24px 0;
       cursor: pointer;
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Playfair Display', serif;
       font-size: 20px;
       font-weight: 400;
       color: var(--white);
@@ -1174,7 +1196,7 @@
     }
 
     .cta-inner h2 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Playfair Display', serif;
       font-size: clamp(32px, 3.5vw, 50px);
       font-weight: 300;
       color: var(--white);
@@ -1213,11 +1235,61 @@
       color: var(--white);
     }
 
+    /* THEME LIGHT FOR ALTERNATING HIGHLIGHTS LIKE HOME PAGE */
+    .theme-light {
+      background: var(--cream) !important;
+    }
+    .theme-light h2, .theme-light h3, .theme-light h4, .theme-light .faq-q, .theme-light p, .theme-light td {
+      color: #1a1a1a !important;
+    }
+    .theme-light p, .theme-light .stat-label, .theme-light .lhr-li p, .theme-light .reason-text p, .theme-light .section-tag {
+      color: #6b6b6b !important;
+    }
+    .theme-light .benefit-chip { color: #1a1a1a !important; }
+    
+    .theme-light .treatments-grid, .theme-light .steps-grid {
+      background: rgba(0,0,0,0.06);
+    }
+    .theme-light .step-card::before { display: none; }
+    
+    .theme-light .treatment-box, .theme-light .step-card {
+      background: #ffffff !important;
+      border: none !important;
+    }
+    .theme-light .treatment-box:hover {
+      background: #fdfdfd !important;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+      z-index: 2;
+    }
+    .theme-light .step-card:hover {
+      background: #ffffff !important;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+      transform: translateY(-6px);
+      z-index: 2;
+    }
+    
+    .theme-light .step-num { color: rgba(0,0,0,0.04) !important; }
+    .theme-light .step-card:hover .step-num { color: rgba(0,0,0,0.06) !important; }
+    
+    .theme-light .step-icon {
+      background: rgba(200,160,144,0.1) !important;
+      color: var(--rose) !important;
+      border-color: rgba(200,160,144,0.3) !important;
+    }
+    .theme-light .step-card:hover .step-icon {
+      background: var(--rose) !important;
+      color: #ffffff !important;
+    }
+    
+    .theme-light .faq-item { border-bottom-color: rgba(0,0,0,0.1) !important; }
+    .theme-light .faq-q:hover { color: var(--rose) !important; }
+    .theme-light .faq-a { color: #6b6b6b !important; }
+
     /* ===== FOOTER ===== */
     /* MASTER FOOTER CLASSES */
     .cnt { max-width: 1200px; margin: 0 auto; padding: 0 64px; }
     .foot-grid { display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr; gap: 56px; margin-bottom: 60px; }
-    .foot-logo { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 400; color: var(--white); text-decoration: none; letter-spacing: 0.1em; display: block; margin-bottom: 0; cursor: pointer; }
+    .foot-logo { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 400; color: var(--white); text-decoration: none; letter-spacing: 0.1em; display: block; margin-bottom: 0; cursor: pointer; }
     .foot-logo span { color: var(--rose); }
     .foot-p { font-size: 14px; color: rgba(255, 255, 255, 0.4); line-height: 1.8; font-weight: 300; margin-bottom: 24px; }
     .fsoc { display: block; }
@@ -1320,7 +1392,8 @@
       .why-choose { grid-template-columns: 1fr; gap: 40px; }
       .why-img-main { height: 350px; }
       .why-content { text-align: center; }
-      .reason-item { text-align: left; }
+      .reason-item { text-align: left; padding: 22px 20px; gap: 18px; }
+      .why-reasons { margin-top: 28px; border-radius: 14px; }
       
       .faq-list { margin-top: 30px; }
       .faq-q { font-size: 18px; padding: 20px 0; }
@@ -1389,7 +1462,7 @@
   </section>
 
   <!-- ADVANCED AESTHETIC TREATMENTS -->
-  <section class="adv-treatments">
+  <section class="adv-treatments theme-light">
     <div class="section-header reveal">
 
       <h2>Advanced Aesthetic <em>Treatments</em></h2>
@@ -1476,7 +1549,7 @@
   </section>
 
   <!-- HOW IT WORKS -->
-  <section class="how-it-works">
+  <section class="how-it-works theme-light">
     <div class="section-header reveal">
       <h2>Your Journey to <em>Silky Skin</em></h2>
     </div>
@@ -1544,7 +1617,12 @@
       <h2>Where <em>Science</em> Meets Beauty</h2>
       <div class="why-reasons">
         <div class="reason-item">
-          <div class="reason-icon">🏥</div>
+          <div class="reason-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="9" r="6"/>
+              <path d="M15.5 12.5 17 22l-5-3-5 3 1.5-9.5"/>
+            </svg>
+          </div>
           <div class="reason-text">
             <h4>Board-Certified Dermatologists</h4>
             <p>Every session is supervised by certified skin specialists — not technicians. Your safety is our
@@ -1552,7 +1630,12 @@
           </div>
         </div>
         <div class="reason-item">
-          <div class="reason-icon">⚡</div>
+          <div class="reason-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/>
+              <path d="m9 12 2 2 4-4"/>
+            </svg>
+          </div>
           <div class="reason-text">
             <h4>FDA-Approved Devices Only</h4>
             <p>We use only internationally certified laser platforms proven safe and effective for Indian skin tones
@@ -1560,14 +1643,32 @@
           </div>
         </div>
         <div class="reason-item">
-          <div class="reason-icon">🌡️</div>
+          <div class="reason-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v4"/>
+              <path d="M12 18v4"/>
+              <path d="m4.93 4.93 2.83 2.83"/>
+              <path d="m16.24 16.24 2.83 2.83"/>
+              <path d="M2 12h4"/>
+              <path d="M18 12h4"/>
+              <path d="m4.93 19.07 2.83-2.83"/>
+              <path d="m16.24 7.76 2.83-2.83"/>
+            </svg>
+          </div>
           <div class="reason-text">
             <h4>Pain-Free with Cryo Cooling</h4>
             <p>Advanced cooling technology ensures a comfortable, painless experience — even in sensitive areas.</p>
           </div>
         </div>
         <div class="reason-item">
-          <div class="reason-icon">📋</div>
+          <div class="reason-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/>
+              <path d="M9 5a2 2 0 012-2h2a2 2 0 012 2v0"/>
+              <path d="M9 12h6"/>
+              <path d="M9 16h6"/>
+            </svg>
+          </div>
           <div class="reason-text">
             <h4>Customized Protocols</h4>
             <p>No two skins are the same. We create a personalized treatment plan based on your unique skin analysis.
@@ -1579,7 +1680,7 @@
   </section>
 
   <!-- FAQ -->
-  <section class="faq">
+  <section class="faq theme-light">
     <div class="section-header reveal">
       <span class="section-tag">Have Questions?</span>
       <h2>Frequently Asked <em>Questions</em></h2>
@@ -1621,64 +1722,15 @@
 
 
 
-  <!-- BOOKING SECTION -->
-  <section id="booking" style="padding: 100px 20px; background: #0a0a0a;">
-    <div style="max-width: 650px; margin: 0 auto; background: #111; border-radius: 8px; overflow: hidden; box-shadow: 0 40px 80px rgba(0,0,0,0.2); color: #fff; padding: 60px 50px; position: relative;">
-
-      <!-- Decor Graphic (Matches User Screenshot) -->
-      <div style="position: absolute; top: 15px; left: 15px; opacity: 0.4; pointer-events: none;">
-        <div style="width: 70px; height: 70px; border: 1px solid rgba(212,181,160,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-          <div style="width: 50px; height: 50px; border: 1px solid rgba(212,181,160,0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-            <div style="width: 30px; height: 30px; border: 1.5px solid rgba(212,181,160,0.7); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-               <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 3V21L9 15L11 20L13 19L11 14L18 14L3 3Z" fill="#d4b5a0" stroke="black" stroke-width="0.5"/></svg>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- TOP PART: Info -->
-      <div style="text-align: center; margin-bottom: 40px;">
-        
-        <h2 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(34px, 4vw, 42px); font-weight: 300; line-height: 1.1; margin-bottom: 20px;">Begin Your<br><em style="font-style: italic;">Transformation</em></h2>
-        <p style="font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.6); max-width: 450px; margin: 0 auto;">Our expert team will confirm your appointment and guide you to the best treatment for your unique needs.</p>
-      </div>
-
-      <!-- BOTTOM PART: Form -->
-      <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 30px;">
-        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; color: #fff; margin-bottom: 24px;">Request Appointment</h3>
-
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px;">
-          <div style="text-align: left;">
-            <label style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); display: block; margin-bottom: 8px;">Full Name</label>
-            <input type="text" placeholder="Your name" style="width: 100%; padding: 14px 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; outline: none; font-family: 'Jost', sans-serif; font-size: 14px; color: #fff;">
-          </div>
-          <div style="text-align: left;">
-            <label style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); display: block; margin-bottom: 8px;">Phone</label>
-            <input type="tel" placeholder="+91 00000 00000" style="width: 100%; padding: 14px 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; outline: none; font-family: 'Jost', sans-serif; font-size: 14px; color: #fff;">
-          </div>
-        </div>
-
-        <button onclick="submitForm(this)" style="width: 100%; background: #d4b5a0; color: #111; font-weight: 500; padding: 16px; border: none; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; border-radius: 4px; cursor: pointer; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
-          Book Appointment &rarr;
-        </button>
-      </div>
-
-    </div>
-
-    <style>
-      @media (max-width: 600px) {
-        #booking > div > div:last-child > div {
-          grid-template-columns: 1fr !important;
-        }
-        #booking > div {
-          padding: 40px 24px !important;
-        }
-      }
-    </style>
-  </section>
+  @include('partials.appointment-form', [
+    'sectionId' => 'booking',
+    'formId' => 'apptFormClinicPage',
+    'context' => 'clinic',
+    'variant' => 'dark',
+  ])
 
   <!-- FOOTER -->
-  <footer style="background: #0a0a0a; border-top: 1px solid rgba(212,181,160,0.1); padding: 100px 0 50px;">
+  <footer style="background: #1a1a1a; border-top: 1px solid rgba(212,181,160,0.1); padding: 100px 0 50px;">
     <div class="cnt">
       <div class="foot-grid">
         <div style="padding-right: 40px;">
@@ -1793,6 +1845,7 @@
       menuOverlay.addEventListener('click', () => toggleMenu(false));
     }
   </script>
+  <script src="{{ asset('js/app.js') }}"></script>
 </body>
 
 </html>

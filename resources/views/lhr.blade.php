@@ -5,12 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Laser Hair Removal | Skinnovation</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ asset('css/appt-form.css') }}">
 <style>
   :root {
     --gold: #c8a090;
     --gold-light: #e8c4b4;
     --gold-dark: #a07060;
-    --black: #0A0A0A;
+    --black: #1a1a1a;
     --dark: #111111;
     --dark2: #181818;
     --dark3: #1F1F1F;
@@ -33,7 +34,7 @@
     position: fixed; top: 0; left: 0; right: 0; z-index: 2000;
     display: flex; align-items: center; justify-content: space-between;
     padding: 0 60px; height: 72px;
-    background: rgba(10, 10, 10, 0.96); backdrop-filter: blur(20px);
+    background: rgba(26, 26, 26, 0.96); backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(201, 169, 110, 0.15);
     transition: all 0.4s;
   }
@@ -525,7 +526,7 @@
   /* ── FOOTER ── */
   /* ── FOOTER (Home Style) ── */
   .cnt { max-width: 1200px; margin: 0 auto; padding: 0 64px; }
-  footer { background: #0a0a0a; border-top: 1px solid rgba(212,181,160,0.1); padding: 100px 0 50px; }
+  footer { background: #1a1a1a; border-top: 1px solid rgba(212,181,160,0.1); padding: 100px 0 50px; }
   .foot-grid { display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr; gap: 56px; margin-bottom: 60px; }
   .foot-logo { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 400; color: var(--white); text-decoration: none; letter-spacing: 0.1em; display: block; margin-bottom: 0; cursor: pointer; }
   .foot-logo span { color: var(--gold); }
@@ -1024,73 +1025,23 @@
           <div class="faq-a">There is zero downtime. You can resume normal activities immediately. Mild redness may occur for a few hours, which is completely normal and subsides quickly.</div>
         </div>
         <div class="faq-item" onclick="toggleFaq(this)">
-        <div class="faq-item" onclick="toggleFaq(this)">
           <div class="faq-q">What makes Skinnovation different? <span class="faq-toggle">+</span></div>
-          <div class="faq-a">We combine 30+ state-of-the-art laser devices, experienced dermatologists with 10+ years expertise, and a patient-first approach — resulting in 10,000+ satisfied clients in Lucknow.</div>
+          <div class="faq-a">We combine state-of-the-art laser devices, experienced dermatologists, and a patient-first approach — resulting in thousands of satisfied clients in Lucknow.</div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- BOOKING SECTION -->
-<section id="booking" style="padding: 100px 20px; background: #0a0a0a;">
-  <div style="max-width: 650px; margin: 0 auto; background: #111; border-radius: 8px; overflow: hidden; box-shadow: 0 40px 80px rgba(0,0,0,0.2); color: #fff; padding: 60px 50px; position: relative;">
-
-    <!-- Decor Graphic (Matches User Screenshot) -->
-    <div style="position: absolute; top: 15px; left: 15px; opacity: 0.4; pointer-events: none;">
-      <div style="width: 70px; height: 70px; border: 1px solid rgba(212,181,160,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-        <div style="width: 50px; height: 50px; border: 1px solid rgba(212,181,160,0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-          <div style="width: 30px; height: 30px; border: 1.5px solid rgba(212,181,160,0.7); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-             <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 3V21L9 15L11 20L13 19L11 14L18 14L3 3Z" fill="#d4b5a0" stroke="black" stroke-width="0.5"/></svg>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- TOP PART: Info -->
-    <div style="text-align: center; margin-bottom: 40px;">
-      
-      <h2 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(34px, 4vw, 42px); font-weight: 300; line-height: 1.1; margin-bottom: 20px;">Begin Your<br><em style="font-style: italic;">Transformation</em></h2>
-      <p style="font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.6); max-width: 450px; margin: 0 auto;">Our expert team will confirm your appointment and guide you to the best treatment for your unique needs.</p>
-    </div>
-
-    <!-- BOTTOM PART: Form -->
-    <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 30px;">
-      <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; color: #fff; margin-bottom: 24px;">Request Appointment</h3>
-
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px;">
-        <div style="text-align: left;">
-          <label style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); display: block; margin-bottom: 8px;">Full Name</label>
-          <input type="text" placeholder="Your name" style="width: 100%; padding: 14px 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; outline: none; font-family: 'Jost', sans-serif; font-size: 14px; color: #fff;">
-        </div>
-        <div style="text-align: left;">
-          <label style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); display: block; margin-bottom: 8px;">Phone</label>
-          <input type="tel" placeholder="+91 00000 00000" style="width: 100%; padding: 14px 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; outline: none; font-family: 'Jost', sans-serif; font-size: 14px; color: #fff;">
-        </div>
-      </div>
-
-      <button onclick="submitForm(this)" style="width: 100%; background: #d4b5a0; color: #111; font-weight: 500; padding: 16px; border: none; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; border-radius: 4px; cursor: pointer; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
-        Book Appointment &rarr;
-      </button>
-    </div>
-
-  </div>
-
-  <style>
-    @media (max-width: 600px) {
-      #booking > div > div:last-child > div {
-        grid-template-columns: 1fr !important;
-      }
-      #booking > div {
-        padding: 40px 24px !important;
-      }
-    }
-  </style>
-</section>
+@include('partials.appointment-form', [
+  'sectionId' => 'booking',
+  'formId' => 'apptFormLhrPage',
+  'context' => 'lhr',
+  'variant' => 'dark',
+])
 
 <!-- Footer -->
-<footer style="background: #0a0a0a; border-top: 1px solid rgba(212,181,160,0.1); padding: 100px 0 50px;">
+<footer style="background: #1a1a1a; border-top: 1px solid rgba(212,181,160,0.1); padding: 100px 0 50px;">
   <div class="cnt">
     <div class="foot-grid">
       <div style="padding-right: 40px;">
@@ -1134,6 +1085,6 @@ function toggleFaq(el) {
   }
 }
 </script>
-
+<script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
