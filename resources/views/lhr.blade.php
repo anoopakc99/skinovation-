@@ -762,42 +762,72 @@
 <div class="why-section">
   <div class="why-inner">
     <div class="why-grid">
-      <div class="why-image-wrap">
-        <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80" alt="Laser Treatment">
+
+      {{-- LEFT: Premium LHR image with overlay badges --}}
+      <div class="why-image-wrap" style="position:relative;">
+
+        {{-- Main LHR image: female technician using laser device on client --}}
+        <img
+          id="lhr-why-img"
+          src="{{ asset('images/lhr-technician.jpg') }}"
+          alt="Laser hair removal procedure with a technician and patient"
+          style="width:100%; height:560px; object-fit:cover; object-position:center top; display:block;"
+          onerror="this.onerror=null; this.src='{{ asset('images/lhr-technician.png') }}';">
 
       </div>
-      <div>
+
+      {{-- RIGHT: Heading + description + why-points --}}
+      <div style="display:flex; flex-direction:column; justify-content:center; padding-left:16px;">
 
         <h2 class="section-title lhr-science-title">The Science of <em>Permanent Smoothness</em> With Our Laser Hair Removal Treatment</h2>
         <div class="section-line"></div>
-        <p class="section-desc">Our FDA-approved diode laser technology targets hair follicles with precision — delivering permanent hair reduction that is safe for all skin tones and all body areas.</p>
-        <div class="why-points">
-          <div class="why-point">
-            <div>
-              <div class="why-point-title">Zero Downtime</div>
-              <div class="why-point-desc">Walk in, walk out. No recovery needed. Resume your day immediately after every session.</div>
-            </div>
+        <p class="section-desc" style="margin-bottom:36px;">Our FDA-approved diode laser technology targets hair follicles with precision — delivering permanent hair reduction that is safe for all skin tones and all body areas.</p>
+
+        <div class="why-points" style="gap:0;">
+
+          <div class="why-point" style="
+            padding:18px 20px; margin-bottom:10px;
+            border-left:3px solid #c9a87c;
+            background:rgba(201,169,110,0.04);
+            gap:0; flex-direction:column;
+          ">
+            <div class="why-point-title" style="margin-bottom:6px;">Zero Downtime</div>
+            <div class="why-point-desc">Walk in, walk out. No recovery needed. Resume your day immediately after every session.</div>
           </div>
-          <div class="why-point">
-            <div>
-              <div class="why-point-title">Pain-Free Procedure</div>
-              <div class="why-point-desc">Advanced cooling technology ensures each session is comfortable — even in sensitive areas.</div>
-            </div>
+
+          <div class="why-point" style="
+            padding:18px 20px; margin-bottom:10px;
+            border-left:3px solid #c9a87c;
+            background:rgba(201,169,110,0.04);
+            gap:0; flex-direction:column;
+          ">
+            <div class="why-point-title" style="margin-bottom:6px;">Pain-Free Procedure</div>
+            <div class="why-point-desc">Advanced cooling technology ensures each session is comfortable — even in sensitive areas.</div>
           </div>
-          <div class="why-point">
-            <div>
-              <div class="why-point-title">No More Ingrowths</div>
-              <div class="why-point-desc">Say goodbye to painful razor bumps, ingrown hairs, and irritation from waxing forever.</div>
-            </div>
+
+          <div class="why-point" style="
+            padding:18px 20px; margin-bottom:10px;
+            border-left:3px solid #c9a87c;
+            background:rgba(201,169,110,0.04);
+            gap:0; flex-direction:column;
+          ">
+            <div class="why-point-title" style="margin-bottom:6px;">No More Ingrowths</div>
+            <div class="why-point-desc">Say goodbye to painful razor bumps, ingrown hairs, and irritation from waxing forever.</div>
           </div>
-          <div class="why-point">
-            <div>
-              <div class="why-point-title">Permanent Results</div>
-              <div class="why-point-desc">Clinically proven 90%+ permanent hair reduction with our advanced diode laser system.</div>
-            </div>
+
+          <div class="why-point" style="
+            padding:18px 20px;
+            border-left:3px solid #c9a87c;
+            background:rgba(201,169,110,0.04);
+            gap:0; flex-direction:column;
+          ">
+            <div class="why-point-title" style="margin-bottom:6px;">Permanent Results</div>
+            <div class="why-point-desc">Clinically proven 90%+ permanent hair reduction with our advanced diode laser system.</div>
           </div>
+
         </div>
       </div>
+
     </div>
   </div>
 </div>
