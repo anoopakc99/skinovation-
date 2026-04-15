@@ -773,28 +773,24 @@
         <p class="section-desc">Our FDA-approved diode laser technology targets hair follicles with precision — delivering permanent hair reduction that is safe for all skin tones and all body areas.</p>
         <div class="why-points">
           <div class="why-point">
-            <div class="why-point-icon">◇</div>
             <div>
               <div class="why-point-title">Zero Downtime</div>
               <div class="why-point-desc">Walk in, walk out. No recovery needed. Resume your day immediately after every session.</div>
             </div>
           </div>
           <div class="why-point">
-            <div class="why-point-icon">◇</div>
             <div>
               <div class="why-point-title">Pain-Free Procedure</div>
               <div class="why-point-desc">Advanced cooling technology ensures each session is comfortable — even in sensitive areas.</div>
             </div>
           </div>
           <div class="why-point">
-            <div class="why-point-icon">◇</div>
             <div>
               <div class="why-point-title">No More Ingrowths</div>
               <div class="why-point-desc">Say goodbye to painful razor bumps, ingrown hairs, and irritation from waxing forever.</div>
             </div>
           </div>
           <div class="why-point">
-            <div class="why-point-icon">◇</div>
             <div>
               <div class="why-point-title">Permanent Results</div>
               <div class="why-point-desc">Clinically proven 90%+ permanent hair reduction with our advanced diode laser system.</div>
@@ -940,47 +936,18 @@
     <div class="section-line"></div>
     <div class="process-steps">
       <div class="process-step">
-        <div class="process-step-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none">
-            <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="1.8"/>
-            <path d="M16.2 16.2L21 21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            <path d="M8.5 11h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
-          </svg>
-        </div>
         <div class="process-step-title">Skin Analysis</div>
         <div class="process-step-desc">Our dermatologist assesses your skin tone, hair type, and creates a personalized treatment plan.</div>
       </div>
       <div class="process-step">
-        <div class="process-step-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none">
-            <path d="M10 3h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            <path d="M11 3v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            <path d="M13 3v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            <path d="M8.5 6.5h7c.9 0 1.5.6 1.5 1.5V20c0 1-.7 1.7-1.7 1.7H8.7C7.7 21.7 7 21 7 20V8c0-.9.6-1.5 1.5-1.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
-            <path d="M9.5 12h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
-          </svg>
-        </div>
         <div class="process-step-title">Pre-Treatment</div>
         <div class="process-step-desc">Gentle cleansing and cooling gel is applied to protect and prepare your skin for laser energy.</div>
       </div>
       <div class="process-step">
-        <div class="process-step-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none">
-            <path d="M13 2L4 14h7l-1 8 10-14h-7l0-6Z" fill="currentColor" opacity="0.25"/>
-            <path d="M13 2L4 14h7l-1 8 10-14h-7l0-6Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
-          </svg>
-        </div>
         <div class="process-step-title">Laser Application</div>
         <div class="process-step-desc">FDA-approved diode laser precisely targets follicles. Most sessions take just 15–45 minutes.</div>
       </div>
       <div class="process-step">
-        <div class="process-step-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none">
-            <path d="M12 2l1.2 4.2L17.5 7.5l-4.3 1.2L12 13l-1.2-4.3L6.5 7.5l4.3-1.3L12 2Z" fill="currentColor" opacity="0.25"/>
-            <path d="M6.5 14l.8 2.7L10 17.5l-2.7.8-.8 2.7-.8-2.7L3 17.5l2.7-.8.8-2.7Z" fill="currentColor" opacity="0.25"/>
-            <path d="M17 13l.9 3.1L21 17l-3.1.9L17 21l-.9-3.1L13 17l3.1-.9L17 13Z" fill="currentColor" opacity="0.25"/>
-          </svg>
-        </div>
         <div class="process-step-title">Aftercare & Follow-up</div>
         <div class="process-step-desc">Soothing aftercare, detailed home instructions, and scheduled follow-up for optimal results.</div>
       </div>
@@ -1085,6 +1052,185 @@ function toggleFaq(el) {
   }
 }
 </script>
+
+{{-- ═══════════════════════════════════════════════════════
+     SALON-STYLE DOM HIGHLIGHT — applies salon page's visual
+     treatment to LHR sections without changing content/layout
+     ═══════════════════════════════════════════════════════ --}}
+{{-- Playfair Display font for salon-style headings on LHR page --}}
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+<style>
+  /* ── Salon-style section highlight variables ── */
+  :root {
+    --salon-rosegold: #C9A87C;
+    --salon-rosegold-lt: #d4ba95;
+    --salon-cream: #FFF8F0;
+    --salon-beige: #FAF4EE;
+    --salon-charcoal: #1a1a1a;
+    --salon-border: rgba(201,168,124,0.18);
+  }
+
+  /* ── Section tag decorator (like salon's "Salon ·" tag) ── */
+  .lhr-sal-tag {
+    display: inline-block;
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--salon-rosegold);
+    margin-bottom: 14px;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(201,168,124,0.35);
+  }
+
+  /* ── Section heading — Playfair like salon ── */
+  .lhr-sal-heading {
+    font-family: 'Playfair Display', serif !important;
+    font-weight: 600 !important;
+  }
+  .lhr-sal-heading em {
+    color: var(--salon-rosegold) !important;
+    font-style: italic !important;
+  }
+
+
+
+  /* ── Alternating section background highlights ── */
+  .lhr-sal-bg-cream  { background: var(--salon-cream)  !important; }
+  .lhr-sal-bg-beige  { background: var(--salon-beige)  !important; }
+  .lhr-sal-bg-dark   { background: var(--salon-charcoal) !important; }
+  .lhr-sal-bg-mid    { background: #111111 !important; }
+
+  /* ── On cream/beige sections: flip text colours for readability ── */
+  .lhr-sal-light-sec .section-title,
+  .lhr-sal-light-sec .lhr-sal-heading,
+  .lhr-sal-light-sec .process-step-title {
+    color: #1a1a1a !important;
+  }
+  .lhr-sal-light-sec .section-desc,
+  .lhr-sal-light-sec .why-point-desc,
+  .lhr-sal-light-sec .process-step-desc,
+  .lhr-sal-light-sec .faq-q,
+  .lhr-sal-light-sec .faq-a {
+    color: #5a5a5a !important;
+  }
+  .lhr-sal-light-sec .why-point-title {
+    color: #222 !important;
+  }
+  .lhr-sal-light-sec .section-line { background: var(--salon-rosegold) !important; }
+
+
+  /* ── Highlight card containers on dark sections — salon card style ── */
+  .lhr-sal-card-wrap .process-step {
+    background: rgba(201,168,124,0.04) !important;
+    border: 1px solid var(--salon-border) !important;
+    border-radius: 10px !important;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s !important;
+  }
+  .lhr-sal-card-wrap .process-step:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.18) !important;
+    border-color: rgba(201,168,124,0.4) !important;
+  }
+
+
+
+  /* ── FAQ items on light bg ── */
+  .lhr-sal-light-sec .faq-item {
+    border-bottom-color: rgba(201,168,124,0.25) !important;
+  }
+  .lhr-sal-light-sec .faq-toggle {
+    border-color: rgba(201,168,124,0.4) !important;
+    color: var(--salon-rosegold) !important;
+  }
+  .lhr-sal-light-sec .faq-item.open .faq-toggle {
+    background: var(--salon-rosegold) !important;
+    color: #fff !important;
+  }
+
+  /* ── Part cards — gold border on hover (same as salon) ── */
+  .part-card {
+    transition: transform 0.4s ease !important;
+  }
+  .part-card:hover {
+    transform: scale(1.02) !important;
+  }
+  .part-card-btn {
+    border-radius: 2px !important;
+  }
+
+  /* ── Section divider line (between sections) ── */
+  .lhr-sal-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(201,168,124,0.3), transparent);
+    margin: 0;
+  }
+
+
+
+  /* ── Smooth padding on inner wrappers ── */
+  .why-inner, .process-inner, .path-inner, .faq-inner, .parts-inner {
+    padding-top: 72px !important;
+    padding-bottom: 72px !important;
+  }
+</style>
+
+<script>
+(function applyLhrSalonStyle() {
+  /* ── Map sections to their salon-style theme ──
+     pattern: cream → dark → beige → dark → cream ...
+     matching salon page's alternating light/dark rhythm        */
+  const sectionMap = [
+    { el: document.querySelector('.why-section'),      bgClass: 'lhr-sal-bg-cream',  light: true,  tag: 'LHR · Science'         },
+    { el: document.querySelector('.path-section'),     bgClass: 'lhr-sal-bg-dark',   light: false, tag: 'LHR · Journey'         },
+    { el: document.querySelector('.parts-section'),    bgClass: 'lhr-sal-bg-beige',  light: true,  tag: 'Treatment Zones'       },
+    { el: document.querySelector('.process-section'),  bgClass: 'lhr-sal-bg-dark',   light: false, tag: 'Our Process'           },
+    { el: document.querySelector('.faq-section'),      bgClass: 'lhr-sal-bg-cream',  light: true,  tag: 'FAQ'                   },
+  ];
+
+  sectionMap.forEach(function(item) {
+    if (!item.el) return;
+
+    /* 1. Apply background colour */
+    item.el.classList.add(item.bgClass);
+    if (item.light) item.el.classList.add('lhr-sal-light-sec');
+
+    /* 2. Add divider above section */
+    const divider = document.createElement('div');
+    divider.className = 'lhr-sal-divider';
+    item.el.parentNode.insertBefore(divider, item.el);
+
+    /* 3. Apply Playfair Display to heading only (no bars, no tag labels) */
+    const h2 = item.el.querySelector('h2.section-title');
+    if (h2) {
+      h2.classList.add('lhr-sal-heading');
+    }
+  });
+
+  /* 4. Process section — add card-wrap class for card hover effect */
+  const procSection = document.querySelector('.process-section');
+  if (procSection) {
+    const steps = procSection.querySelector('.process-steps');
+    if (steps) steps.classList.add('lhr-sal-card-wrap');
+  }
+
+  /* 5. Hero section — add subtle salon-style bottom divider */
+  const hero = document.querySelector('.hero');
+  if (hero) {
+    const heroDiv = document.createElement('div');
+    heroDiv.className = 'lhr-sal-divider';
+    hero.parentNode.insertBefore(heroDiv, hero.nextSibling);
+  }
+
+  /* 6. Apply Playfair Display to ALL section-title headings on page */
+  document.querySelectorAll('h2.section-title, h1').forEach(function(el) {
+    el.classList.add('lhr-sal-heading');
+  });
+
+})();
+</script>
+
 <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
