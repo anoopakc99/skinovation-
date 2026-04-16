@@ -17,3 +17,4 @@ use App\Http\Controllers\HomeController;
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/clinic', [HomeController::class, 'clinic']);
 Route::get('/lhr', [HomeController::class, 'lhr']);
+Route::get('/medifacials', [HomeController::class, 'medifacials']);

@@ -237,8 +237,8 @@
           <div class="fc">
             <h4>Clinic</h4>
             <ul>
-              <li><a onclick="openLHR()">Laser Hair Reduction</a></li>
-              <li><a onclick="showPage('clinic')">Medi Facials</a></li>
+              <li><a href="/lhr">Laser Hair Reduction</a></li>
+              <li><a href="/medifacials">Medi Facials</a></li>
               <li><a onclick="showPage('clinic')">Skin Boosters</a></li>
               <li><a onclick="showPage('clinic')">IV Therapy</a></li>
               <li><a onclick="showPage('clinic')">Microneedling</a></li>
@@ -646,8 +646,8 @@
           <div class="fc">
             <h4>Clinic</h4>
             <ul>
-              <li><a onclick="openLHR()">Laser Hair Reduction</a></li>
-              <li><a onclick="showPage('clinic')">Medi Facials</a></li>
+              <li><a href="/lhr">Laser Hair Reduction</a></li>
+              <li><a href="/medifacials">Medi Facials</a></li>
               <li><a onclick="showPage('clinic')">Skin Boosters</a></li>
               <li><a onclick="showPage('clinic')">IV Therapy</a></li>
               <li><a onclick="showPage('clinic')">Microneedling</a></li>
@@ -730,14 +730,14 @@
           </div>
         </div>
         <div class="grid-3 grid-3-d rv">
-          <div class="scard scard-d" onclick="openLHR()">
+          <div class="scard scard-d" onclick="location.href='/lhr'" style="cursor:pointer">
             <div class="scard-num">01</div>
             <h3 class="scard-h scard-hd">Laser Hair Reduction</h3>
             <p class="scard-p scard-pd">FDA-grade permanent hair reduction. Safe for all Indian skin types. 90% reduction
               in 6–8 sessions.</p>
             <div class="tag-row"><span class="ctag">Most Popular</span><span class="ctag">Permanent</span></div>
           </div>
-          <div class="scard scard-d">
+          <div class="scard scard-d" onclick="location.href='/medifacials'" style="cursor:pointer">
             <div class="scard-num">02</div>
             <h3 class="scard-h scard-hd">Advanced Medi Facials</h3>
             <p class="scard-p scard-pd">Medical-grade facials targeting pigmentation, acne, texture and skin quality.</p>
@@ -808,8 +808,8 @@
           <div class="fc">
             <h4>Clinic</h4>
             <ul>
-              <li><a onclick="openLHR()">Laser Hair Reduction</a></li>
-              <li><a onclick="showPage('clinic')">Medi Facials</a></li>
+              <li><a href="/lhr">Laser Hair Reduction</a></li>
+              <li><a href="/medifacials">Medi Facials</a></li>
               <li><a onclick="showPage('clinic')">Skin Boosters</a></li>
               <li><a onclick="showPage('clinic')">IV Therapy</a></li>
               <li><a onclick="showPage('clinic')">Microneedling</a></li>

@@ -188,7 +188,7 @@
   }
   .why-image-wrap { position: relative; }
   .why-image-wrap img {
-    width: 100%; height: 520px; object-fit: cover;
+    width: 100%; height: 560px; object-fit: cover;
     filter: grayscale(20%);
   }
   .why-image-badge {
@@ -682,24 +682,26 @@
     .skin-inner, .pricing-inner, .testimonials-inner, .faq-inner,
     .path-inner, .ba-inner-custom { padding: 0 20px; }
     
-    .hero { min-height: auto; padding-bottom: 60px; }
-    .hero-content { padding: 60px 20px 20px; text-align: center; }
+    .hero { min-height: calc(100vh - 72px); padding-top: 72px; flex-direction: column; align-items: flex-start; }
+    .hero-bg { background-position: center center; }
+    .hero-content { padding: 90px 20px 24px; margin: 0 auto; max-width: 100%; text-align: center; }
     .hero h1 { font-size: 38px; max-width: 100%; margin: 0 auto 20px; }
     .hero-sub { margin: 0 auto 30px; font-size: 14px; }
     .hero-btns { justify-content: center; }
-    /* hero is background-only on mobile too */
-    .hero { flex-direction: column; }
-    
+    .btn-primary, .btn-outline { width: 100%; max-width: 380px; }
+
     .hero-stats { position: static; max-width: 100%; margin-top: 30px; display: grid; grid-template-columns: 1fr 1fr; }
     .hero-stat { padding: 15px; border-right: none; border-bottom: 1px solid rgba(201,169,110,0.1); }
     .hero-stat:nth-child(odd) { border-right: 1px solid rgba(201,169,110,0.1); }
-    
+
     .why-grid, .skin-grid, .faq-grid, .cta-inner { grid-template-columns: 1fr; gap: 30px; }
+    .why-grid > div { padding-left: 0; }
     .why-inner { text-align: center; }
+    .why-image-wrap { overflow: hidden; border-radius: 14px; }
+    .why-image-wrap img { height: 300px; }
     .section-title { font-size: 30px; }
     .section-line { margin: 15px auto 25px; }
     .section-desc { margin-left: auto; margin-right: auto; font-size: 14px; }
-    .why-image-wrap img { height: 300px; }
     .why-point { text-align: left; gap: 15px; }
     .why-points { gap: 20px; margin-top: 30px; }
     
@@ -771,7 +773,7 @@
           id="lhr-why-img"
           src="{{ asset('images/lhr-technician.jpg') }}"
           alt="Laser hair removal procedure with a technician and patient"
-          style="width:100%; height:560px; object-fit:cover; object-position:center top; display:block;"
+          style="width:100%; object-fit:cover; object-position:center top; display:block;"
           onerror="this.onerror=null; this.src='{{ asset('images/lhr-technician.png') }}';">
 
       </div>
@@ -1056,7 +1058,7 @@
           </a>
         </div>
       </div>
-      <div class="fc"><h4>Clinic</h4><ul><li><a href="/lhr">Laser Hair Reduction</a></li><li><a href="/clinic">Medi Facials</a></li><li><a href="/clinic">Skin Boosters</a></li><li><a href="/clinic">IV Therapy</a></li><li><a href="/clinic">Microneedling</a></li></ul></div>
+      <div class="fc"><h4>Clinic</h4><ul><li><a href="/lhr">Laser Hair Reduction</a></li><li><a href="/medifacials">Medi Facials</a></li><li><a href="/clinic">Skin Boosters</a></li><li><a href="/clinic">IV Therapy</a></li><li><a href="/clinic">Microneedling</a></li></ul></div>
       <div class="fc"><h4>Salon</h4><ul><li><a href="/?page=salon">Korean Head Spa</a></li><li><a href="/?page=salon">Hair Spa</a></li><li><a href="/?page=salon">Smoothening</a></li><li><a href="/?page=salon">Styling & Cuts</a></li><li><a href="/?page=salon">Color & Balayage</a></li></ul></div>
 
     </div>

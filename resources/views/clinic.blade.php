@@ -1473,13 +1473,13 @@
 
     <div class="treatments-grid reveal">
 
-      <div class="treatment-box">
+      <div class="treatment-box" onclick="location.href='/lhr'" style="cursor:pointer">
         <h3>Laser Hair Reduction</h3>
         <p>A scientifically proven solution for long-term reduction of unwanted hair. Uses controlled laser energy to
           target hair follicles safely and comfortably.</p>
       </div>
 
-      <div class="treatment-box">
+      <div class="treatment-box" onclick="location.href='/medifacials'" style="cursor:pointer">
         <h3>Medi Facials</h3>
         <p>Medical-grade treatments formulated for dullness, acne, pigmentation, and early aging using clinical
           ingredients and dermatological protocols.</p>
@@ -1748,7 +1748,7 @@
             </a>
           </div>
         </div>
-        <div class="fc"><h4>Clinic</h4><ul><li><a href="/clinic">Laser Hair Reduction</a></li><li><a href="/clinic">Medi Facials</a></li><li><a href="/clinic">Skin Boosters</a></li><li><a href="/clinic">IV Therapy</a></li><li><a href="/clinic">Microneedling</a></li></ul></div>
+        <div class="fc"><h4>Clinic</h4><ul><li><a href="/lhr">Laser Hair Reduction</a></li><li><a href="/medifacials">Medi Facials</a></li><li><a href="/clinic">Skin Boosters</a></li><li><a href="/clinic">IV Therapy</a></li><li><a href="/clinic">Microneedling</a></li></ul></div>
         <div class="fc"><h4>Salon</h4><ul><li><a href="/?page=salon">Korean Head Spa</a></li><li><a href="/?page=salon">Hair Spa</a></li><li><a href="/?page=salon">Smoothening</a></li><li><a href="/?page=salon">Styling & Cuts</a></li><li><a href="/?page=salon">Color & Balayage</a></li></ul></div>
 
       </div>

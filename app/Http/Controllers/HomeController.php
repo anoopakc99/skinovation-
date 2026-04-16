@@ -20,4 +20,9 @@ class HomeController extends Controller
     {
         return view('lhr');
     }
+
+    public function medifacials()
+    {
+        return view('medifacials');
+    }
 }
